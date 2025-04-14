@@ -1,0 +1,29 @@
+.recipes-container {
+    display: flex;
+    justify-content: center;
+}
+
+.recipe:nth-child(2n) {
+    background-color: var(--clr-red);
+}
+
+.recipe {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    min-width: 500px;
+    border-radius: var(--br);
+}
+
+.recipe p {
+    margin: 0;
+    padding: 0 .5rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex p:first-child {
+    width: 17px;
+}
