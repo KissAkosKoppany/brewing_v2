@@ -27,3 +27,23 @@
 .flex p:first-child {
     width: 17px;
 }
+
+.recipe-container {
+    border: 2px solid var(--clr-red);
+    border-radius: var(--br);
+    padding: 2rem;
+    width: 700px;
+}
+
+.recipe-info-container:not(:last-child) {
+    border-bottom: 2px solid var(--clr-red);
+}
+
+.recipe-title {
+    text-align: center;
+    font-size: xx-large;
+    border-bottom: 2px solid var(--clr-red);
+    margin: 0;
+    padding-bottom: .75rem;
+}
+

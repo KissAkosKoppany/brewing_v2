@@ -16,7 +16,7 @@ const Recipe = ({ recipe }) => {
         <ul>
           {recipe.hozzavalok.komlo.map(komlo => <li key={komlo}>{komlo}</li>)}
         </ul>
-        <h3>ÍzesítőkÉ</h3>
+        <h3>Ízesítők:</h3>
         <ul>
           {recipe.hozzavalok.izesitok.map(izesitok => <li key={izesitok}>{izesitok}</li>)}
         </ul>

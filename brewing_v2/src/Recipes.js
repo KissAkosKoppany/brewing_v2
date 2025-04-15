@@ -69,7 +69,7 @@ export const recipes = [
     },
     {
         name: "Szimpla IPA",
-        brewed: 1,
+        brewed: 0,
         link: "szimpla_ipa",
         hozzavalok: {
           malata: ["4,3kg Münich I."],
