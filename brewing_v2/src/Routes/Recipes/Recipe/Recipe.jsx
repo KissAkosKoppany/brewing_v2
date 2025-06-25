@@ -10,31 +10,31 @@ const Recipe = ({ recipe }) => {
         <h2>Hozzávalók:</h2>
         <h3>Maláta:</h3>
         <ul>
-          {recipe.hozzavalok.malata.map(malata => <li key={malata}>{malata}</li>)}
+          {recipe.ingredients.malts.map(malt => <li key={malt}>{malt}</li>)}
         </ul>
         <h3>Komló:</h3>
         <ul>
-          {recipe.hozzavalok.komlo.map(komlo => <li key={komlo}>{komlo}</li>)}
+          {recipe.ingredients.hops.map(hop => <li key={hop}>{hop}</li>)}
         </ul>
         <h3>Ízesítők:</h3>
         <ul>
-          {recipe.hozzavalok.izesitok.map(izesitok => <li key={izesitok}>{izesitok}</li>)}
+          {recipe.ingredients.spieces.map(spiece => <li key={spiece}>{spiece}</li>)}
         </ul>
         <h3>Élesztő:</h3>
         <ul>
-          <li>{recipe.hozzavalok.eleszto}</li>
+          <li>{recipe.ingredients.yeast}</li>
         </ul>
       </div>
       <div className="recipe-info-container">
         <h2>Hőlépcsők:</h2>
         <ul>
-          {recipe.holepcsok.map(holepcso => <li key={holepcso}>{holepcso}</li>)}
+          {recipe.thermal_steps.map(thermal_step => <li key={thermal_step}>{thermal_step}</li>)}
         </ul>
       </div>
       <div className="recipe-info-container">
         <h2>Komlóforralás:</h2>
         <ul>
-          {recipe.komloforralas.map(komlo => <li key={komlo}>{komlo}</li>)}
+          {recipe.boiling.map(hop => <li key={hop}>{hop}</li>)}
         </ul>
       </div>
     </div>

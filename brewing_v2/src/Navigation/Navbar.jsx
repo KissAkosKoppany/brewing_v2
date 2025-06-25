@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className='nav-container'>
         <div className='logo'>
-            Ren's brewery
+            Company name
         </div>
         <div className='nav-buttons'>
             <Link className='link' to='recipes'>
