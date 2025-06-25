@@ -12,12 +12,12 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 1rem;
-    min-width: 500px;
+    min-width: 1270px;
     border-radius: var(--br);
 }
 
 .recipe p {
-    margin: 0;
+    margin: 0 .4rem;
     padding: 0 .5rem;
 }
 
@@ -33,7 +33,7 @@
     border: 2px solid var(--clr-highlight);
     border-radius: var(--br);
     padding: 2rem;
-    width: 700px;
+    max-width: 1270px;
 }
 
 .recipe-info-container:not(:last-child) {
