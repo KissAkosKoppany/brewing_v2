@@ -4,8 +4,9 @@
 }
 
 .recipe:nth-child(2n) {
-    background-color: var(--clr-red);
+    background-color: var(--clr-highlight);
 }
+
 
 .recipe {
     display: flex;
@@ -29,20 +30,20 @@
 }
 
 .recipe-container {
-    border: 2px solid var(--clr-red);
+    border: 2px solid var(--clr-highlight);
     border-radius: var(--br);
     padding: 2rem;
     width: 700px;
 }
 
 .recipe-info-container:not(:last-child) {
-    border-bottom: 2px solid var(--clr-red);
+    border-bottom: 2px solid var(--clr-highlight);
 }
 
 .recipe-title {
     text-align: center;
     font-size: xx-large;
-    border-bottom: 2px solid var(--clr-red);
+    border-bottom: 2px solid var(--clr-highlight);
     margin: 0;
     padding-bottom: .75rem;
 }

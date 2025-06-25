@@ -1,12 +1,13 @@
 :root {
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   box-sizing: border-box;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--clr-text);
+  background-color: var(--clr-bg);
   font-size: large;
 
   font-synthesis: none;
@@ -14,9 +15,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --clr-text: rgba(255, 255, 255, 0.87);
-  --clr-red: rgb(115, 42, 42);
-  --clr-hover: rgba(255, 255, 255, 0.081);
+  --clr-bg: rgb(46, 46, 46);
+  --clr-bg-accent: rgb(22, 22, 22);
+  --clr-text: rgb(214, 214, 214);
+  --clr-highlight: rgb(42, 115, 99);
+  --clr-hover: rgba(255, 255, 255, 0.062);
   --clr-active: rgba(255, 255, 255, 0.148);
-  --br: 25px;
+  --br: 2px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
