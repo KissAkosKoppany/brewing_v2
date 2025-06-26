@@ -40,18 +40,87 @@
     margin-bottom: 1rem;
 }
 
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg;}
+    100% { --gradient-angle: 360deg;}
+}
+
 .shop-item-card {
     width: 300px;
     background-color: var(--clr-bg-accent);
     margin: 1rem;
     border-radius: var(--br);
+    aspect-ratio: 10/16;
+    position: relative;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.shop-item-card::before,
+.shop-item-card::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    z-index: -1;
+    border-radius: inherit;
+    background-image: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-highlight),
+        var(--clr-bg-accent),
+        var(--clr-highlight)
+    );
+    animation: rotation 4s linear infinite;
+}
+
+.shop-item-card::after {
+    filter: blur(5px);
 }
 
 .card-image-container {
-    padding: .5rem;
+    padding: .4rem;
 }
 
 .card-image-container img {
     width: 100%;
     height: auto;
+}
+
+.shop-item-card-description,
+.shop-item-card-price {
+    margin: 0;
+    padding: 0 .4rem;
+}
+
+.shop-item-card-description h1, p {
+    margin: 0;
+    padding: 0;
+    font-size: large;
+}
+
+.shop-item-card-description p {
+    height: 5.4rem;
+    overflow-y: scroll;
+}
+
+.shop-item-card-description p::-webkit-scrollbar {
+    display: none;
+}
+
+.shop-item-card-description p,
+.shop-item-card-price p {
+    font-size: medium;
+}
+
+.shop-item-card-price {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
