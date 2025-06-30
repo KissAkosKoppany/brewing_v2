@@ -1,15 +1,15 @@
 import React from 'react'
 import ShopItem from './ShopItem'
 
-const ShopItems = () => {
+const ShopItems = ({beers}) => {
+  
   return (
     <div className='shop-items-container'>
-        <ShopItem />
-        <ShopItem />
-        <ShopItem />
-        <ShopItem />
-        <ShopItem />
-        <ShopItem />
+      {
+        beers.map(beer => (
+          <ShopItem beer={beer} key={beer.name} />
+        ))
+      }
     </div>
   )
 }

@@ -1,18 +1,18 @@
 import React from 'react'
 
-const ShopItem = () => {
+const ShopItem = ({beer}) => {
   return (
     <div className='shop-item-card'>
         <div className='card-image-container'>
-            <img src="images/neko.webp" alt="neko" />
+            <img src={beer.image} alt="beer cover" />
         </div>
         <div className='shop-item-card-description'>
-            <h1>Beer name</h1>
-            <p>Beer description</p>
+            <h1>{beer.name}</h1>
+            <p>{beer.description}</p>
         </div>
         <div className='shop-item-card-price'>
-            <p>Alc.</p>
-            <p>Price</p>
+            <p>{beer.alcohol}</p>
+            <p>{beer.price}</p>
         </div>
     </div>
   )
