@@ -6,19 +6,9 @@ import { beers } from '../../Beers.js'
 
 const Shop = () => {
 
-  const [beerFilter, setBeerFilter] = useState("all")
-  
-  useEffect(() => {
-    beers.filter(beer => beer.type || "all" === beerFilter)
-  }, [beerFilter])
-
-  const applyBeerFilter = (filter) => {
-    setBeerFilter(filter)
-  }
-
   return (
     <div className='shop-container'>
-        <ShopFilters applyBeerFilter={applyBeerFilter} />
+        <ShopFilters />
         <ShopItems beers={beers} />
     </div>
   )
