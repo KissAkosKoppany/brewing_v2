@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 
-import { shopReducer } from "./shop/shop.reducer";
+import { beerReducer } from "./beer/beer.reducer";
 
 export const rootReducer = combineReducers({
-    shop: shopReducer
+    beer: beerReducer
 })
