@@ -5,8 +5,11 @@ import Recipes from './Routes/Recipes/Recipes'
 import Stock from './Routes/Stock/Stock'
 import Brewings from './Routes/Brewings/Brewings'
 import Shop from './Routes/Shop/Shop'
+import { useLoadBeers } from './hooks/useLoadBeers'
 
 function App() {
+
+  useLoadBeers()
 
   return (
     <div className='app-container'>

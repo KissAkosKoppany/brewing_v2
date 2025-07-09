@@ -1,25 +1,52 @@
-import React from 'react'
-import { useDispatch } from 'react-redux'
-import { setBeerFilter } from '../../../store/beer/beer.action'
+import { useState } from 'react'
 
-const ShopFilters = () => {
+const ShopFilters = ({ applyFilter }) => {
 
-  //dispatch to setbeerfilter reducer
-  // const [filter, setFilter] = useState("all")
+  const [activeButton, setActiveButton] = useState("all")
 
-  const changeBeerFilter = (filter) => {
-    const dispatch = useDispatch()
-    console.log('filter func', filter)
-    dispatch(setBeerFilter(filter))
-  }
+  const toggleActiveButton = (link) => {
+        setActiveButton(link)
+    }
 
   return (
     <div className='shop-filters-container'>
         <ul>
-            <li onClick={() => changeBeerFilter("all")}>All</li>
-            <li onClick={() => changeBeerFilter("IPA")}>IPA</li>
-            <li onClick={() => changeBeerFilter("stout")}>Stout</li>
-            <li>Other</li>
+            <li 
+              onClick={() => {
+                applyFilter("all")
+                toggleActiveButton('all')
+              }}
+              className={`${activeButton === "all" ? "active-link" : ""} `}
+            >
+              All
+            </li>
+            <li 
+              onClick={() => {
+                applyFilter("IPA")
+                toggleActiveButton('IPA')
+              }}
+              className={`${activeButton === "IPA" ? "active-link" : ""} `}
+            >
+              IPA
+            </li>
+            <li 
+              onClick={() => {
+                applyFilter("stout")
+                toggleActiveButton('stout')
+              }}
+              className={`${activeButton === "stout" ? "active-link" : ""} `}
+            >
+              Stout
+            </li>
+            <li 
+              onClick={() => {
+                applyFilter("other")
+                toggleActiveButton('other')
+              }}
+              className={`${activeButton === "other" ? "active-link" : ""} `}
+            >
+              Other
+            </li>
         </ul>
     </div>
   )

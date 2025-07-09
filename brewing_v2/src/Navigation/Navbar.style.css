@@ -4,6 +4,9 @@
     justify-content: space-between;
     margin-bottom: 2rem;
     background-color: var(--clr-bg-accent);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .logo {
@@ -42,12 +45,7 @@
 }
 
 .nav-item:hover {
-    background-color: var(--clr-hover);
     border-radius: var(--br);
     cursor: pointer;
     color: var(--clr-highlight);
-}
-
-.nav-item:active {
-    background-color: var(--clr-active);
 }
