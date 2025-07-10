@@ -3,7 +3,7 @@ export const beers = [
     {
         name: "Isekai delivery service",
         description: "Description of beer",
-        image: "images/beer.jpg",
+        images: ["images/beer.jpg"],
         alcohol: "9%",
         price: "10",
         color_scheme: "white",
@@ -18,7 +18,7 @@ export const beers = [
     {
         name: "Stoutzilla",
         description: "Description of beer",
-        image: "images/beer.jpg",
+        images: ["images/beer.jpg"],
         alcohol: "8%",
         price: "10",
         color_scheme: "black",
@@ -33,7 +33,7 @@ export const beers = [
     {
         name: "Yabai Yakuza",
         description: "Description of beer",
-        image: "images/beer.jpg",
+        images: ["images/beer.jpg"],
         alcohol: "6%",
         price: "10",
         color_scheme: "red",
@@ -48,7 +48,7 @@ export const beers = [
     {
         name: "Sumo Stout",
         description: "Description of beer",
-        image: "images/beer.jpg",
+        images: ["images/beer.jpg"],
         alcohol: "8%",
         price: "10",
         color_scheme: "black",
@@ -63,7 +63,7 @@ export const beers = [
     {
         name: "Hop Samurai",
         description: "Description of beer",
-        image: "images/beer.jpg",
+        images: ["images/beer.jpg"],
         alcohol: "7%",
         price: "10",
         color_scheme: "green",
@@ -78,7 +78,7 @@ export const beers = [
     {
         name: "Hopkido",
         description: "Description of beer",
-        image: "images/beer.jpg",
+        images: ["images/beer.jpg"],
         alcohol: "6%",
         price: "10",
         color_scheme: "green",

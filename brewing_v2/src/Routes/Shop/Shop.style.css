@@ -124,3 +124,7 @@
     display: flex;
     justify-content: space-between;
 }
+
+.shop-item-page-container {
+    max-width: 1270px;
+}

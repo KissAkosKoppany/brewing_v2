@@ -6,6 +6,6 @@ export const setAllBeers = (items) => {
     return createAction(BEER_ACTION_TYPES.SET_ALL_BEERS, items)
 }
 
-export const setBeerFilter = (filter) => {
-    return createAction(BEER_ACTION_TYPES.SET_BEER_FILTER, filter)
+export const setSelectedBeer = (item) => {
+    return createAction(BEER_ACTION_TYPES.SET_SELECTED_BEER, item)
 }

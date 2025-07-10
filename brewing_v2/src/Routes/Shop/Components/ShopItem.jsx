@@ -1,10 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router'
 
-const ShopItem = ({beer}) => {
+const ShopItem = ({ beer }) => {
+
+  // needs to set a global beer variable to this beer and load that with useloadbeer
+  
+
   return (
+    <Link to={beer.name} className='link'>
     <div className='shop-item-card'>
         <div className='card-image-container'>
-            <img src={beer.image} alt="beer cover" />
+            <img src={beer.images[0]} alt="beer cover" />
         </div>
         <div className='shop-item-card-description'>
             <h1>{beer.name}</h1>
@@ -15,6 +21,7 @@ const ShopItem = ({beer}) => {
             <p>{beer.price}</p>
         </div>
     </div>
+    </Link>
   )
 }
 

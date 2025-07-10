@@ -2,7 +2,7 @@ import { BEER_ACTION_TYPES } from "./beer.type";
 
 const INITIAL_STATE = {
     allBeers: null,
-    beerFilter: "all"
+    selectedBeer: null
 }
 
 export const beerReducer = (state = INITIAL_STATE, action) => {
@@ -14,10 +14,10 @@ export const beerReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 allBeers: payload
             }
-        case BEER_ACTION_TYPES.SET_BEER_FILTER:
+        case BEER_ACTION_TYPES.SET_SELECTED_BEER:
             return {
                 ...state,
-                beerFilter: payload
+                selectedBeer: payload
             }
         default:
             return state
