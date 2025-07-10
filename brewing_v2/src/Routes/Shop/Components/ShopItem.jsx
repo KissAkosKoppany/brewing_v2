@@ -3,9 +3,6 @@ import { Link } from 'react-router'
 
 const ShopItem = ({ beer }) => {
 
-  // needs to set a global beer variable to this beer and load that with useloadbeer
-  
-
   return (
     <Link to={beer.name} className='link'>
     <div className='shop-item-card'>

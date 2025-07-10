@@ -128,3 +128,38 @@
 .shop-item-page-container {
     max-width: 1270px;
 }
+
+.shop-item-page-container h1 {
+    border-bottom: 2px solid var(--clr-highlight);
+    text-align: center;
+    font-size: xx-large;
+}
+
+.shop-item-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-page-info-container {
+    width: 400px;
+    height: 600px;
+    padding-left: 1rem;
+    border-left: 2px solid var(--clr-highlight);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-page-description {
+    height: 250px;
+}
+
+.item-page-description h2 {
+    margin: 0;
+    font-size: larger;
+}
+
+.item-page-description p {
+    margin: 0;
+    font-size: medium;
+}
