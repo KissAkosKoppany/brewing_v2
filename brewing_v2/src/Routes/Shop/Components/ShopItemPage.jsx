@@ -27,6 +27,7 @@ const ShopItemPage = () => {
             <p>{selectedBeer?.description}</p>
           </div>
           <div className='item-page-beer-info'>
+            <h2>Charateristics</h2>
             <ul>
               <li>
                 <p>Type:</p>
@@ -50,7 +51,7 @@ const ShopItemPage = () => {
             <div className={`item-page-price ${selectedBeer?.stock > 0 ? 'on-stock' : 'out-of-stock'}`}>
               <p>{selectedBeer?.price} RON</p>
               <p title={selectedBeer?.stock}>
-                {selectedBeer?.stock > 0 ? "On stock" : "Out of stock"}
+                {selectedBeer?.stock > 0 ? "In stock" : "Out of stock"}
               </p>
             </div>
             <div className='item-page-cart-button'>

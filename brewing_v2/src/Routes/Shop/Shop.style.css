@@ -165,10 +165,16 @@
     font-size: medium;
 }
 
+.item-page-beer-info h2 {
+    margin: 0;
+    font-size: larger;
+}
+
 .item-page-beer-info ul {
     list-style: none;
     padding: 0;
     width: 100%;
+    margin: 0;
 }
 
 .item-page-beer-info ul li {
@@ -186,10 +192,18 @@
 .item-page-price {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .item-page-price p {
     position: relative;
+    margin-bottom: 2rem;
+}
+
+.item-page-price p:first-child {
+    font-weight: bold;
+    color: var(--clr-highlight);
+    font-size: xx-large;
 }
 
 .item-page-price p:last-child::before {
@@ -211,4 +225,29 @@
 
 .item-page-price.out-of-stock p:last-child::before {
     background-color: var(--clr-red);
+}
+
+.item-page-cart-button {
+    display: flex;
+    justify-content: center;
+}
+
+.item-page-cart-button button {
+    font-size: large;
+    padding: .7rem 3rem;
+    background-color: var(--clr-highlight);
+    border: none;
+    border-radius: var(--br);
+    cursor: pointer;
+    color: var(--clr-text);
+    transition: all .2s linear;
+    scale: 1;
+}
+
+.item-page-cart-button button:hover {
+    scale: 1.1;
+}
+
+.item-page-cart-button button:active {
+    scale: 1;
 }
