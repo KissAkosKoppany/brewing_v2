@@ -12,7 +12,7 @@ export const beers = [
         stock: 20,
         starting_balling: 1060,
         final_balling: 1008,
-        IBU: 70,
+        ibu: 70,
         type: "IPA"
     },
     {
@@ -27,7 +27,7 @@ export const beers = [
         stock: 40,
         starting_balling: 1075,
         final_balling: 1005,
-        IBU: 30,
+        ibu: 30,
         type: "stout"
     },
     {
@@ -42,7 +42,7 @@ export const beers = [
         stock: 30,
         starting_balling: 1055,
         final_balling: 1005,
-        IBU: 50,
+        ibu: 50,
         type: "IPA"
     },
     {
@@ -57,7 +57,7 @@ export const beers = [
         stock: 40,
         starting_balling: 1075,
         final_balling: 1005,
-        IBU: 20,
+        ibu: 20,
         type: "stout"
     },
     {
@@ -72,7 +72,7 @@ export const beers = [
         stock: 40,
         starting_balling: 1075,
         final_balling: 1005,
-        IBU: 60,
+        ibu: 60,
         type: "IPA"
     },
     {
@@ -87,7 +87,7 @@ export const beers = [
         stock: 60,
         starting_balling: 1075,
         final_balling: 1005,
-        IBU: 65,
+        ibu: 65,
         type: "IPA"
     }
 ]

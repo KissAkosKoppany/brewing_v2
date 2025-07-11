@@ -21,6 +21,7 @@
   --clr-highlight: rgb(42, 115, 99);
   --clr-hover: rgba(255, 255, 255, 0.062);
   --clr-active: rgba(255, 255, 255, 0.148);
+  --clr-red: rgb(145, 36, 36);
   --br: 2px;
 }
 

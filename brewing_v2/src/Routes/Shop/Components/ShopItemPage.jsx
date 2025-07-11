@@ -26,8 +26,36 @@ const ShopItemPage = () => {
             <h2>Description</h2>
             <p>{selectedBeer?.description}</p>
           </div>
+          <div className='item-page-beer-info'>
+            <ul>
+              <li>
+                <p>Type:</p>
+                <p>{selectedBeer?.type}</p>
+              </li>
+              <li>
+                <p>Alcohol:</p>
+                <p>{selectedBeer?.alcohol}</p>
+              </li>
+              <li>
+                <p>IBU:</p>
+                <p>{selectedBeer?.ibu}</p>
+              </li>
+              <li>
+                <p>Litreage:</p>
+                <p>0,33l</p>
+              </li>
+            </ul>
+          </div>
           <div className='item-page-price-box'>
-            hello
+            <div className={`item-page-price ${selectedBeer?.stock > 0 ? 'on-stock' : 'out-of-stock'}`}>
+              <p>{selectedBeer?.price} RON</p>
+              <p title={selectedBeer?.stock}>
+                {selectedBeer?.stock > 0 ? "On stock" : "Out of stock"}
+              </p>
+            </div>
+            <div className='item-page-cart-button'>
+              <button>Add to cart</button>
+            </div>
           </div>
         </div>
       </div>

@@ -48,15 +48,22 @@ const ImageSlider = ({ images }) => {
 
   return (
      <div className="image-slider-container">
-            <div onClick={() => handleImageSelect(1)} className={`image-slider-image-container ${activeImage.imageOne ?  " active-image" : ""}`}>
-                <img src={`/${images[0]}`} alt="image" className="image-slider-image" />
-            </div>
-            <div onClick={() => handleImageSelect(2)} className={`image-slider-image-container ${activeImage.imageTwo ?  " active-image" : ""}`}>
-                <img src={`/${images[1]}`} alt="image" className="image-slider-image" />
-            </div>
-            <div onClick={() => handleImageSelect(3)} className={`image-slider-image-container ${activeImage.imageThree ?  " active-image" : ""}`}>
-                <img src={`/${images[2]}`} alt="image" className="image-slider-image" />
-            </div>
+            {
+                images ?
+                <>
+                    <div onClick={() => handleImageSelect(1)} className={`image-slider-image-container ${activeImage.imageOne ?  " active-image" : ""}`}>
+                        <img src={`/${images[0]}`} alt="image" className="image-slider-image" />
+                    </div>
+                    <div onClick={() => handleImageSelect(2)} className={`image-slider-image-container ${activeImage.imageTwo ?  " active-image" : ""}`}>
+                        <img src={`/${images[1]}`} alt="image" className="image-slider-image" />
+                    </div>
+                    <div onClick={() => handleImageSelect(3)} className={`image-slider-image-container ${activeImage.imageThree ?  " active-image" : ""}`}>
+                        <img src={`/${images[2]}`} alt="image" className="image-slider-image" />
+                    </div>
+                </>
+            :
+            null
+            }
         </div>
   )
 }
