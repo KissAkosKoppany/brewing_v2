@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import { useLoadSelectedBeer } from '../../../hooks/useLoadSelectedBeer'
 import { useSelector } from 'react-redux'
 import ImageSlider from './ImageSlider'
 
 const ShopItemPage = () => {
+
+  const [openModal, setOpenModal] = useState(false)
 
   const { id } = useParams()
   
@@ -13,6 +15,16 @@ const ShopItemPage = () => {
   const selectedBeer = useSelector(state => state.rootReducer.beer.selectedBeer)
 
   const images = selectedBeer?.images
+
+  const rating = 2.4;
+
+  const handleModalOpen = () => {
+    setOpenModal(true)
+  }
+
+  const handleModalClose = () => {
+    setOpenModal(false)
+  }
 
   return (
     <div className='shop-item-page-container'>
@@ -60,6 +72,28 @@ const ShopItemPage = () => {
           </div>
         </div>
       </div>
+      <div className='shop-item-page-review-container'>
+        <h2>Reviews</h2>
+        <div className='item-page-review'>
+          <div className='item-page-review-stars'>
+            <div className="stars" style={{"--rating": rating}}></div>
+            <p>{rating} from 13 reviews</p>
+            <button onClick={() => handleModalOpen()}>Add a review</button>
+          </div>
+          <div className='item-page-review-graph'>
+            graph
+          </div>
+        </div>
+      </div>
+      {
+        openModal ?
+          <div className='review-modal'>
+            <div onClick={() => handleModalClose()} className='overlay'></div>
+            modal
+          </div>
+        :
+        null
+      }
     </div>
   )
 }
