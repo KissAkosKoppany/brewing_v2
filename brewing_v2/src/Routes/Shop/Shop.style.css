@@ -321,10 +321,191 @@
     z-index: 20;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 0, 0, 0.664);
 }
 
 .review-modal .overlay {
     width: 100%;
     height: 100%;
+}
+
+/* ------------- Modal ------------- */
+
+
+.item-review-from {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 40;
+    width: 400px;
+    background-color: var(--clr-bg-accent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.item-review-from h1 {
+    margin-top: 0;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.radio-input {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-label {
+  cursor: pointer;
+  font-size: 0;
+  color: rgba(0, 0, 0, 0.774);
+  transition: color 0.1s ease-in-out;
+}
+
+.radio-label:before {
+  content: "★";
+  display: inline-block;
+  font-size: 32px;
+}
+
+.radio-input:checked ~ .radio-label {
+  color: #ffc700;
+  color: gold;
+}
+
+.radio-label:hover,
+.radio-label:hover ~ .radio-label {
+  color: goldenrod;
+}
+
+.radio-input:checked + .radio-label:hover,
+.radio-input:checked + .radio-label:hover ~ .radio-label,
+.radio-input:checked ~ .radio-label:hover,
+.radio-input:checked ~ .radio-label:hover ~ .radio-label,
+.radio-label:hover ~ .radio-input:checked ~ .radio-label {
+  color: darkgoldenrod;
+}
+
+.group 			  { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+
+.item-review-input {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+}
+
+.item-review-input:focus { 
+    outline:none; 
+}
+
+/* LABEL ======================================= */
+.item-review-label {
+  color: var(--clr-text); 
+  font-size: medium;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+.item-review-input:focus ~ .item-review-label, .item-review-input:valid ~ .item-review-label 		{
+  top:-20px;
+  font-size: 14px;
+  color: var(--clr-highlight);
+}
+
+/* BOTTOM BARS ================================= */
+.bar { 
+    position:relative; display:block; width:300px;
+}
+
+.bar:before, .bar:after {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background: var(--clr-highlight); 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+.item-review-input:focus ~ .bar:before, .item-review-input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+/* .highlight {
+  position:absolute;
+  height:60%; 
+  width: 100%; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+} */
+
+/* active state */
+/* .item-review-input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+} */
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background: var(--clr-highlight); }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background: var(--clr-highlight); }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background: var(--clr-highlight); }
+  to 	{ width:0; background:transparent; }
+}
+
+.item-review-submit-buttons button {
+    font-size: medium;
+    margin: 0 0.5rem;
+    padding: .5rem 1rem;
+    background-color: var(--clr-highlight);
+    border: none;
+    scale: 1;
+    transition: all .2s linear;
+}
+
+.item-review-submit-buttons button:hover {
+    scale: 1.1;
+}
+
+.item-review-submit-buttons button:active {
+    scale: 1;
 }
