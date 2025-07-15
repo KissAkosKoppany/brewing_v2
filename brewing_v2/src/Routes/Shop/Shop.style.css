@@ -426,7 +426,7 @@
 }
 
 /* active state */
-.item-review-input:focus ~ .item-review-label, .item-review-input:valid ~ .item-review-label 		{
+.item-review-input:focus ~ .item-review-label, .item-review-input:valid ~ .item-review-label {
   top:-20px;
   font-size: 14px;
   color: var(--clr-highlight);

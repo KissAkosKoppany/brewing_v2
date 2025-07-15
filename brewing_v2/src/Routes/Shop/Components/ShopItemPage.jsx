@@ -120,7 +120,7 @@ const ShopItemPage = () => {
               </div>
 
               <div className="group">      
-                <input type="text" className='item-review-input' name='comment' id='comment' />
+                <input type="text" className='item-review-input' name='comment' id='comment' required />
                 <span className="bar"></span>
                 <label htmlFor='comment' className='item-review-label'>Leave a comment</label>
               </div>
