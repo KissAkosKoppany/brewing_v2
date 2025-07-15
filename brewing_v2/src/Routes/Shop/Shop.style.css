@@ -419,7 +419,7 @@
   position:absolute;
   pointer-events:none;
   left:5px;
-  top:10px;
+  top:7px;
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
@@ -430,6 +430,12 @@
   top:-20px;
   font-size: 14px;
   color: var(--clr-highlight);
+}
+
+.item-review-input:placeholder-shown ~ .item-review-label {
+    top: 7px;
+    font-size: medium;
+    color: var(--clr-text);
 }
 
 /* BOTTOM BARS ================================= */

@@ -120,13 +120,13 @@ const ShopItemPage = () => {
               </div>
 
               <div className="group">      
-                <input type="text" className='item-review-input' name='comment' id='comment' required />
+                <input type="text" className='item-review-input' name='comment' id='comment' placeholder='' />
                 <span className="bar"></span>
                 <label htmlFor='comment' className='item-review-label'>Leave a comment</label>
               </div>
 
               <div className='item-review-submit-buttons'>
-                <button>Cancel</button>
+                <button onClick={() => handleModalClose()}>Cancel</button>
                 <button>Submit</button>
               </div>
 
