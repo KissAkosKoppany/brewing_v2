@@ -18,8 +18,6 @@ const ShopItemPage = () => {
 
   const images = selectedBeer?.images
 
-  const rating = 2.4;
-
   const handleModalOpen = () => {
     setOpenModal(true)
   }
@@ -74,7 +72,7 @@ const ShopItemPage = () => {
           </div>
         </div>
       </div>
-      <ItemReview rating={rating} handleModalOpen={handleModalOpen} selectedBeer={selectedBeer} />
+      <ItemReview handleModalOpen={handleModalOpen} selectedBeer={selectedBeer} />
       {
         openModal ?
         <ItemReviewModal handleModalClose={handleModalClose} />

@@ -282,6 +282,11 @@
   }
 }
 
+.stars.comment {
+    --star-size: 25px;
+    margin-bottom: 0;
+}
+
 .shop-item-page-review-container h2 {
     text-align: center;
     border-bottom: 2px solid var(--clr-highlight);
@@ -526,14 +531,14 @@
     scale: 1;
 }
 
-/* ------------ Shop Review Comments ------------ */
+/* ------------ Shop Review Graph ------------ */
 
 .item-page-review-graph {
     display: flex;
-    margin-bottom: 3rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .graph-element {
@@ -546,12 +551,45 @@
 
 .graph-element p {
     font-size: large;
+    display: flex;
+    align-items: center;
 }
 
-.graph-element progress {
-    appearance: none;
-    padding: .8rem;
-    margin: 0 .5rem;
-    width: 75%;
+progress[value] {
+  -webkit-appearance: none;
+   appearance: none;
+   margin: 0 .5rem;
+   width: 80%;
 }
 
+progress[value]::-webkit-progress-bar {
+  background-color: var(--clr-bg-accent);
+  display: inline-block;
+  border-radius: var(--br);
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: var(--clr-highlight);
+    border-radius: var(--br);
+}
+
+/* ------------ Shop Review Comments ------------ */
+
+.review-comments-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.review-comments-container h3 {
+    margin: 0;
+}
+
+.review-comments-container h3 span {
+    font-weight: 100;
+    font-size: large;
+}
+
+.review-comment {
+    margin-bottom: 1rem;
+}

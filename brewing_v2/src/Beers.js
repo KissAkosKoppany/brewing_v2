@@ -19,13 +19,15 @@ export const beers = [
                 rating: 4,
                 custom_name: "Pudingfihgter",
                 email: "puding@gmail.com",
-                comment: "Ammmazing!"
+                comment: "Ammmazing!",
+                date: "2025.02.11"
             },
             {
-                rating: 5,
+                rating: 2,
                 custom_name: "Diabolic light",
                 email: "diabolic@gmail.com",
-                comment: "Drinkable.."
+                comment: "Drinkable..",
+                date: "2025.04.06"
             }
         ]
     },
