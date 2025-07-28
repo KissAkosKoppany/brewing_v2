@@ -74,7 +74,7 @@ const ShopItemPage = () => {
           </div>
         </div>
       </div>
-      <ItemReview rating={rating} handleModalOpen={handleModalOpen} />
+      <ItemReview rating={rating} handleModalOpen={handleModalOpen} selectedBeer={selectedBeer} />
       {
         openModal ?
         <ItemReviewModal handleModalClose={handleModalClose} />

@@ -1,8 +1,12 @@
+/* ------------ Shop ------------ */
+
 .shop-container {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
+
+/* ------------ Shop Filters ------------ */
 
 .shop-filters-container {
     max-width: 1270px;
@@ -31,6 +35,8 @@
 .shop-filters-container ul li:hover {
     color: var(--clr-highlight);
 }
+
+/* ------------ Shop Items ------------ */
 
 .shop-items-container {
     max-width: 1270px;
@@ -124,6 +130,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+/* ------------ Shop Item Page ------------ */
 
 .shop-item-page-container {
     max-width: 1270px;
@@ -252,6 +260,8 @@
 .item-page-cart-button button:active {
     scale: 1;
 }
+
+/* ------------ Shop Review Section ------------ */
 
 .stars {
   --percent: calc(var(--rating) / 5 * 100%);
@@ -515,3 +525,33 @@
 .item-review-submit-buttons button:active {
     scale: 1;
 }
+
+/* ------------ Shop Review Comments ------------ */
+
+.item-page-review-graph {
+    display: flex;
+    margin-bottom: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.graph-element {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: .5rem;
+    justify-content: center;
+}
+
+.graph-element p {
+    font-size: large;
+}
+
+.graph-element progress {
+    appearance: none;
+    padding: .8rem;
+    margin: 0 .5rem;
+    width: 75%;
+}
+

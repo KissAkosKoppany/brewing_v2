@@ -13,7 +13,21 @@ export const beers = [
         starting_balling: 1060,
         final_balling: 1008,
         ibu: 70,
-        type: "IPA"
+        type: "IPA",
+        reviews: [
+            {
+                rating: 4,
+                custom_name: "Pudingfihgter",
+                email: "puding@gmail.com",
+                comment: "Ammmazing!"
+            },
+            {
+                rating: 5,
+                custom_name: "Diabolic light",
+                email: "diabolic@gmail.com",
+                comment: "Drinkable.."
+            }
+        ]
     },
     {
         name: "Stoutzilla",
