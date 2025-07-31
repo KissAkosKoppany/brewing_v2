@@ -40,8 +40,11 @@
     justify-content: center;
     align-items: center;
     padding: .3rem 1rem;
-    width: 5rem;
     margin: 0 .2rem;
+}
+
+.nav-item.icon {
+    padding: .5rem 1rem;
 }
 
 .nav-item:hover {

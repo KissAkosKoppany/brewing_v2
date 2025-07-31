@@ -24,6 +24,7 @@
   --clr-red: rgb(145, 36, 36);
   --clr-gold: gold;
   --br: 2px;
+  --max-w: 1270px;
 }
 
 * {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router'
 import './Navbar.style.css'
+import { BsFillCartFill } from "react-icons/bs";
 
 const Navbar = () => {
 
@@ -31,6 +32,11 @@ const Navbar = () => {
             <Link className={`${activeLink === 4 ? "active-link" : ""} link`} to='recipes'>
                 <div onClick={() => toggleLink(4)} className='nav-item'>
                     Recipes
+                </div>
+            </Link>
+            <Link className={`${activeLink === 5 ? "active-link" : ""} link`} to='cart'>
+                <div onClick={() => toggleLink(5)} className='nav-item icon'>
+                    <BsFillCartFill />
                 </div>
             </Link>
         </div>

@@ -209,13 +209,13 @@
     margin-bottom: 2rem;
 }
 
-.item-page-price p:first-child {
+.item-page-price > p:first-child, .discounted-price > p:last-child {
     font-weight: bold;
     color: var(--clr-highlight);
     font-size: xx-large;
 }
 
-.item-page-price p:last-child::before {
+.item-page-price > p:last-child::before {
     content: '';
     display: inline-block;
     height: 10px;
@@ -226,6 +226,19 @@
     margin: auto;
     left: -15px;
     border-radius: 50%;
+}
+
+.discounted-price {
+    position: relative;
+}
+
+.discounted-price p:first-child {
+    margin: 0;
+    position: absolute;
+    top: -12px;
+    font-size: smaller;
+    text-decoration: line-through;
+    font-weight: bold;
 }
 
 .item-page-price.on-stock p:last-child::before {
@@ -242,13 +255,13 @@
 }
 
 .item-page-cart-button button {
-    font-size: large;
-    padding: .7rem 3rem;
+    font-size:x-large;
+    padding: .3rem 2.5rem;
     background-color: var(--clr-highlight);
     border: none;
     border-radius: var(--br);
     cursor: pointer;
-    color: var(--clr-text);
+    color: var(--clr-bg-accent);
     transition: all .2s linear;
     scale: 1;
 }
@@ -318,7 +331,9 @@
     transition: all .2s linear;
     scale: 1;
     font-size: medium;
-    color: var(--clr-text);
+    color: var(--clr-bg-accent);
+    font-weight: bold;
+    border-radius: var(--br);
 }
 
 .item-page-review-stars button:hover {
@@ -521,6 +536,9 @@
     border: none;
     scale: 1;
     transition: all .2s linear;
+    color: var(--clr-bg-accent);
+    font-weight: bold;
+    border-radius: var(--br);
 }
 
 .item-review-submit-buttons button:hover {

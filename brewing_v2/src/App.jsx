@@ -6,6 +6,7 @@ import Stock from './Routes/Stock/Stock'
 import Brewings from './Routes/Brewings/Brewings'
 import Shop from './Routes/Shop/Shop'
 import { useLoadBeers } from './hooks/useLoadBeers'
+import Cart from './Routes/Cart/Cart'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='stock' element={<Stock />} />
         <Route path='brewings' element={<Brewings />} />
         <Route path='recipes/*' element={<Recipes />} />
+        <Route path='cart' element={<Cart />} />
       </Routes>
     </div>
   )

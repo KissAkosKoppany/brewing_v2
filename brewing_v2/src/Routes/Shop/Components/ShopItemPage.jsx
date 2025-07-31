@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import ImageSlider from './ImageSlider'
 import ItemReview from './ItemReview'
 import ItemReviewModal from './ItemReviewModal'
+import { BsFillCartPlusFill } from "react-icons/bs";
 
 const ShopItemPage = () => {
 
@@ -25,6 +26,8 @@ const ShopItemPage = () => {
   const handleModalClose = () => {
     setOpenModal(false)
   }
+
+  const discountedPrice = selectedBeer?.price * (100-selectedBeer?.discount) / 100;
 
   return (
     <div className='shop-item-page-container'>
@@ -61,13 +64,22 @@ const ShopItemPage = () => {
           </div>
           <div className='item-page-price-box'>
             <div className={`item-page-price ${selectedBeer?.stock > 0 ? 'on-stock' : 'out-of-stock'}`}>
-              <p>{selectedBeer?.price} RON</p>
+              {
+                selectedBeer?.discount === 0
+                ?
+                <p>{selectedBeer?.price} RON</p>
+                :
+                <div className='discounted-price'>
+                  <p>{selectedBeer?.price} RON</p>
+                  <p>{discountedPrice} RON</p>
+                </div>
+              }
               <p title={selectedBeer?.stock}>
                 {selectedBeer?.stock > 0 ? "In stock" : "Out of stock"}
               </p>
             </div>
             <div className='item-page-cart-button'>
-              <button>Add to cart</button>
+              <button><BsFillCartPlusFill /></button>
             </div>
           </div>
         </div>
