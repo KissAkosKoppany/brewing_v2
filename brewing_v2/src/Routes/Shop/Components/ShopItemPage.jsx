@@ -27,7 +27,13 @@ const ShopItemPage = () => {
     setOpenModal(false)
   }
 
-  const discountedPrice = selectedBeer?.price * (100-selectedBeer?.discount) / 100;
+  const originalPrice = selectedBeer?.price;
+
+  const discountedPrice = originalPrice * (100-selectedBeer?.discount) / 100;
+
+  const priceInt = (price) => price.toFixed(2).toString().split(".")[0];
+
+  const priceFloat = (price) => price.toFixed(2).toString().split(".")[1];
 
   return (
     <div className='shop-item-page-container'>
@@ -67,11 +73,11 @@ const ShopItemPage = () => {
               {
                 selectedBeer?.discount === 0
                 ?
-                <p>{selectedBeer?.price} RON</p>
+                <p>{priceInt(discountedPrice)},<span>{priceFloat(discountedPrice)}</span> RON</p>
                 :
                 <div className='discounted-price'>
-                  <p>{selectedBeer?.price} RON</p>
-                  <p>{discountedPrice} RON</p>
+                  <p>{priceInt(originalPrice)},<span>{priceFloat(originalPrice)}</span> RON</p>
+                  <p>{priceInt(discountedPrice)},<span>{priceFloat(discountedPrice)}</span> RON</p>
                 </div>
               }
               <p title={selectedBeer?.stock}>

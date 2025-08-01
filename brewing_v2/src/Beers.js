@@ -5,7 +5,7 @@ export const beers = [
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean cursus purus in auctor tempor. Sed feugiat lacinia commodo. Donec aliquet tempor felis ac suscipit. Nulla euismod varius nisi, vel pharetra lacus aliquet sed. Fusce luctus, ante sed luctus pharetra, nunc velit vulputate nisi, eget posuere felis metus quis elit. Praesent sed elit est.",
         images: ["images/beer.jpg", "images/neko.webp", "images/beer.jpg"],
         alcohol: "9%",
-        price: 10,
+        price: 10.00,
         discount: 10,
         color_scheme: "white",
         batch_number: 1,

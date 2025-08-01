@@ -131,6 +131,10 @@
     justify-content: space-between;
 }
 
+.shop-item-card-price span {
+    font-size: small;
+}
+
 /* ------------ Shop Item Page ------------ */
 
 .shop-item-page-container {
@@ -207,6 +211,14 @@
 .item-page-price p {
     position: relative;
     margin-bottom: 2rem;
+}
+
+.item-page-price p span {
+    font-size: large;
+}
+
+.item-page-price p:first-child span {
+    font-size: x-small;
 }
 
 .item-page-price > p:first-child, .discounted-price > p:last-child {
