@@ -1,0 +1,61 @@
+.brewings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ............ Brewings Nav ............ */
+
+.brewings-nav-container {
+    max-width: var(--max-w);
+    display: flex;
+    align-items: center;
+    background-color: var(--clr-bg-accent);
+    border-radius: var(--br);
+    margin-bottom: 1rem;
+}
+
+.brewings-nav-container .link {
+    padding: .5rem 1.5rem;
+}
+
+.brewings-nav-container .link:hover {
+    color: var(--clr-highlight);
+}
+
+/* ............ Brewings list ............ */
+
+.brewings-list {
+    max-width: var(--max-w);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.brewing-list-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--clr-bg-accent);
+    margin-bottom: .2rem;
+    width: 700px;
+}
+
+.brewing-list-item:nth-child(2n) {
+    background-color: var(--clr-bg);
+}
+
+.brewing-list-item .group {
+    display: flex;
+    margin: 0;
+}
+
+.brewing-list-item p {
+    padding: .4rem 1rem;
+}
+
+/* ............ Brewing item ............ */
+
+.brewing-item {
+    display: flex;
+}
