@@ -12,7 +12,7 @@ const BrewingsList = ({ brewings }) => {
         {
             brewings.map(brewing => {
                 return (
-                    <Route key={brewing.info.id} path={`/brewings/brewings-list${brewing.info.id}`} element={<BrewingItem brewing={brewing} />} />
+                    <Route key={brewing.info.id} path={`${brewing.info.id}`} element={<BrewingItem brewing={brewing} />} />
                 )
             })
         }

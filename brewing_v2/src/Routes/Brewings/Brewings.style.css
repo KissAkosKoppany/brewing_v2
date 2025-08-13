@@ -56,6 +56,51 @@
 
 /* ............ Brewing item ............ */
 
-.brewing-item {
+.brewing-item, .brewing-item form {
+    width: 800px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.brewing-item h1 {
+    font-size: x-large;
+}
+
+.brewing-item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.brewing-item-info p {
+    padding: .4rem 1rem;
+}
+
+.brewing-item-info:nth-child(2n) {
+    background-color: var(--clr-bg-accent);
+}
+
+.brewing-item-group {
+    padding: 1rem;
+    width: 100%;
+    border-radius: var(--br);
+    border: 3px solid var(--clr-bg-accent);
+    margin-bottom: 2rem;
+}
+
+.brewing-item-info input {
+    width: 300px;
+    padding: .4rem;
+    border: none;
+    margin-right: 1rem;
+}
+
+.brewing-item button {
+    font-size: larger;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    background-color: var(--clr-bg-accent);
 }

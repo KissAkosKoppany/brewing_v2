@@ -13,7 +13,7 @@ const Brewings = () => {
       <BrewingsNav />
       <Routes>
         <Route path="brewings-list/*" element={<BrewingsList brewings={brewings} />} />
-        <Route path="add-brewing" element={<AddBrewing />} />
+        <Route path="add-brewing" element={<AddBrewing brewings={brewings} />} />
       </Routes>
     </div>
   )
