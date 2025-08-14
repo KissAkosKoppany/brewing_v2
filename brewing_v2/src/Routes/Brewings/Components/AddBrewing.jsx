@@ -1,46 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const AddBrewing = ({ brewings }) => {
 
-  const [data, setData] = useState({
-    info: {
-            id: null,
-            beer_name: '',
-            brew_date: null,
-        },
-        brewing: {
-            preboil_gr: null,
-            preboil_v: null,
-            postbiol_v: null,
-            original_gr: null,
-            water_ph: null,
-            water_chemistry: [],
-            aeration_type: '',
-            aeration_duration: null,
-            pitching_method: '',
-            yeast_type: '',
-        },
-        fermentation: {
-            gravity_4_days: null,
-            gravity_6_days: null,
-            final_gravity: null,
-            temp: [],
-            worth_ph: null,
-            abv: null,
-            cold_hop_date: null,
-            cold_hop_length: null,
-        },
-        bottling: {
-            bottling_date: null,
-            bottles_filled: null,
-            sugar_per_bottle: null,
-        }
-  })
+  
 
   const handleSubmit = (e) => {
     e.preventDefault()
     
-    brewings.push({
+    let newBrew = {
       info: {
             id: e.target.id.value,
             beer_name: e.target.name.value,
@@ -73,10 +40,14 @@ const AddBrewing = ({ brewings }) => {
             bottles_filled: e.target.bottles_filled.value,
             sugar_per_bottle: e.target.sugar_bottle.value,
         }
-    })
+    }
+
+    brewings.push(newBrew)
+    // save it to local and then get it from local to reducer and load to brewinglist brewings.push(obj from local)
+
   }
 
-  console.log(brewings)
+  console.log("add brewing", brewings)
 
   return (
     <div className='brewing-item'>
