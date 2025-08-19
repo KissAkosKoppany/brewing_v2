@@ -5,8 +5,16 @@ const Cart = () => {
     
   return (
     <div className='cart-container'>
-        <div className='rename-this'>
-            Cart
+        <h2>
+          Your shopping cart
+        </h2>
+        <div className='cart-sections'>
+          <div className='cart-section items'>
+          
+          </div>
+          <div className='cart-section summary'>
+
+          </div>
         </div>
     </div>
   )

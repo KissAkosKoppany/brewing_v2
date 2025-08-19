@@ -4,6 +4,10 @@
     flex-direction: column;
 }
 
-.rename-this {
+.cart-container h2 {
+    margin: 0;
+}
+
+.cart-sections {
     max-width: var(--max-w);
 }
