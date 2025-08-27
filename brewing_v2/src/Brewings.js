@@ -8,7 +8,7 @@ export const brewings = [
         brewing: {
             preboil_gr: 1035,
             preboil_v: 28,
-            postbiol_v: 23,
+            postboil_v: 23,
             original_gr: 1055,
             water_ph: 5.4,
             water_chemistry: ["4g gypsum"],
@@ -42,7 +42,7 @@ export const brewings = [
         brewing: {
             preboil_gr: 1035,
             preboil_v: 28,
-            postbiol_v: 23,
+            postboil_v: 23,
             original_gr: 1055,
             water_ph: 5.4,
             water_chemistry: ["4g gypsum"],
@@ -65,6 +65,40 @@ export const brewings = [
             bottling_date: "2025.05.29",
             bottles_filled: 57,
             sugar_per_bottle: 2.5,
+        }
+    },
+    {
+        info: {
+            id: 3,
+            beer_name: "Hop Samurai",
+            brew_date: "2025.08.24",
+        },
+        brewing: {
+            preboil_gr: 1043,
+            preboil_v: 27.5,
+            postboil_v: 24.5,
+            original_gr: 1050,
+            water_ph: 5.4,
+            water_chemistry: ["2,8g gypsum"],
+            aeration_type: "pumped",
+            aeration_duration: 0,
+            pitching_method: "dry pitch",
+            yeast_type: "Mangrove Jack's M66 Hophead",
+        },
+        fermentation: {
+            gravity_4_days: 1026,
+            gravity_6_days: null,
+            final_gravity: null,
+            temp: [""],
+            worth_ph: null,
+            abv: null,
+            cold_hop_date: "",
+            cold_hop_length: null,
+        },
+        bottling: {
+            bottling_date: "",
+            bottles_filled: null,
+            sugar_per_bottle: null,
         }
     }
 ]
