@@ -88,11 +88,11 @@ export const brewings = [
         fermentation: {
             gravity_4_days: 1026,
             gravity_6_days: null,
-            final_gravity: null,
+            final_gravity: 1011,
             temp: [""],
             worth_ph: null,
             abv: null,
-            cold_hop_date: "",
+            cold_hop_date: "2025.09.01",
             cold_hop_length: null,
         },
         bottling: {

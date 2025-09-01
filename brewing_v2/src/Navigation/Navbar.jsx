@@ -42,7 +42,7 @@ const Navbar = () => {
         </div>
         <Link className='link' to="/">
             <div onClick={() => toggleLink(0)} className='logo'>
-                Brewery name
+                Neko kaiju
             </div>
         </Link>
     </div>

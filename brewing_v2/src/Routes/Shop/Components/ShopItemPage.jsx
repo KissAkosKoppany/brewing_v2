@@ -31,9 +31,9 @@ const ShopItemPage = () => {
 
   const discountedPrice = originalPrice * (100-selectedBeer?.discount) / 100;
 
-  const priceInt = (price) => price.toFixed(2).toString().split(".")[0];
+  const priceInt = (price) => price?.toFixed(2).toString().split(".")[0];
 
-  const priceFloat = (price) => price.toFixed(2).toString().split(".")[1];
+  const priceFloat = (price) => price?.toFixed(2).toString().split(".")[1];
 
   return (
     <div className='shop-item-page-container'>
