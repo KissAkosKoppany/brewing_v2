@@ -1,11 +1,11 @@
 export const brewings = [
     {
-        info: {
+    
             id: 1,
             beer_name: "Test name",
             brew_date: "2025.05.16",
-        },
-        brewing: {
+        
+        
             preboil_gr: 1035,
             preboil_v: 28,
             postboil_v: 23,
@@ -16,8 +16,8 @@ export const brewings = [
             aeration_duration: 1,
             pitching_method: "rehydrated",
             yeast_type: "Lallemand New England",
-        },
-        fermentation: {
+        
+        
             gravity_4_days: 1030,
             gravity_6_days: 1020,
             final_gravity: 1007,
@@ -26,20 +26,19 @@ export const brewings = [
             abv: 5.6,
             cold_hop_date: "2025.05.26",
             cold_hop_length: 3,
-        },
-        bottling: {
+
+        
             bottling_date: "2025.05.29",
             bottles_filled: 57,
             sugar_per_bottle: 2.5,
-        }
+        
     },
     {
-        info: {
+        
             id: 2,
             beer_name: "Test name2",
             brew_date: "2025.05.16",
-        },
-        brewing: {
+        
             preboil_gr: 1035,
             preboil_v: 28,
             postboil_v: 23,
@@ -50,8 +49,7 @@ export const brewings = [
             aeration_duration: 1,
             pitching_method: "rehydrated",
             yeast_type: "Lallemand New England",
-        },
-        fermentation: {
+        
             gravity_4_days: 1030,
             gravity_6_days: 1020,
             final_gravity: 1007,
@@ -60,20 +58,16 @@ export const brewings = [
             abv: 5.6,
             cold_hop_date: "2025.05.26",
             cold_hop_length: 3,
-        },
-        bottling: {
+       
             bottling_date: "2025.05.29",
             bottles_filled: 57,
             sugar_per_bottle: 2.5,
-        }
+        
     },
     {
-        info: {
             id: 3,
             beer_name: "Hop Samurai",
             brew_date: "2025.08.24",
-        },
-        brewing: {
             preboil_gr: 1043,
             preboil_v: 27.5,
             postboil_v: 24.5,
@@ -84,21 +78,17 @@ export const brewings = [
             aeration_duration: 0,
             pitching_method: "dry pitch",
             yeast_type: "Mangrove Jack's M66 Hophead",
-        },
-        fermentation: {
             gravity_4_days: 1026,
             gravity_6_days: null,
             final_gravity: 1011,
-            temp: [""],
+            temp: ["3 days at 20°C, 2 days at 19°C, rest 24°C"],
             worth_ph: null,
             abv: null,
             cold_hop_date: "2025.09.01",
             cold_hop_length: null,
-        },
-        bottling: {
             bottling_date: "",
             bottles_filled: null,
             sugar_per_bottle: null,
-        }
+        
     }
 ]

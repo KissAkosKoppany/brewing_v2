@@ -5,9 +5,9 @@ const ShopItem = ({ beer }) => {
 
   const discountedPrice = beer.price * (100-beer.discount) / 100;
 
-  const priceInt = (price) => price.toFixed(2).toString().split(".")[0];
+  const priceInt = (price) => price.toString().split(".")[0];
 
-  const priceFloat = (price) => price.toFixed(2).toString().split(".")[1];
+  const priceFloat = (price) => price.toString().split(".")[1];
 
   return (
     <Link to={beer.name} className='link'>
@@ -20,7 +20,7 @@ const ShopItem = ({ beer }) => {
             <p>{beer.description}</p>
         </div>
         <div className='shop-item-card-price'>
-            <p>{beer.alcohol}</p>
+            <p>ABV: {beer.alcohol}%</p>
             <p>{priceInt(discountedPrice)},<span>{priceFloat(discountedPrice)}</span> RON</p>
         </div>
     </div>

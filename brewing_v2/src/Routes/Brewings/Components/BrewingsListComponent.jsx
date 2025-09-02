@@ -14,16 +14,16 @@ const BrewingsListComponent = ({ brewings }) => {
         {
             brewings.map(brewing => {
                 return (
-                    <div key={brewing.info.id} className='brewing-list-item'>
+                    <div key={brewing.id} className='brewing-list-item'>
                         <div className='group'>
-                            <p>{brewing.info.id}</p>
+                            <p>{brewing.id}</p>
                             <p>
-                                <Link className='link' to={`/brewings/brewings-list/${brewing.info.id}`}>
-                                    {brewing.info.beer_name}
+                                <Link className='link' to={`/brewings/brewings-list/${brewing.id}`}>
+                                    {brewing.beer_name}
                                 </Link>
                             </p>
                         </div>
-                        <p>{brewing.info.brew_date}</p>
+                        <p>{brewing.brew_date}</p>
                     </div>
                 )
             })

@@ -8,6 +8,7 @@ export const useLoadBeers = () => {
 
     const getAllBeers = useCallback(async() => {
         const allBeers = await httpGetAllBeers()
+        console.log('from server', allBeers)
         dispatch(setAllBeers(allBeers))
     }, [dispatch])
 

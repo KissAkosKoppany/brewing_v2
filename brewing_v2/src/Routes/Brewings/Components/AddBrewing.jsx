@@ -8,12 +8,9 @@ const AddBrewing = ({ brewings }) => {
     e.preventDefault()
     
     let newBrew = {
-      info: {
             id: e.target.id.value,
             beer_name: e.target.name.value,
             brew_date: e.target.brew_date.value,
-        },
-        brewing: {
             preboil_gr: e.target.pre_gr.value,
             preboil_v: e.target.pre_v.value,
             postbiol_v: e.target.post_v.value,
@@ -24,8 +21,6 @@ const AddBrewing = ({ brewings }) => {
             aeration_duration: e.target.aeration_dur.value,
             pitching_method: e.target.pitch_method.value,
             yeast_type: e.target.yeast.value,
-        },
-        fermentation: {
             gravity_4_days: e.target.gr_4.value,
             gravity_6_days: e.target.gr_6.value,
             final_gravity: e.target.fg.value,
@@ -34,12 +29,9 @@ const AddBrewing = ({ brewings }) => {
             abv: e.target.abv.value,
             cold_hop_date: e.target.cold_hop_date.value,
             cold_hop_length: e.target.cold_hop_dur.value,
-        },
-        bottling: {
             bottling_date: e.target.bottling_date.value,
             bottles_filled: e.target.bottles_filled.value,
             sugar_per_bottle: e.target.sugar_bottle.value,
-        }
     }
 
     brewings.push(newBrew)
