@@ -3,7 +3,6 @@ const API_URL = 'http://localhost:8000'
 export async function httpGetAllBeers() {
     try {
         const response = await fetch(`${API_URL}/beers`)
-        // console.log("frontend", response)
         return await response.json()
     } catch(err) {
         console.log("error getting the beers", err)
@@ -24,7 +23,13 @@ export async function httpAddReview() {
 }
 
 export async function httpGetBrewingsList() {
-    //after api is implemented
+    try {
+        const response = await fetch(`${API_URL}/brewings`)
+        const brewings = await response.json()
+        return await brewings
+    } catch(err) {
+        console.log("error getting the brewings list", err)
+    }
 }
 
 export async function httpAddBrewing() {

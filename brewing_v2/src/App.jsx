@@ -7,10 +7,12 @@ import Brewings from './Routes/Brewings/Brewings'
 import Shop from './Routes/Shop/Shop'
 import { useLoadBeers } from './hooks/useLoadBeers'
 import Cart from './Routes/Cart/Cart'
+import { useLoadBrewings } from './hooks/useLoadBrewings'
 
 function App() {
 
   useLoadBeers()
+  useLoadBrewings()
 
   return (
     <div className='app-container'>

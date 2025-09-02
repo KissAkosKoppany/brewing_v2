@@ -13,6 +13,14 @@ const Navbar = () => {
 
   return (
     <div className='nav-container'>
+        <Link className='link' to="/">
+            <div onClick={() => toggleLink(0)} className='logo'>
+                <div className='logo-image'>
+                    <img src="/neko-kaiju-logo.png" alt="logo" />
+                </div>
+                NEKO KAIJU
+            </div>
+        </Link>
         <div className='nav-buttons'>
             <Link className={`${activeLink === 1 ? "active-link" : ""} link`} to='shop'>
                 <div onClick={() => toggleLink(1)} className='nav-item'>
@@ -34,17 +42,12 @@ const Navbar = () => {
                     Recipes
                 </div>
             </Link>
+        </div>
             <Link className={`${activeLink === 5 ? "active-link" : ""} link`} to='cart'>
                 <div onClick={() => toggleLink(5)} className='nav-item icon'>
                     <BsFillCartFill />
                 </div>
             </Link>
-        </div>
-        <Link className='link' to="/">
-            <div onClick={() => toggleLink(0)} className='logo'>
-                Neko kaiju
-            </div>
-        </Link>
     </div>
   )
 }

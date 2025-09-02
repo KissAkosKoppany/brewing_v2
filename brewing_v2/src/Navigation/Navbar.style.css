@@ -11,7 +11,25 @@
 
 .logo {
     font-size: larger;
-    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    color: var(--clr-orange);
+}
+
+.logo-image {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    margin-left: 1rem;
+    margin-right: .5rem;
+    border-radius: 13%;
+}
+
+.logo-image img {
+    width: auto;
+    height: 100%;
+    border-radius: inherit;
 }
 
 .nav-buttons {
@@ -23,6 +41,7 @@
     border-radius: var(--br);
     font-size: large;
     font-weight: bolder;
+    text-transform: uppercase;
 }
 
 .link {
@@ -52,3 +71,4 @@
     cursor: pointer;
     color: var(--clr-highlight);
 }
+

@@ -18,13 +18,15 @@
   --clr-bg: rgb(34, 34, 34);
   --clr-bg-accent: rgb(22, 22, 22);
   --clr-text: rgb(214, 214, 214);
-  --clr-highlight: rgb(42, 115, 99);
+  --clr-highlightsss: rgb(42, 115, 99);
   --clr-hover: rgba(255, 255, 255, 0.062);
   --clr-active: rgba(255, 255, 255, 0.148);
   --clr-red: rgb(145, 36, 36);
   --clr-gold: gold;
   --br: 2px;
   --max-w: 1270px;
+  --clr-highlight: rgb(35, 76, 52);
+  --clr-orange: rgb(228, 87, 46);
 }
 
 * {
