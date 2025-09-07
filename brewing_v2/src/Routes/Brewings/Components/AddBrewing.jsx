@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useCallback } from 'react'
+import { httpAddBrewing } from '../../../hooks/requests'
 
-const AddBrewing = ({ brewings }) => {
+const AddBrewing = () => {
 
-  
+  // const formRef = useRef();  
 
-  const handleSubmit = (e) => {
+  const handleSubmit = useCallback(() => async(e) => {
     e.preventDefault()
     
-    let newBrew = {
-            id: e.target.id.value,
+    const newBrew = {
+            // id: e.target.id.value,
             beer_name: e.target.name.value,
             brew_date: e.target.brew_date.value,
             preboil_gr: e.target.pre_gr.value,
@@ -34,18 +35,15 @@ const AddBrewing = ({ brewings }) => {
             sugar_per_bottle: e.target.sugar_bottle.value,
     }
 
-    brewings.push(newBrew)
-    // save it to local and then get it from local to reducer and load to brewinglist brewings.push(obj from local)
-
-  }
-
-  console.log("add brewing", brewings)
+    e.target.reset()
+    await httpAddBrewing(newBrew)
+  }, [httpAddBrewing])
 
   return (
     <div className='brewing-item'>
       <h1>Add Brew</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit()}>
         <div className='brewing-item-group'>
           <div className='brewing-item-info'>
             <label htmlFor="name"><p>Beer name:</p></label>
@@ -55,10 +53,10 @@ const AddBrewing = ({ brewings }) => {
             <label htmlFor="brew_date"><p>Brew date:</p></label>
             <input type='date' id='brew_date' name='brew_date' />
           </div>
-          <div className='brewing-item-info'>
+          {/* <div className='brewing-item-info'>
             <label htmlFor="id"><p>ID:</p></label>
             <input type='number' id='id' name='id' required />
-          </div>
+          </div> */}
         </div>
         
         <div className='brewing-item-group'>
@@ -146,7 +144,7 @@ const AddBrewing = ({ brewings }) => {
           </div>
           <div className='brewing-item-info'>
             <label htmlFor="bottles_filled"><p>Bottles filled:</p></label>
-            <input type='text' id='bottles_filled' name='bottles_filled' />
+            <input type='number' id='bottles_filled' name='bottles_filled' />
           </div>
           <div className='brewing-item-info'>
             <label htmlFor="sugar_bottle"><p>Sugar per bottle:</p></label>

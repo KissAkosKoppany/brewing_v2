@@ -1,3 +1,5 @@
+import { soundEffects } from "../SoundEffects/soundEffects"
+
 const API_URL = 'http://localhost:8000'
 
 export async function httpGetAllBeers() {
@@ -32,8 +34,20 @@ export async function httpGetBrewingsList() {
     }
 }
 
-export async function httpAddBrewing() {
-    //after api is implemented
+export async function httpAddBrewing(newBrewing) {
+    try {
+        await fetch(`${API_URL}/brewings/add-brewing`, {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(newBrewing)
+        })
+        soundEffects.success.play()
+    } catch(err) {
+        // soundEffects.fail.play()
+        console.log("Error adding brewing", err)
+    }
 }
 
 export async function httpUpdateBrewing() {

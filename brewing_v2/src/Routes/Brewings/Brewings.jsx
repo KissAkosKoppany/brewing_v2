@@ -15,7 +15,7 @@ const Brewings = () => {
       <BrewingsNav />
       <Routes>
         <Route path="brewings-list/*" element={<BrewingsList brewings={brewingsList} />} />
-        <Route path="add-brewing" element={<AddBrewing brewings={brewingsList} />} />
+        <Route path="add-brewing" element={<AddBrewing />} />
       </Routes>
     </div>
   )
