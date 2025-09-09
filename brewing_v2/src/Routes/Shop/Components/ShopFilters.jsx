@@ -40,12 +40,21 @@ const ShopFilters = ({ applyFilter }) => {
             </li>
             <li 
               onClick={() => {
-                applyFilter("other")
-                toggleActiveButton('other')
+                applyFilter("porter")
+                toggleActiveButton('porter')
               }}
-              className={`${activeButton === "other" ? "active-link" : ""} `}
+              className={`${activeButton === "porter" ? "active-link" : ""} `}
             >
-              Other
+              Porter
+            </li>
+            <li 
+              onClick={() => {
+                applyFilter("weizen")
+                toggleActiveButton('weizen')
+              }}
+              className={`${activeButton === "weizen" ? "active-link" : ""} `}
+            >
+              Weizen
             </li>
         </ul>
     </div>

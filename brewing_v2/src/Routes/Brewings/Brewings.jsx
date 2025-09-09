@@ -9,14 +9,24 @@ import { useSelector } from "react-redux"
 const Brewings = () => {
 
   const brewingsList = useSelector(state => state.rootReducer.brewing.brewingsList)
+  const isAdmin = useSelector(state => state.rootReducer.admin.admin)
 
   return (
     <div className="brewings-container">
-      <BrewingsNav />
-      <Routes>
-        <Route path="brewings-list/*" element={<BrewingsList brewings={brewingsList} />} />
-        <Route path="add-brewing" element={<AddBrewing />} />
-      </Routes>
+      {
+        isAdmin ?
+          <>
+            <BrewingsNav />
+            <Routes>
+              <Route index path="brewings-list/*" element={<BrewingsList brewings={brewingsList} />} />
+              <Route path="add-brewing" element={<AddBrewing />} />
+            </Routes>
+          </>
+        :
+          <Routes>
+              <Route index path="brewings-list/*" element={<BrewingsList brewings={brewingsList} />} />
+          </Routes>
+      }
     </div>
   )
 }

@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import { Link } from 'react-router'
 import './Navbar.style.css'
 import { BsFillCartFill } from "react-icons/bs";
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
 
     const [activeLink, setActiveLink] = useState(0)
+
+    const isAdmin = useSelector(state => state.rootReducer.admin.admin)
 
     const toggleLink = (link) => {
         setActiveLink(link)
@@ -32,22 +35,37 @@ const Navbar = () => {
                     Stock
                 </div>
             </Link>
-            <Link className={`${activeLink === 3 ? "active-link" : ""} link`} to='brewings'>
+            <Link className={`${activeLink === 3 ? "active-link" : ""} link`} to={isAdmin ? 'brewings' : 'brewings/brewings-list'}>
                 <div onClick={() => toggleLink(3)} className='nav-item'>
                     Brewings
                 </div>
             </Link>
-            <Link className={`${activeLink === 4 ? "active-link" : ""} link`} to='recipes'>
-                <div onClick={() => toggleLink(4)} className='nav-item'>
-                    Recipes
-                </div>
-            </Link>
+            {
+                isAdmin ?
+                    <Link className={`${activeLink === 4 ? "active-link" : ""} link`} to='recipes'>
+                        <div onClick={() => toggleLink(4)} className='nav-item'>
+                            Recipes
+                        </div>
+                    </Link>
+                :
+                null
+            }
+            {
+                isAdmin ?
+                    <Link className={`${activeLink === 6 ? "active-link" : ""} link`} to='admin-dashboard-6666'>
+                        <div onClick={() => toggleLink(6)} className='nav-item'>
+                            Admin
+                        </div>
+                    </Link>
+                :
+                null
+            }
         </div>
-            <Link className={`${activeLink === 5 ? "active-link" : ""} link`} to='cart'>
-                <div onClick={() => toggleLink(5)} className='nav-item icon'>
-                    <BsFillCartFill />
-                </div>
-            </Link>
+        <Link className={`${activeLink === 5 ? "active-link" : ""} link`} to='cart'>
+            <div onClick={() => toggleLink(5)} className='nav-item icon'>
+                <BsFillCartFill />
+            </div>
+        </Link>
     </div>
   )
 }

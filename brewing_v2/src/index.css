@@ -27,6 +27,11 @@
   --max-w: 1270px;
   --clr-highlight: rgb(35, 76, 52);
   --clr-orange: rgb(228, 87, 46);
+  --clr-samurai: rgb(33, 76, 45);
+  --clr-shogun: rgb(149, 61, 36);
+  --clr-yakuza: rgb(164, 71, 106);
+  --clr-sumo: rgb(37, 24, 13);
+  --clr-ronin: rgb(171, 108, 42);
 }
 
 * {

@@ -64,6 +64,8 @@
 
 .nav-item.icon {
     padding: .5rem 1rem;
+    /* cart icon hidden */
+    display:none
 }
 
 .nav-item:hover {

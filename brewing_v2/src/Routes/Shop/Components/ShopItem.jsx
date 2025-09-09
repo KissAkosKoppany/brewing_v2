@@ -11,17 +11,17 @@ const ShopItem = ({ beer }) => {
 
   return (
     <Link to={beer.name} className='link'>
-    <div className='shop-item-card'>
+    <div className={`shop-item-card ${beer.color_scheme}`}>
         <div className='card-image-container'>
             <img src={beer.images[0]} alt="beer cover" />
         </div>
         <div className='shop-item-card-description'>
             <h1>{beer.name}</h1>
-            <p>{beer.description}</p>
+            {/* <p>{beer.description}</p> */}
         </div>
         <div className='shop-item-card-price'>
             <p>ABV: {beer.alcohol}%</p>
-            <p>{priceInt(discountedPrice)},<span>{priceFloat(discountedPrice)}</span> RON</p>
+            <p>{priceInt(discountedPrice.toFixed(2))},<span>{priceFloat(discountedPrice.toFixed(2))}</span> RON</p>
         </div>
     </div>
     </Link>

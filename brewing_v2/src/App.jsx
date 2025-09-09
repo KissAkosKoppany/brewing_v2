@@ -8,6 +8,8 @@ import Shop from './Routes/Shop/Shop'
 import { useLoadBeers } from './hooks/useLoadBeers'
 import Cart from './Routes/Cart/Cart'
 import { useLoadBrewings } from './hooks/useLoadBrewings'
+import Footer from './Footer/Footer'
+import Admin from './Routes/Admin/Admin'
 
 function App() {
 
@@ -24,7 +26,9 @@ function App() {
         <Route path='brewings/*' element={<Brewings />} />
         <Route path='recipes/*' element={<Recipes />} />
         <Route path='cart' element={<Cart />} />
+        <Route path='admin-dashboard-6666' element={<Admin />} />
       </Routes>
+      <Footer />
     </div>
   )
 }

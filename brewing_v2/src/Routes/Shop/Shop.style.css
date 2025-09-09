@@ -84,6 +84,56 @@
     animation: rotation 4s linear infinite;
 }
 
+.shop-item-card.samurai::before,
+.shop-item-card.samurai::after {
+    background-image: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-samurai),
+        var(--clr-bg-accent),
+        var(--clr-samurai)
+    );
+}
+
+.shop-item-card.shogun::before,
+.shop-item-card.shogun::after {
+    background-image: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-shogun),
+        var(--clr-bg-accent),
+        var(--clr-shogun)
+    );
+}
+
+.shop-item-card.yakuza::before,
+.shop-item-card.yakuza::after {
+    background-image: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-yakuza),
+        var(--clr-bg-accent),
+        var(--clr-yakuza)
+    );
+}
+
+.shop-item-card.sumo::before,
+.shop-item-card.sumo::after {
+    background-image: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-sumo),
+        var(--clr-bg-accent),
+        var(--clr-sumo)
+    );
+}
+
+.shop-item-card.ronin::before,
+.shop-item-card.ronin::after {
+    background-image: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-ronin),
+        var(--clr-bg-accent),
+        var(--clr-ronin)
+    );
+} 
+
 .shop-item-card::after {
     filter: blur(5px);
 }
@@ -110,14 +160,14 @@
     font-size: large;
 }
 
-.shop-item-card-description p {
+/* .shop-item-card-description p {
     height: 5.4rem;
     overflow-y: scroll;
-}
+} */
 
-.shop-item-card-description p::-webkit-scrollbar {
+/* .shop-item-card-description p::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .shop-item-card-description p,
 .shop-item-card-price p {
@@ -125,7 +175,7 @@
 }
 
 .shop-item-card-price {
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     width: 100%;
     display: flex;
@@ -203,6 +253,10 @@
     font-size: medium;
 }
 
+.item-page-beer-info ul li p::first-letter {
+    text-transform: capitalize;
+}
+
 .item-page-price {
     display: flex;
     justify-content: space-between;
@@ -219,7 +273,7 @@
 }
 
 .item-page-price p:first-child span {
-    font-size: x-small;
+    font-size: smaller;
 }
 
 .item-page-price > p:first-child, .discounted-price > p:last-child {

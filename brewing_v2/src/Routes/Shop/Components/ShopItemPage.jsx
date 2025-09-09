@@ -64,29 +64,30 @@ const ShopItemPage = () => {
               </li>
               <li>
                 <p>Litreage:</p>
-                <p>0,33l</p>
+                <p>{selectedBeer?.litrage} ml</p>
               </li>
             </ul>
           </div>
           <div className='item-page-price-box'>
             <div className={`item-page-price ${selectedBeer?.stock > 0 ? 'on-stock' : 'out-of-stock'}`}>
-              {
+              <p>{priceInt(discountedPrice.toFixed(2))},<span>{priceFloat(discountedPrice.toFixed(2))}</span> RON</p>
+              {/* {
                 selectedBeer?.discount === 0
                 ?
-                <p>{priceInt(discountedPrice)},<span>{priceFloat(discountedPrice)}</span> RON</p>
+                <p>{priceInt(discountedPrice.toFixed(2))},<span>{priceFloat(discountedPrice.toFixed(2))}</span> RON</p>
                 :
                 <div className='discounted-price'>
                   <p>{priceInt(originalPrice)},<span>{priceFloat(originalPrice)}</span> RON</p>
-                  <p>{priceInt(discountedPrice)},<span>{priceFloat(discountedPrice)}</span> RON</p>
+                  <p>{priceInt(discountedPrice.toFixed(2))},<span>{priceFloat(discountedPrice.toFixed(2))}</span> RON</p>
                 </div>
-              }
+              } */}
               <p title={selectedBeer?.stock}>
                 {selectedBeer?.stock > 0 ? "In stock" : "Out of stock"}
               </p>
             </div>
-            <div className='item-page-cart-button'>
+            {/* <div className='item-page-cart-button'>
               <button><BsFillCartPlusFill /></button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
