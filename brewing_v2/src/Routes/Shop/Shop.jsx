@@ -6,8 +6,6 @@ import ShopItemPage from './Components/ShopItemPage'
 import ShopMain from './Components/ShopMain'
 
 const Shop = () => {
-
-
   return (
     <div className='shop-container'>
         <Routes>

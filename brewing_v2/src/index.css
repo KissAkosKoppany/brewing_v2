@@ -24,14 +24,21 @@
   --clr-red: rgb(145, 36, 36);
   --clr-gold: gold;
   --br: 2px;
+  --bs: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --max-w: 1270px;
   --clr-highlight: rgb(35, 76, 52);
   --clr-orange: rgb(228, 87, 46);
+  --clr-orange-d: rgb(180, 60, 23);
   --clr-samurai: rgb(33, 76, 45);
+  --clr-samurai-d: rgb(17, 41, 24);
   --clr-shogun: rgb(149, 61, 36);
+  --clr-shogun-d: rgb(65, 27, 17);
   --clr-yakuza: rgb(164, 71, 106);
+  --clr-yakuza-d: rgb(54, 23, 35);
   --clr-sumo: rgb(37, 24, 13);
+  --clr-sumo-d: rgb(22, 14, 9);
   --clr-ronin: rgb(171, 108, 42);
+  --clr-ronin-d: rgb(53, 34, 13);
 }
 
 * {

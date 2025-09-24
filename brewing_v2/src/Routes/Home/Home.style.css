@@ -8,11 +8,13 @@
 /* ...........home banner............. */
 
 .home-banner-container {
-    background-color: var(--clr-highlight);
+    background-color: var(--clr-bg-accent);
+    /* border-top: 2px solid var(--clr-orange); */
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: -2rem;
+    padding-top: 2rem;
 }
 
 .home-banner {
@@ -25,23 +27,348 @@
 .banner-title h1 {
     color: var(--clr-orange);
     margin: 0;
-    font-size: xxx-large;
+    font-size: xx-large;
     font-weight: 900;
+    margin: 1rem 0;
+}
+
+.banner-title h1:last-child {
+    font-size: x-large;
 }
 
 .banner-image {
-    width: 400px;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.banner-image img {
-    width: 100%;
+.banner-image-container {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-image-container img {
+    width: 90%;
     height: auto;
-    margin-bottom: 1.2rem;
+    object-fit: cover;
+    border-radius: var(--br);
+    clip-path: circle(58.7% at 50% 50%);
 }
 
 /* ............Home Slider.............. */
 
 .home-slider {
     width: var(--max-w);
+    /* margin-bottom: 2rem; */
+}
+
+.slider-container {
+    width: var(--max-w);
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.reel-nav-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+.reel-nav-dot {
+    scale: 1;
+    transition: all 0.3s ease;
+}
+
+.reel-nav-dot:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.slider-element {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.slider-image {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: var(--clr-orange); */
+    clip-path: ellipse(67% 100% at 31% 35%);
+}
+
+.slider-image-container {
+    width: 350px;
+    height: 350px;
+}
+
+.slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-description {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.slider-description h3 {
+    font-size: xx-large;
+    margin: 0;
+    color: var(--clr-text);
+}
+
+.slider-description p {
+    padding: .2rem;
+    color: var(--clr-text);
+}
+
+.slider-description button {
+    background-color: var(--clr-bg);
+    border: 3px solid var(--clr-orange);
+    padding: .4rem 1.8rem;
+    border-radius: var(--br);
+    font-size:medium;
+    color: var(--clr-text);
+    cursor: pointer;
+    margin-top: .5rem;
+}
+
+.slider-description button:hover {
+    color: var(--clr-orange);
+}
+
+.slider-description button:active {
+    color: var(--clr-text);
+}
+
+.slider-description button:focus {
+    border: 3px solid var(--clr-orange);
+}
+
+
+/* .............Custon colors............... */
+
+/* yakuza */
+/* .slider-element.yakuza {
+    border-right: 6px solid var(--clr-yakuza);
+} */
+
+.slider-image.yakuza {
+    /* background-color: var(--clr-yakuza); */
+    background-image: linear-gradient(to right, var(--clr-yakuza-d), var(--clr-yakuza));
+}
+
+.slider-description.yakuza button {
+    border: 3px solid var(--clr-yakuza);
+}
+
+.slider-description.yakuza button:hover {
+    color: var(--clr-yakuza);
+}
+
+.slider-description.yakuza button:focus {
+    border: 3px solid var(--clr-yakuza);
+}
+
+/* samurai */
+/* .slider-element.samurai {
+    border-right: 6px solid var(--clr-samurai);
+} */
+
+.slider-image.samurai {
+    /* background-color: var(--clr-samurai); */
+    background-image: linear-gradient(to right, var(--clr-samurai-d), var(--clr-samurai));
+}
+
+.slider-description.samurai button {
+    border: 3px solid var(--clr-samurai);
+}
+
+.slider-description.samurai button:hover {
+    color: var(--clr-samurai);
+}
+
+.slider-description.samurai button:focus {
+    border: 3px solid var(--clr-samurai);
+}
+
+/* shogun */
+/* .slider-element.shogun {
+    border-right: 6px solid var(--clr-shogun);
+} */
+
+.slider-image.shogun {
+    /* background-color: var(--clr-shogun); */
+    background-image: linear-gradient(to right, var(--clr-shogun-d), var(--clr-shogun));
+}
+
+.slider-description.shogun button {
+    border: 3px solid var(--clr-shogun);
+}
+
+.slider-description.shogun button:hover {
+    color: var(--clr-shogun);
+}
+
+.slider-description.shogun button:focus {
+    border: 3px solid var(--clr-shogun);
+}
+
+/* ronin */
+/* .slider-element.ronin {
+    border-right: 6px solid var(--clr-ronin);
+} */
+
+.slider-image.ronin {
+    /* background-color: var(--clr-ronin); */
+    background-image: linear-gradient(to right, var(--clr-ronin-d), var(--clr-ronin));
+}
+
+.slider-description.ronin button {
+    border: 3px solid var(--clr-ronin);
+}
+
+.slider-description.ronin button:hover {
+    color: var(--clr-ronin);
+}
+
+.slider-description.ronin button:focus {
+    border: 3px solid var(--clr-ronin);
+}
+
+/* sumo */
+/* .slider-element.sumo {
+    border-right: 6px solid var(--clr-sumo);
+} */
+
+.slider-image.sumo {
+    /* background-color: var(--clr-sumo); */
+    background-image: linear-gradient(to right, var(--clr-sumo-d), var(--clr-sumo));
+}
+
+.slider-description.sumo button {
+    border: 3px solid var(--clr-sumo);
+}
+
+.slider-description.sumo button:hover {
+    color: var(--clr-sumo);
+}
+
+.slider-description.sumo button:focus {
+    border: 3px solid var(--clr-sumo);
+}
+
+/* .........Home About........... */
+
+.home-about {
+    max-width: var(--max-w);
+    margin-bottom: 2rem;
+}
+
+.about-title h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    /* color: var(--clr-orange); */
+}
+
+.about-text {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about-text p {
+    text-indent: 2rem;
+    width: 30%;
+    padding: 1rem;
+    background-color: var(--clr-bg-accent);
+    border-radius: var(--br);
+    box-shadow: var(--bs);
+}
+
+.about-text p span {
+    color: var(--clr-ronin);
+}
+
+.about-text p:last-child span {
+    color: var(--clr-orange);
+}
+
+.about-text p span:last-child {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+.about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title p {
+    margin: .5rem;
+    color: var(--clr-highlight);
+    font-size:x-large;
+}
+
+.about-title p:last-child {
+    transform: scaleX(-1);
+}
+
+/* .........Home Video........... */
+
+.home-video {
+    max-width: var(--max-w);
+    margin-bottom: 2rem;
+}
+
+.video-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-title h2 {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.video-title p {
+    font-size: xx-large;
+    margin: .5rem;
+    color: var(--clr-yakuza);
+}
+
+.video-title p:last-child {
+    transform: scaleX(-1);
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: var(--bs);
+}
+
+.video iframe {
+    border-radius: var(--br);
 }
