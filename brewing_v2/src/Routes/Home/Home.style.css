@@ -1,0 +1,47 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ...........home banner............. */
+
+.home-banner-container {
+    background-color: var(--clr-highlight);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -2rem;
+}
+
+.home-banner {
+    width: var(--max-w);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-title h1 {
+    color: var(--clr-orange);
+    margin: 0;
+    font-size: xxx-large;
+    font-weight: 900;
+}
+
+.banner-image {
+    width: 400px;
+    height: auto;
+}
+
+.banner-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.2rem;
+}
+
+/* ............Home Slider.............. */
+
+.home-slider {
+    width: var(--max-w);
+}
