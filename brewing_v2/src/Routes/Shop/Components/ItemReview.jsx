@@ -2,12 +2,13 @@ import React from 'react'
 import { MdOutlineStarBorder } from "react-icons/md";
 import ReviewComments from './ReviewComments';
 
-const ItemReview = ({ handleModalOpen, selectedBeer }) => {
+const ItemReview = ({ handleModalOpen, selectedReview, selectedBeer }) => {
+
 
   const getAvarageRating = (arr) => {
     if (arr) {
       const sum = arr.reduce((acc, review) => {
-        acc += review.rating;
+        acc = Number(acc) + Number(review.rating);
         return acc;
       }, 0);
       return sum/arr.length;
@@ -17,7 +18,8 @@ const ItemReview = ({ handleModalOpen, selectedBeer }) => {
   const getStarsCount = (arr, stars) => {
     if (arr) {
       const sum = arr.reduce((acc, review) => {
-        if (review.rating === stars) {
+        const rating = Number(review.rating)
+        if (rating === stars) {
           acc += 1
         } 
         return acc
@@ -26,15 +28,15 @@ const ItemReview = ({ handleModalOpen, selectedBeer }) => {
     } else return 0
   }
 
-  const rating = getAvarageRating(selectedBeer?.reviews);
+  const rating = getAvarageRating(selectedReview);
 
-  const reviewsCount = selectedBeer?.reviews?.length;
+  const reviewsCount = selectedReview?.length;
 
-  const fiveStarCount = getStarsCount(selectedBeer?.reviews, 5)
-  const fourStarCount = getStarsCount(selectedBeer?.reviews, 4)
-  const threeStarCount = getStarsCount(selectedBeer?.reviews, 3)
-  const twoStarCount = getStarsCount(selectedBeer?.reviews, 2)
-  const oneStarCount = getStarsCount(selectedBeer?.reviews, 1)
+  const fiveStarCount = getStarsCount(selectedReview, 5)
+  const fourStarCount = getStarsCount(selectedReview, 4)
+  const threeStarCount = getStarsCount(selectedReview, 3)
+  const twoStarCount = getStarsCount(selectedReview, 2)
+  const oneStarCount = getStarsCount(selectedReview, 1)
 
   return (
     <div className='shop-item-page-review-container'>
@@ -45,7 +47,7 @@ const ItemReview = ({ handleModalOpen, selectedBeer }) => {
             {
               reviewsCount && rating
               ?
-              <p>{rating} from {reviewsCount} reviews</p>
+              <p>{rating.toFixed(1)} from {reviewsCount} reviews</p>
               :
               <p>No reviews yet!</p>
             }
@@ -81,9 +83,10 @@ const ItemReview = ({ handleModalOpen, selectedBeer }) => {
         </div>
         <div className='review-comments-container'>
           {
+            // replace with the reviews obj
             reviewsCount ?
-            selectedBeer?.reviews.map(review => (
-              <ReviewComments key={review.email} review={review} />
+            selectedReview.map(review => (
+              <ReviewComments key={review.id} review={review} selectedBeer={selectedBeer} />
             ))
             :
             null

@@ -10,7 +10,7 @@ const HomeVideo = () => {
             <p><GiVideoCamera /></p>
         </div>
         <div className='video'>
-            <iframe width="700" height="394" src="https://www.youtube.com/embed/UKQqesuxLaE?si=4ysy1KmN5veKI2gb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="700" height="394" src="https://www.youtube.com/embed/UKQqesuxLaE?si=4ysy1KmN5veKI2gb" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
         </div>
     </div>
   )

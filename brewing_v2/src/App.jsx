@@ -10,18 +10,20 @@ import Cart from './Routes/Cart/Cart'
 import { useLoadBrewings } from './hooks/useLoadBrewings'
 import Footer from './Footer/Footer'
 import Admin from './Routes/Admin/Admin'
+import { useLoadReviews } from './hooks/useLoadReviews'
 
 function App() {
 
   useLoadBeers()
   useLoadBrewings()
+  useLoadReviews()
 
   return (
     <div className='app-container'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='shop/*' element={<Shop />} />
+        <Route path='beers/*' element={<Shop />} />
         <Route path='stock' element={<Stock />} />
         <Route path='brewings/*' element={<Brewings />} />
         <Route path='recipes/*' element={<Recipes />} />

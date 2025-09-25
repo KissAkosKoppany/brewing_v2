@@ -17,11 +17,27 @@ export async function httpAddBeer() {
 }
 
 export async function httpGetReviews() {
-    //after api is implemented
+    try {
+        const response = await fetch(`${API_URL}/reviews`)
+        return await response.json()
+    } catch(err) {
+        console.log('error getting the reviews', err)
+    }
 }
 
-export async function httpAddReview() {
-    //after api is implemented
+export async function httpAddReview(newReview) {
+    try {
+        await fetch(`${API_URL}/reviews/add-review`, {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(newReview)
+            })
+            soundEffects.success.play()
+    } catch(err) {
+        console.log("error adding review", err)
+    }
 }
 
 export async function httpGetBrewingsList() {

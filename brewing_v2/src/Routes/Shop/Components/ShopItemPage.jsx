@@ -1,21 +1,33 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { useLoadSelectedBeer } from '../../../hooks/useLoadSelectedBeer'
 import { useSelector } from 'react-redux'
 import ImageSlider from './ImageSlider'
 import ItemReview from './ItemReview'
 import ItemReviewModal from './ItemReviewModal'
-import { BsFillCartPlusFill } from "react-icons/bs";
+import Spinner from '../../../GeneralComponents/Spinner'
+// import { BsFillCartPlusFill } from "react-icons/bs";
 
 const ShopItemPage = () => {
 
   const [openModal, setOpenModal] = useState(false)
+
+  const [selectedReview, setSelectedReview] = useState([])
+
+  const allReviews = useSelector(state => state.rootReducer.reviews.allReviews)
 
   const { id } = useParams()
   
   useLoadSelectedBeer(id)
 
   const selectedBeer = useSelector(state => state.rootReducer.beer.selectedBeer)
+
+  useEffect(() => {
+    if (allReviews) {
+      const review = allReviews.filter(rev => rev?.name === selectedBeer?.name)
+      setSelectedReview(review)
+    }
+  }, [selectedBeer])
 
   const images = selectedBeer?.images
 
@@ -91,12 +103,19 @@ const ShopItemPage = () => {
           </div>
         </div>
       </div>
-      <ItemReview handleModalOpen={handleModalOpen} selectedBeer={selectedBeer} />
       {
-        openModal ?
-        <ItemReviewModal handleModalClose={handleModalClose} />
+        selectedReview ?
+        <>
+          <ItemReview handleModalOpen={handleModalOpen} selectedReview={selectedReview} selectedBeer={selectedBeer} />
+          {
+            openModal ?
+            <ItemReviewModal handleModalClose={handleModalClose} selectedBeer={selectedBeer} />
+            :
+            null
+          }
+        </>
         :
-        null
+        <Spinner />
       }
     </div>
   )

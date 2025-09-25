@@ -1,5 +1,6 @@
 import React from 'react'
 import ShopItem from './ShopItem'
+import Spinner from '../../../GeneralComponents/Spinner'
 
 const ShopItems = ({ beers }) => {
 
@@ -7,7 +8,12 @@ const ShopItems = ({ beers }) => {
     <div className='shop-items-container'>
       {
         beers?.map(beer => (
-          <ShopItem beer={beer} key={beer.name} />
+          
+            beers ?
+              <ShopItem beer={beer} key={beer.name} />
+            :
+              <Spinner key={beer.name} />
+          
         ))
       }
     </div>

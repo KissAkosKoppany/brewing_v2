@@ -1,5 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
 import SliderNav from './SliderNav'
+import Spinner from '../../../GeneralComponents/Spinner'
 import { useSelector } from 'react-redux'
 
 const HomeSlider = () => {
@@ -28,10 +29,8 @@ const HomeSlider = () => {
             </div>
         <SliderNav currentItem={currentItem} handleItemChangeOnClick={handleItemChangeOnClick} />
         </div>
-        
         :
-        null
-        // spinner
+        <Spinner />
       }
     </div>
   )

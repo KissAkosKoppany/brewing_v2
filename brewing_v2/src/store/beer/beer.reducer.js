@@ -2,7 +2,7 @@ import { BEER_ACTION_TYPES } from "./beer.type";
 
 const INITIAL_STATE = {
     allBeers: null,
-    selectedBeer: null
+    selectedBeer: null,
 }
 
 export const beerReducer = (state = INITIAL_STATE, action) => {

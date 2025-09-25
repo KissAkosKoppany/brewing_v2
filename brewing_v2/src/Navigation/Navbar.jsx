@@ -25,9 +25,9 @@ const Navbar = () => {
             </div>
         </Link>
         <div className='nav-buttons'>
-            <Link className={`${activeLink === 1 ? "active-link" : ""} link`} to='shop'>
+            <Link className={`${activeLink === 1 ? "active-link" : ""} link`} to='beers'>
                 <div onClick={() => toggleLink(1)} className='nav-item'>
-                    Shop
+                    Beers
                 </div>
             </Link>
             <Link className={`${activeLink === 2 ? "active-link" : ""} link`} to='stock'>
