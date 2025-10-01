@@ -21,7 +21,9 @@ const Navbar = () => {
                 <div className='logo-image'>
                     <img src="/neko-kaiju-logo.png" alt="logo" />
                 </div>
-                NEKO KAIJU
+                <p>
+                    NEKO KAIJU
+                </p>
             </div>
         </Link>
         <div className='nav-buttons'>
@@ -52,7 +54,7 @@ const Navbar = () => {
             }
             {
                 isAdmin ?
-                    <Link className={`${activeLink === 6 ? "active-link" : ""} link`} to='admin-dashboard-6666'>
+                    <Link className={`${activeLink === 6 ? "active-link" : ""} link`} to='admin-dashboard'>
                         <div onClick={() => toggleLink(6)} className='nav-item'>
                             Admin
                         </div>

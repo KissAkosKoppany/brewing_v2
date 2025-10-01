@@ -12,7 +12,7 @@ const BrewingItem = ({ brewing }) => {
       <div className='brewing-item-group'>
         <div className='brewing-item-info'>
           <p>Brew date:</p>
-          <p>{brewing.brew_date}</p>
+          <p>{brewing.brew_date.split('T')[0]}</p>
         </div>
         {
           isAdmin ?
@@ -121,7 +121,7 @@ const BrewingItem = ({ brewing }) => {
         </div>
         <div className='brewing-item-info'>
           <p>Cold hop date:</p>
-          <p>{brewing.cold_hop_date}</p>
+          <p>{brewing.cold_hop_date.split('T')[0]}</p>
         </div>
         <div className='brewing-item-info'>
           <p>Cold hop duration:</p>
@@ -154,7 +154,7 @@ const BrewingItem = ({ brewing }) => {
       <div className='brewing-item-group'>
         <div className='brewing-item-info'>
           <p>Bottling date:</p>
-          <p>{brewing.bottling_date}</p>
+          <p>{brewing.bottling_date?.split('T')[0]}</p>
         </div>
         <div className='brewing-item-info'>
           <p>Bottles filled:</p>

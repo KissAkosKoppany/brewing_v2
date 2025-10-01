@@ -26,6 +26,12 @@
   --br: 2px;
   --bs: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --max-w: 1270px;
+  /* medium below 1350px */
+  --w-medium: 850px;
+  /* medium below 950px */
+  --w-small: 550px;
+  /* medium below 600px */
+  --w-x-small: 350px;
   --clr-highlight: rgb(35, 76, 52);
   --clr-orange: rgb(228, 87, 46);
   --clr-orange-d: rgb(180, 60, 23);

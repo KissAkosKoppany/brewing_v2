@@ -1,12 +1,22 @@
 import React from 'react'
-import { useSetAdminTrue } from '../../hooks/useSetAdmin'
+import "./Admin.style.css"
+import { useSelector } from 'react-redux'
+import AdminLogin from './Components/AdminLogin'
+import Dashboard from './Components/Dashboard'
 
 const Admin = () => {
 
-    useSetAdminTrue()
+    const isAdmin = useSelector(state => state.rootReducer.admin.admin)
 
   return (
-    <div>Admin</div>
+    <div>
+      {
+        isAdmin ?
+          <Dashboard />
+          :
+          <AdminLogin />
+      }
+    </div>
   )
 }
 

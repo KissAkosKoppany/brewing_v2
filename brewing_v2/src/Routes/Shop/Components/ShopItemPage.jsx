@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { lazy, Suspense, useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import { useLoadSelectedBeer } from '../../../hooks/useLoadSelectedBeer'
 import { useSelector } from 'react-redux'
 import ImageSlider from './ImageSlider'
-import ItemReview from './ItemReview'
+// import ItemReview from './ItemReview'
 import ItemReviewModal from './ItemReviewModal'
 import Spinner from '../../../GeneralComponents/Spinner'
+import { GiBeerBottle } from "react-icons/gi";
 // import { BsFillCartPlusFill } from "react-icons/bs";
+
+const ItemReview = lazy(() => import("./ItemReview"))
 
 const ShopItemPage = () => {
 
@@ -39,13 +42,13 @@ const ShopItemPage = () => {
     setOpenModal(false)
   }
 
-  const originalPrice = selectedBeer?.price;
+  // const originalPrice = selectedBeer?.price;
 
-  const discountedPrice = originalPrice * (100-selectedBeer?.discount) / 100;
+  // const discountedPrice = originalPrice * (100-selectedBeer?.discount) / 100;
 
-  const priceInt = (price) => price?.toString().split(".")[0];
+  // const priceInt = (price) => price?.toString().split(".")[0];
 
-  const priceFloat = (price) => price?.toString().split(".")[1];
+  // const priceFloat = (price) => price?.toString().split(".")[1];
 
   return (
     <div className='shop-item-page-container'>
@@ -82,7 +85,8 @@ const ShopItemPage = () => {
           </div>
           <div className='item-page-price-box'>
             <div className={`item-page-price ${selectedBeer?.stock > 0 ? 'on-stock' : 'out-of-stock'}`}>
-              <p>{priceInt(discountedPrice.toFixed(2))},<span>{priceFloat(discountedPrice.toFixed(2))}</span> RON</p>
+              {/* <p>{priceInt(discountedPrice.toFixed(2))},<span>{priceFloat(discountedPrice.toFixed(2))}</span> RON</p> */}
+              <p>{selectedBeer?.stock} <span><GiBeerBottle /></span></p>
               {/* {
                 selectedBeer?.discount === 0
                 ?
@@ -103,8 +107,7 @@ const ShopItemPage = () => {
           </div>
         </div>
       </div>
-      {
-        selectedReview ?
+      <Suspense fallback={<Spinner />}>
         <>
           <ItemReview handleModalOpen={handleModalOpen} selectedReview={selectedReview} selectedBeer={selectedBeer} />
           {
@@ -114,9 +117,7 @@ const ShopItemPage = () => {
             null
           }
         </>
-        :
-        <Spinner />
-      }
+      </Suspense>
     </div>
   )
 }

@@ -12,7 +12,7 @@
 .logo {
     position: absolute;
     top: 5px;
-    left: -5px;
+    left: -13px;
     font-size: larger;
     display: flex;
     align-items: center;
@@ -77,3 +77,37 @@
     color: var(--clr-highlight);
 }
 
+@media screen and (max-width: 800px) {
+    .nav-buttons {
+        font-size: medium;
+    }
+    
+    .logo p {
+        font-size: medium;
+    }
+
+    .logo-image {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .nav-buttons {
+        font-size: small;
+    }
+
+    .nav-item {
+        padding: .3rem .5rem;
+    }
+    
+    .logo p {
+        display: none;
+        /* left: -10px; */
+    }
+
+    .logo-image {
+        width: 37px;
+        height: 37px;
+    }
+}

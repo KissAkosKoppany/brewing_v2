@@ -63,4 +63,46 @@
     color: var(--clr-orange);
 }
 
+/* ..........Responsive.......... */
+
+@media screen and (max-width: 900px) {
+    .stock-item {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .stock-item {
+        width: 300px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stock-info {
+        width: 100%;
+    }
+
+    .stock-title {
+        padding: .5rem;
+    }
+
+    .stock-title h2 {
+        font-size: large;
+    }
+
+    .stock-title p {
+        font-size: medium;
+    }
+
+    .stock-value {
+        margin: 0;
+        padding-bottom: .5rem;
+    }
+
+    .stock-value h2 {
+        font-size: larger;
+        margin: .2rem;
+    }
+}
 

@@ -34,3 +34,21 @@
 .footer a:link:hover {
     color: var(--clr-highlight);
 }
+
+@media screen and (max-width: 600px) {
+    .footer-logo {
+        width: 100px;
+    }
+
+    .footer-contact h2 {
+        font-size: large;
+    }
+
+    .footer-contact p {
+        font-size: medium;
+    }
+
+    .footer > p {
+        font-size: small;
+    }
+}

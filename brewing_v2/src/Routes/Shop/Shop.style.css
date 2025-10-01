@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    min-height: calc(100vh - 20.6rem);
 }
 
 /* ------------ Shop Filters ------------ */
@@ -205,7 +206,7 @@
 }
 
 .item-page-info-container {
-    width: 400px;
+    width: 440px;
     height: 600px;
     padding-left: 1rem;
     border-left: 2px solid var(--clr-highlight);
@@ -266,19 +267,21 @@
 .item-page-price p {
     position: relative;
     margin-bottom: 2rem;
-}
-
-.item-page-price p span {
-    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
 }
 
 .item-page-price p:first-child span {
-    font-size: smaller;
+    font-size: xx-large;
+    margin-top: .3rem;
+    color: var(--clr-orange);
 }
 
 .item-page-price > p:first-child, .discounted-price > p:last-child {
     font-weight: bold;
-    color: var(--clr-highlight);
+    color: var(--clr-orange);
     font-size: xx-large;
 }
 
@@ -355,7 +358,7 @@
   &::before {
     content: '★★★★★';
     letter-spacing: 3px;
-    background: linear-gradient(90deg, var(--clr-gold) var(--percent), var(--clr-text) var(--percent));
+    background: linear-gradient(90deg, var(--clr-ronin) var(--percent), var(--clr-text) var(--percent));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -474,8 +477,8 @@
 }
 
 .radio-input:checked ~ .radio-label {
-  color: #ffc700;
-  color: gold;
+  /* color: #ffc700; */
+  color: var(--clr-ronin);
 }
 
 .radio-label:hover,
@@ -493,7 +496,7 @@
 
 .group 			  { 
   position:relative; 
-  margin-bottom:45px; 
+  margin-bottom:45px;
 }
 
 .item-review-input {
@@ -606,6 +609,7 @@
     color: var(--clr-bg-accent);
     font-weight: bold;
     border-radius: var(--br);
+    cursor: pointer;
 }
 
 .item-review-submit-buttons button:hover {
@@ -664,6 +668,7 @@ progress[value]::-webkit-progress-value {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 .review-comments-container h3 {
@@ -677,4 +682,127 @@ progress[value]::-webkit-progress-value {
 
 .review-comment {
     margin-bottom: 1rem;
+}
+
+/* ..........Shop Items Responsive............... */
+
+@media screen and (max-width: 800px) {
+    .shop-container {
+        min-height: calc(100vh - 20.5rem);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .shop-item-card {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .shop-container {
+        min-height: calc(100vh - 20.2rem);
+    }
+
+    .shop-item-card {
+        width: 150px;
+    }
+
+    .card-image-container {
+        padding: .2rem;
+    }
+
+    .shop-item-card-description h1 {
+        font-size: small;
+    }
+
+    .shop-item-card-price p {
+        font-size: x-small;
+    }
+
+    .shop-filters-container ul li {
+        font-size: small;
+        padding: .1rem;
+        width: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .shop-container {
+        min-height: calc(100vh - 14.2rem);
+    }
+}
+
+/* ..........Shop Item Page Responsive............... */
+
+
+@media screen and (max-width: 950px) {
+    .item-page-info-container {
+        height: 400px;
+        width: 295px;
+    }
+
+    .item-page-price p {
+        font-size: large;
+    }
+
+    .item-page-price p:first-child span {
+        font-size: x-large;
+    }
+
+    .item-page-price > p:first-child, .discounted-price > p:last-child {
+        font-size: x-large;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .item-page-info-container {
+        /* height: 300px; */
+        width: 220px;
+    }
+
+    .shop-item-page-container h1 {
+        font-size: larger;
+    }
+
+    .shop-item-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-page-info-container {
+        border: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    .item-page-info-container h2 {
+        font-size: large;
+    }
+
+    .item-page-info-container p {
+        font-size: small;
+    }
+
+    .stars {
+        --star-size: 45px;
+    }
+
+    .item-page-review {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item-page-review-stars, .item-page-review-graph {
+        width: 100%;
+    }
+
+    .item-review-from {
+        width: 300px; 
+    }
+
+    .group .item-review-input, .group .bar, .group .item-review-label {
+        font-size:15px;
+        width:280px;
+        margin: auto;
+}
 }

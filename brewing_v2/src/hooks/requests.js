@@ -11,9 +11,34 @@ export async function httpGetAllBeers() {
     }
 }
 
-export async function httpAddBeer() {
-    //after api is implemented
-    //need to implement the fronted for it
+export async function httpAddBeer(newBeer) {
+    try {
+         await fetch(`${API_URL}/beers/add-beer`, {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(newBeer)
+            })
+            soundEffects.success.play()
+    } catch(err) {
+        console.log("error adding beer", err)
+    }
+}
+
+export async function httpModifyStock(newBeer) {
+    try {
+         await fetch(`${API_URL}/beers/modify-stock`, {
+            method: "post",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(newBeer)
+            })
+            soundEffects.success.play()
+    } catch(err) {
+        console.log("error updating stock", err)
+    }
 }
 
 export async function httpGetReviews() {

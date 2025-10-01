@@ -28,7 +28,7 @@ function App() {
         <Route path='brewings/*' element={<Brewings />} />
         <Route path='recipes/*' element={<Recipes />} />
         <Route path='cart' element={<Cart />} />
-        <Route path='admin-dashboard-6666' element={<Admin />} />
+        <Route path='admin-dashboard/*' element={<Admin />} />
       </Routes>
       <Footer />
     </div>

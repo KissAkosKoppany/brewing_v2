@@ -16,17 +16,9 @@ const AddBrewing = () => {
             preboil_v: e.target.pre_v.value,
             postbiol_v: e.target.post_v.value,
             original_gr: e.target.og.value,
-            water_ph: e.target.water_ph.value,
             water_chemistry: e.target.water_chem.value,
-            aeration_type: e.target.aeration_type.value,
-            aeration_duration: e.target.aeration_dur.value,
-            pitching_method: e.target.pitch_method.value,
             yeast_type: e.target.yeast.value,
-            gravity_4_days: e.target.gr_4.value,
-            gravity_6_days: e.target.gr_6.value,
             final_gravity: e.target.fg.value,
-            temp: e.target.temp.value,
-            worth_ph: e.target.wort_ph.value,
             abv: e.target.abv.value,
             cold_hop_date: e.target.cold_hop_date.value,
             cold_hop_length: e.target.cold_hop_dur.value,
@@ -61,10 +53,6 @@ const AddBrewing = () => {
         
         <div className='brewing-item-group'>
           <div className='brewing-item-info'>
-            <label htmlFor="water_ph"><p>Water PH:</p></label>
-            <input type='number' id='water_ph' name='water_ph' />
-          </div>
-          <div className='brewing-item-info'>
             <label htmlFor="water_chem"><p>Water chemistry:</p></label>
             <input type='text' id='water_chem' name='water_chem' />
           </div>
@@ -85,32 +73,12 @@ const AddBrewing = () => {
             <input type='number' id='og' name='og' />
           </div>
           <div className='brewing-item-info'>
-            <label htmlFor="pitch_method"><p>Pitching method:</p></label>
-            <input type='text' id='pitch_method' name='pitch_method' />
-          </div>
-          <div className='brewing-item-info'>
             <label htmlFor="yeast"><p>Yeast type:</p></label>
             <input type='text' id='yeast' name='yeast' />
-          </div>
-          <div className='brewing-item-info'>
-            <label htmlFor="aeration_type"><p>Aeration type:</p></label>
-            <input type='text' id='aeration_type' name='aeration_type' />
-          </div>
-          <div className='brewing-item-info'>
-            <label htmlFor="aeration_dur"><p>Aeration duration:</p></label>
-            <input type='number' id='aeration_dur' name='aeration_dur' />
           </div>
         </div>
 
         <div className='brewing-item-group'>
-          <div className='brewing-item-info'>
-            <label htmlFor="gr_4"><p>Gravity 4 days:</p></label>
-            <input type='number' id='gr_4' name='gr_4' />
-          </div>
-          <div className='brewing-item-info'>
-            <label htmlFor="gr_6"><p>Gravity 6 days:</p></label>
-            <input type='number' id='gr_6' name='gr_6' />
-          </div>
           <div className='brewing-item-info'>
             <label htmlFor="fg"><p>Final Gravity:</p></label>
             <input type='number' id='fg' name='fg' />
@@ -122,14 +90,6 @@ const AddBrewing = () => {
           <div className='brewing-item-info'>
             <label htmlFor="cold_hop_dur"><p>Cold hop duration:</p></label>
             <input type='number' id='cold_hop_dur' name='cold_hop_dur' />
-          </div>
-          <div className='brewing-item-info'>
-            <label htmlFor="temp"><p>Temperature:</p></label>
-            <input type='number' id='temp' name='temp' />
-          </div>
-          <div className='brewing-item-info'>
-            <label htmlFor="wort_ph"><p>Wort PH:</p></label>
-            <input type='number' id='wort_ph' name='wort_ph' />
           </div>
           <div className='brewing-item-info'>
             <label htmlFor="abv"><p>ABV:</p></label>

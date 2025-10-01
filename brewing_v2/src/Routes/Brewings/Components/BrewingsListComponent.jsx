@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 const BrewingsListComponent = ({ brewings }) => {
   return (
     <>
-        <div className='brewing-list-item'>
+        <div className='brewing-list-item first'>
             <div className='group'>
                 <p>Nr.</p>
                 <p>Beer name</p>
@@ -12,18 +12,18 @@ const BrewingsListComponent = ({ brewings }) => {
             <p>Brew date</p>
         </div>
         {
-            brewings.map(brewing => {
+            brewings.map((brewing, i) => {
                 return (
                     <div key={brewing.id} className='brewing-list-item'>
                         <div className='group'>
-                            <p>{brewing.id}.</p>
+                            <p>{i+1}.</p>
                             <p>
                                 <Link className='link' to={`/brewings/brewings-list/${brewing.id}`}>
                                     {brewing.beer_name}
                                 </Link>
                             </p>
                         </div>
-                        <p>{brewing.brew_date}</p>
+                        <p>{brewing.brew_date.split('T')[0]}</p>
                     </div>
                 )
             })
