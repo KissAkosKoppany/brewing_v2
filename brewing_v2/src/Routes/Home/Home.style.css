@@ -111,7 +111,7 @@
 }
 
 .slider-image-container {
-    width: 350px;
+    width: auto;
     height: 350px;
 }
 
@@ -418,7 +418,6 @@
     }
 
     .slider-image-container {
-        width: 220px;
         height: 220px;
     }
 
@@ -490,7 +489,6 @@
     }
 
     .slider-image-container {
-        width: 170px;
         height: 170px;
     }
 

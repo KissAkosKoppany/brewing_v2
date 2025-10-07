@@ -201,9 +201,14 @@
 
 .shop-item-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 3rem;
+    margin: 0 1rem;
 }
+
+/* .item-page-img-slider-container {
+    width: calc(100% - 460px);
+} */
 
 .item-page-info-container {
     width: 440px;
@@ -213,6 +218,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 1rem;
 }
 
 .item-page-description {

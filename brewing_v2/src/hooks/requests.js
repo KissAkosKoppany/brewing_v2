@@ -1,6 +1,7 @@
 import { soundEffects } from "../SoundEffects/soundEffects"
 
 const API_URL = 'http://localhost:8000'
+// const API_URL = 'http://neko-kaiju.com/'
 
 export async function httpGetAllBeers() {
     try {
@@ -38,6 +39,21 @@ export async function httpModifyStock(newBeer) {
             soundEffects.success.play()
     } catch(err) {
         console.log("error updating stock", err)
+    }
+}
+
+export async function httpDeleteReview(id) {
+    try {
+    await fetch(`${API_URL}/reviews/delete-review`, {
+        method: "post",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({id: id})
+    })
+    soundEffects.success.play()
+    } catch (err) {
+        console.log("error deleting beer", err)
     }
 }
 

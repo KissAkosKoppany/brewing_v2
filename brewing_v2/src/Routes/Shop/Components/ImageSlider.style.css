@@ -1,16 +1,16 @@
 .image-slider-container {
-    width: 440px;
-    margin-right: 1rem;
+    width: 460px;
+    /* margin-right: 1rem; */
     height: 600px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .image-slider-image-container {
     height: 95%;
-    width: 4%;
+    width: 5%;
     transition: width 1s ease-in-out, height 0.8s ease-in-out;
     cursor: pointer;
 }

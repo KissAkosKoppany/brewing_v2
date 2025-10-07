@@ -57,9 +57,6 @@ const ImageSlider = ({ images }) => {
                     <div onClick={() => handleImageSelect(2)} className={`image-slider-image-container ${activeImage.imageTwo ?  " active-image" : ""}`}>
                         <img src={`/${images[1]}`} alt="image" className="image-slider-image" />
                     </div>
-                    <div onClick={() => handleImageSelect(3)} className={`image-slider-image-container ${activeImage.imageThree ?  " active-image" : ""}`}>
-                        <img src={`/${images[2]}`} alt="image" className="image-slider-image" />
-                    </div>
                 </>
             :
             null

@@ -18,7 +18,7 @@ const HomeSlider = () => {
             <div className={`slider-element ${beers[currentItem]?.color_scheme}`}>
               <div className={`slider-image ${beers[currentItem]?.color_scheme}`}>
                 <div className='slider-image-container'>
-                  <img src="images/banner-img.png" alt="slider-image" />
+                  <img src={beers[currentItem]?.banner_img} alt="slider-image" />
                 </div>
               </div>
               <div className={`slider-description ${beers[currentItem]?.color_scheme}`}>
