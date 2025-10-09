@@ -14,7 +14,7 @@ const AddBrewing = () => {
             brew_date: e.target.brew_date.value,
             preboil_gr: e.target.pre_gr.value,
             preboil_v: e.target.pre_v.value,
-            postbiol_v: e.target.post_v.value,
+            postboil_v: e.target.post_v.value,
             original_gr: e.target.og.value,
             water_chemistry: e.target.water_chem.value,
             yeast_type: e.target.yeast.value,
