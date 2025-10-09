@@ -1,6 +1,6 @@
 import { soundEffects } from "../SoundEffects/soundEffects"
 
-const API_URL = 'http://neko-kaiju.com'
+const API_URL = 'http://neko-kaiju.com/api'
 // const API_URL = 'http://neko-kaiju.com/'
 
 export async function httpGetAllBeers() {
