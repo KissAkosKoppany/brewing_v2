@@ -1,11 +1,11 @@
 import { soundEffects } from "../SoundEffects/soundEffects"
 
-const API_URL = 'http://neko-kaiju.com/api'
+// const API_URL = 'http://neko-kaiju.com/api'
 // const API_URL = 'http://neko-kaiju.com/'
 
 export async function httpGetAllBeers() {
     try {
-        const response = await fetch(`${API_URL}/beers`)
+        const response = await fetch(`/api/beers`)
         return await response.json()
     } catch(err) {
         console.log("error getting the beers", err)
@@ -14,7 +14,7 @@ export async function httpGetAllBeers() {
 
 export async function httpAddBeer(newBeer) {
     try {
-         await fetch(`${API_URL}/beers/add-beer`, {
+         await fetch(`/api/beers/add-beer`, {
             method: "post",
             headers: {
                 "Content-type": "application/json"
@@ -29,7 +29,7 @@ export async function httpAddBeer(newBeer) {
 
 export async function httpModifyStock(newBeer) {
     try {
-         await fetch(`${API_URL}/beers/modify-stock`, {
+         await fetch(`/api/beers/modify-stock`, {
             method: "post",
             headers: {
                 "Content-type": "application/json"
@@ -44,7 +44,7 @@ export async function httpModifyStock(newBeer) {
 
 export async function httpDeleteReview(id) {
     try {
-    await fetch(`${API_URL}/reviews/delete-review`, {
+    await fetch(`/api/reviews/delete-review`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
@@ -59,7 +59,7 @@ export async function httpDeleteReview(id) {
 
 export async function httpGetReviews() {
     try {
-        const response = await fetch(`${API_URL}/reviews`)
+        const response = await fetch(`/api/reviews`)
         return await response.json()
     } catch(err) {
         console.log('error getting the reviews', err)
@@ -68,7 +68,7 @@ export async function httpGetReviews() {
 
 export async function httpAddReview(newReview) {
     try {
-        await fetch(`${API_URL}/reviews/add-review`, {
+        await fetch(`/api/reviews/add-review`, {
             method: "post",
             headers: {
                 "Content-type": "application/json"
@@ -83,7 +83,7 @@ export async function httpAddReview(newReview) {
 
 export async function httpGetBrewingsList() {
     try {
-        const response = await fetch(`${API_URL}/brewings`)
+        const response = await fetch(`/api/brewings`)
         const brewings = await response.json()
         return await brewings
     } catch(err) {
@@ -93,7 +93,7 @@ export async function httpGetBrewingsList() {
 
 export async function httpAddBrewing(newBrewing) {
     try {
-        await fetch(`${API_URL}/brewings/add-brewing`, {
+        await fetch(`/api/brewings/add-brewing`, {
             method: "post",
             headers: {
                 "Content-type": "application/json"
