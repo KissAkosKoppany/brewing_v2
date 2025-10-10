@@ -5,7 +5,7 @@ const HomeBanner = () => {
     <div className='home-banner-container'>
         <div className='home-banner'>
             <div className='banner-title'>
-                <h1>WHERE JAPANESE LEGENDS MEET CRAFT BEER.</h1>
+                <h1>WHEREeeee JAPANESE LEGENDS MEET CRAFT BEER.</h1>
                 <h1>HOP IN FOR A GOOD TIME!</h1>
             </div>
             <div className='banner-image'>
