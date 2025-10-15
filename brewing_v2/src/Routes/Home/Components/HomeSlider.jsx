@@ -25,7 +25,7 @@ const HomeSlider = () => {
               <div className={`slider-description ${beers[currentItem]?.color_scheme}`}>
                 <h3>{beers[currentItem]?.name}</h3>
                 <p>{beers[currentItem]?.description}</p>
-                <Link to={beers[currentItem].link}>
+                <Link to={`beers/${beers[currentItem].name}`}>
                   <button>CLICK HERE</button>
                 </Link>
               </div>
