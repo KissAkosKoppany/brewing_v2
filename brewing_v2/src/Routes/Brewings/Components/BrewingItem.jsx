@@ -145,10 +145,15 @@ const BrewingItem = ({ brewing }) => {
           :
           null
         }
-        <div className='brewing-item-info'>
-          <p>ABV:</p>
-          <p>{brewing.abv}%</p>
-        </div>
+        {
+          isAdmin ?
+            <div className='brewing-item-info'>
+              <p>ABV:</p>
+              <p>{brewing.abv}%</p>
+            </div>
+          :
+          null
+        }
       </div>
 
       <div className='brewing-item-group'>

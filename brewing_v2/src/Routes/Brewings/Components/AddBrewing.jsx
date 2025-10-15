@@ -93,7 +93,7 @@ const AddBrewing = () => {
           </div>
           <div className='brewing-item-info'>
             <label htmlFor="abv"><p>ABV:</p></label>
-            <input type='number' id='abv' name='abv' />
+            <input type='number' id='abv' step={0.01} name='abv' />
           </div>
         </div>
 
@@ -108,7 +108,7 @@ const AddBrewing = () => {
           </div>
           <div className='brewing-item-info'>
             <label htmlFor="sugar_bottle"><p>Sugar per bottle:</p></label>
-            <input type='number' id='sugar_bottle' name='sugar_bottle' />
+            <input type='number' id='sugar_bottle' step='0.01' name='sugar_bottle' />
           </div>
         </div>
 
