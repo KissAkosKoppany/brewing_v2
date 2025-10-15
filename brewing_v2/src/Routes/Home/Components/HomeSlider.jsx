@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from 'react'
 import SliderNav from './SliderNav'
 import Spinner from '../../../GeneralComponents/Spinner'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router'
 
 const HomeSlider = () => {
 
@@ -24,7 +25,9 @@ const HomeSlider = () => {
               <div className={`slider-description ${beers[currentItem]?.color_scheme}`}>
                 <h3>{beers[currentItem]?.name}</h3>
                 <p>{beers[currentItem]?.description}</p>
-                <button>CLICK HERE</button>
+                <Link to={beers[currentItem].link}>
+                  <button>CLICK HERE</button>
+                </Link>
               </div>
             </div>
         <SliderNav currentItem={currentItem} handleItemChangeOnClick={handleItemChangeOnClick} />
