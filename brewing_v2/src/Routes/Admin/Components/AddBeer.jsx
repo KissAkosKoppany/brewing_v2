@@ -34,7 +34,7 @@ const AddBeer = () => {
             <p>Description</p>
             <input type="text" id='description' name='description' />
             <p>ABV</p>
-            <input type="number" id='alcohol' name='alcohol' />
+            <input type="number" id='alcohol' step="0.1" name='alcohol' />
             <p>Color scheme</p>
             <input type="text" id='color_scheme' name='color_scheme' />
             <p>Link</p>
