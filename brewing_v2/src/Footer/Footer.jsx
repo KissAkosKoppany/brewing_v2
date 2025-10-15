@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="footer-contact">
                 <h2>CONTACT US</h2>
                 <p>tel.: 0757 539 561</p>
-                <p>email: <a href="mailto:kopyherceg@gmail.com">kopyherceg@gmail.com</a></p>
+                <p>e-mail: <a href="mailto:nekokaiju66@gmail.com">nekokaiju66@gmail.com</a></p>
             </div>
         </div>
         <p>© Copyright 2025 | Kiss Ákos Koppány</p>
