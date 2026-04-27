@@ -10,7 +10,7 @@ const HomeBanner = () => {
             </div>
             <div className='banner-image'>
               <div className='banner-image-container'>
-                <img src="neko-kaiju-logo.png" alt="banner-img" />
+                <img src="wizardhops_logo.png" alt="banner-img" />
               </div>
             </div>
         </div>
