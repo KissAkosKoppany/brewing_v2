@@ -85,13 +85,13 @@
     animation: rotation 4s linear infinite;
 }
 
-.shop-item-card.samurai::before,
-.shop-item-card.samurai::after {
+.shop-item-card.enchanter::before,
+.shop-item-card.enchanter::after {
     background-image: conic-gradient(
         from var(--gradient-angle),
-        var(--clr-samurai),
+        var(--clr-hop-enchanter),
         var(--clr-bg-accent),
-        var(--clr-samurai)
+        var(--clr-hop-enchanter)
     );
 }
 
@@ -125,13 +125,13 @@
     );
 }
 
-.shop-item-card.ronin::before,
-.shop-item-card.ronin::after {
+.shop-item-card.arcane::before,
+.shop-item-card.arcane::after {
     background-image: conic-gradient(
         from var(--gradient-angle),
-        var(--clr-ronin),
+        var(--clr-arcane-wheat),
         var(--clr-bg-accent),
-        var(--clr-ronin)
+        var(--clr-arcane-wheat)
     );
 } 
 

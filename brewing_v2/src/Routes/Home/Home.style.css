@@ -15,6 +15,7 @@
     justify-content: center;
     margin-top: -2rem;
     padding-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .home-banner {
@@ -25,7 +26,7 @@
 }
 
 .banner-title h1 {
-    color: var(--clr-orange);
+    color: var(--clr-logo-hat);
     margin: 0;
     font-size: xx-large;
     font-weight: 900;
@@ -62,6 +63,9 @@
 
 .home-slider {
     width: var(--max-w);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* margin-bottom: 2rem; */
 }
 
@@ -70,6 +74,28 @@
     position: relative;
     margin-bottom: 2rem;
     box-shadow: var(--bs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-page {
+    width: 500px;
+    height: 595px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-img-container {
+    width: 100%;
+    height: 100%;
+}
+
+.book-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .reel-nav-container {
@@ -194,21 +220,21 @@
     border-right: 6px solid var(--clr-samurai);
 } */
 
-.slider-image.samurai {
+.slider-image.enchanter {
     /* background-color: var(--clr-samurai); */
-    background-image: linear-gradient(to right, var(--clr-samurai-d), var(--clr-samurai));
+    background-image: linear-gradient(to right, var(--clr-hop-enchanter), var(--clr-hop-enchanter));
 }
 
-.slider-description.samurai button {
-    border: 3px solid var(--clr-samurai);
+.slider-description.enchanter button {
+    border: 3px solid var(--clr-hop-enchanter);
 }
 
-.slider-description.samurai button:hover {
-    color: var(--clr-samurai);
+.slider-description.enchanter button:hover {
+    color: var(--clr-hop-enchanter);
 }
 
-.slider-description.samurai button:focus {
-    border: 3px solid var(--clr-samurai);
+.slider-description.enchanter button:focus {
+    border: 3px solid var(--clr-hop-enchanter);
 }
 
 /* shogun */
@@ -238,21 +264,21 @@
     border-right: 6px solid var(--clr-ronin);
 } */
 
-.slider-image.ronin {
+.slider-image.arcane {
     /* background-color: var(--clr-ronin); */
-    background-image: linear-gradient(to right, var(--clr-ronin-d), var(--clr-ronin));
+    background-image: linear-gradient(to right, var(--clr-arcane-wheat), var(--clr-arcane-wheat));
 }
 
-.slider-description.ronin button {
-    border: 3px solid var(--clr-ronin);
+.slider-description.arcane button {
+    border: 3px solid var(--clr-arcane-wheat);
 }
 
-.slider-description.ronin button:hover {
-    color: var(--clr-ronin);
+.slider-description.arcane button:hover {
+    color: var(--clr-arcane-wheat);
 }
 
-.slider-description.ronin button:focus {
-    border: 3px solid var(--clr-ronin);
+.slider-description.arcane button:focus {
+    border: 3px solid var(--clr-arcane-wheat);
 }
 
 /* sumo */

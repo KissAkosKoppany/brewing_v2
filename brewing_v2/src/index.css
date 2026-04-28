@@ -23,6 +23,14 @@
   --clr-active: rgba(255, 255, 255, 0.148);
   --clr-red: rgb(145, 36, 36);
   --clr-gold: gold;
+
+  --clr-logo-hat: rgba(237, 139, 59);
+  --clr-logo-main: rgba(159, 195, 128);
+  --clr-logo-black: rgba(22, 22, 21);
+
+  --clr-arcane-wheat: rgba(234, 176, 84);
+  --clr-hop-enchanter: rgba(115, 118, 33);
+
   --br: 2px;
   --bs: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --max-w: 1270px;
