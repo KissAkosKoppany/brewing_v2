@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2rem;
-    background-color: var(--clr-bg-accent);
+    background-color: var(--clr-bg);
     position: sticky;
     top: 0;
     z-index: 10;

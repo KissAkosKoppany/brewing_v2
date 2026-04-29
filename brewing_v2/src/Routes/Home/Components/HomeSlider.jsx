@@ -12,14 +12,14 @@ const HomeSlider = () => {
     const { currentItem, handleItemChangeOnClick } = useHandleSlideChange()
 
   return (
-    <div className='home-silder'>
+    <div className='home-book'>
       {
         beers ?
         
-        <div className='slider-container'>
+        <div className='book-container'>
           <HTMLFlipBook 
             width={500} 
-            height={595}
+            height={600}
             maxShadowOpacity={0.8}
             drawShadow={true}
             showCover={true}
@@ -27,7 +27,7 @@ const HomeSlider = () => {
           >
             <div className='book-page cover'>
               <div className='book-img-container'>
-                <img src="wizardhops_logo.png" alt="book logo" />
+                <img src="images/book_front_cover.png" alt="book cover" />
               </div>
             </div>
 
@@ -37,12 +37,14 @@ const HomeSlider = () => {
               </div>
             </div>
 
-            <div className='book-page'>
-              <div className='book-info'>
+            <div className='book-page info'>
+              <img src="images/enchanter_bg.png" alt="bg" />
+              <div className='book-info enchanter'>
                 <h3>{beers[0].name}</h3>
                 <p>{beers[0].description}</p>
               </div>
             </div>
+
 
             <div className='book-page'>
               <div className='book-img-container'>
@@ -51,11 +53,13 @@ const HomeSlider = () => {
             </div>
 
             <div className='book-page'>
-              <div className='book-info'>
+              <img src="images/arcane_bg.png" alt="bg" />
+              <div className='book-info arcane'>
                 <h3>{beers[1].name}</h3>
                 <p>{beers[1].description}</p>
               </div>
             </div>
+
 
             <div className='book-page'>
               <div className='book-img-container'>
@@ -64,7 +68,8 @@ const HomeSlider = () => {
             </div>
 
             <div className='book-page'>
-              <div className='book-info'>
+              <img src="images/grimoire_bg.png" alt="bg" />
+              <div className='book-info arcane'>
                 <h3>{beers[2].name}</h3>
                 <p>{beers[2].description}</p>
               </div>

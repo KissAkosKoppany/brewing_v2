@@ -1,20 +1,22 @@
 :root {
 
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  font-family: "New Rocker", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   box-sizing: border-box;
-
+  
   color-scheme: light dark;
   color: var(--clr-text);
-  background-color: var(--clr-bg);
+  background-color: var(--clr-bg-accent);
   font-size: large;
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  
   --clr-bg: rgb(34, 34, 34);
   --clr-bg-accent: rgb(22, 22, 22);
   --clr-text: rgb(214, 214, 214);
@@ -31,6 +33,7 @@
   --clr-arcane-wheat: rgba(234, 176, 84);
   --clr-hop-enchanter: rgba(115, 118, 33);
 
+  --text-shadow: 2px 2px 0 var(--clr-bg-accent), 1px -1px 0 var(--clr-bg-accent), -1px 1px 0 var(--clr-bg-accent), 1px 1px 0 var(--clr-bg-accent);
   --br: 2px;
   --bs: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --max-w: 1270px;
