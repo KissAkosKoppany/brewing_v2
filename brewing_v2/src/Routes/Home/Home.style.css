@@ -5,6 +5,141 @@
     flex-direction: column;
 }
 
+/* ...........Parallax................ */
+
+
+.parallax {
+  /* overflow: hidden; */
+  position: relative;
+  z-index: 0;
+  min-height: 75vh;
+  display: grid;
+  grid-template-areas: "stack";
+  width: 99vw;
+  /* min-width: ; */
+}
+
+.parallax > * {
+  grid-area: stack;
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+
+.parallax > img {
+  width: 100%;
+}
+
+.primary-header,
+.hero {
+  --parallax-speed: 25;
+  z-index: 10;
+}
+
+.parallax__bg {
+  --parallax-speed: 0;
+
+  z-index: 1;
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.parallax__last {
+  --parallax-speed: 0;
+  z-index: 5;
+}
+
+/* .parallax__bg {
+  --parallax-speed: 50;
+  z-index: 3;
+} */
+
+.parallax__cloud {
+  --parallax-speed: -10;
+  z-index: 2;
+}
+
+.parallax__trees {
+  --parallax-speed: 6;
+  z-index: 3;
+}
+
+.parallax__hut {
+  --parallax-speed: 3;
+  z-index: 4;
+}
+
+.parallax__shade {
+    --parallax-speed: 0;
+    z-index: 999;
+    align-self: end;
+}
+
+
+.parallax__foreground-back {
+  z-index: 6;
+}
+
+/* .parallax__last {
+  transform: scaleY(1.2);
+  transform-origin: bottom;
+  mix-blend-mode: hard-light;
+} */
+
+@keyframes parallax {
+  to {
+    transform: 
+      translateY(calc(var(--parallax-speed) * 200px));
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+.main-content {
+    position: relative;
+    width: 100%;
+    /* z-index: 1; */
+    background: var(--clr-bg-accent);
+    padding-block: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-group {
+    display: flex;
+    gap: 1rem;
+}
+
+
+.hero {
+    margin-block-start: max(20vh, 8rem);
+}
+
+.wrapper {
+  width: var(--max-w);
+  margin-inline: auto;
+}
+
+.hero__title {
+    color: var(--clr-text);
+    text-shadow: var(--text-s);
+    font-size: 4rem;
+    max-width: 15ch;
+    line-height: 1;
+    position: relative;
+
+  > span {
+    font-style: normal;
+    font-size: 0.5em;
+    display: block;
+  }
+}
+
 /* ...........home banner............. */
 
 .home-banner-container {
@@ -13,7 +148,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: -2rem;
+    margin-top: 2rem;
     padding-top: 2rem;
     margin-bottom: 3rem;
 }
@@ -22,7 +157,7 @@
     width: var(--max-w);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .banner-title h1 {

@@ -66,6 +66,11 @@
                   -1px 1px 0 var(--clr-arcane-hl), 
                   1px 1px 0 var(--clr-arcane-hl);
 
+  --text-s: -3px -3px 0 var(--clr-bg), 
+                  1px -1px 0 var(--clr-bg), 
+                  -1px 1px 0 var(--clr-bg), 
+                  1px 1px 0 var(--clr-bg);
+
   --br: 2px;
   --bs: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --max-w: 1270px;
