@@ -17,7 +17,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   
-  --clr-bg: rgb(34, 34, 34);
+  --clr-bg: rgb(15, 15, 15);
   --clr-bg-accent: rgb(22, 22, 22);
   --clr-text: rgb(214, 214, 214);
   --clr-highlightsss: rgb(42, 115, 99);
@@ -30,10 +30,42 @@
   --clr-logo-main: rgba(159, 195, 128);
   --clr-logo-black: rgba(22, 22, 21);
 
-  --clr-arcane-wheat: rgba(234, 176, 84);
-  --clr-hop-enchanter: rgba(115, 118, 33);
+  --clr-arcane: #ffd391;
+  --clr-arcane-hl: rgb(17, 17, 17);
+  --clr-enchanter: rgba(35, 43, 29);
+  --clr-enchanter-hl:  rgba(115, 118, 33);
+  --clr-pandora: rgba(113, 59, 95);
+  --clr-pandora-hl: rgb(255, 228, 187);
+  --clr-incantation: rgb(78, 21, 72);
+  --clr-incantation-hl: rgb(228, 195, 120);
+  --clr-grimoire: rgb(255, 223, 181);
+  --clr-grimoire-hl: rgb(31, 31, 31);
 
-  --text-shadow: 2px 2px 0 var(--clr-bg-accent), 1px -1px 0 var(--clr-bg-accent), -1px 1px 0 var(--clr-bg-accent), 1px 1px 0 var(--clr-bg-accent);
+  --text-s-pandora: -2px -2px 0 var(--clr-pandora-hl), 
+                  1px -1px 0 var(--clr-pandora-hl), 
+                  -1px 1px 0 var(--clr-pandora-hl), 
+                  1px 1px 0 var(--clr-pandora-hl);
+  
+  --text-s-enchanter: -2px -2px 0 var(--clr-pandora-hl), 
+                  1px -1px 0 var(--clr-pandora-hl), 
+                  -1px 1px 0 var(--clr-pandora-hl), 
+                  1px 1px 0 var(--clr-pandora-hl);
+  
+  --text-s-incantation: -2px -2px 0 var(--clr-incantation-hl), 
+                  1px -1px 0 var(--clr-incantation-hl), 
+                  -1px 1px 0 var(--clr-incantation-hl), 
+                  1px 1px 0 var(--clr-incantation-hl);
+
+  --text-s-grimoire: -2px -2px 0 var(--clr-grimoire-hl), 
+                  1px -1px 0 var(--clr-grimoire-hl), 
+                  -1px 1px 0 var(--clr-grimoire-hl), 
+                  1px 1px 0 var(--clr-grimoire-hl);
+
+  --text-s-arcane: -2px -2px 0 var(--clr-arcane-hl), 
+                  1px -1px 0 var(--clr-arcane-hl), 
+                  -1px 1px 0 var(--clr-arcane-hl), 
+                  1px 1px 0 var(--clr-arcane-hl);
+
   --br: 2px;
   --bs: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --max-w: 1270px;

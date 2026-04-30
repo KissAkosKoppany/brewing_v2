@@ -4,6 +4,7 @@ import Spinner from '../../../GeneralComponents/Spinner'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router'
 import HTMLFlipBook from 'react-pageflip';
+import { GiSpellBook } from "react-icons/gi";
 
 const HomeSlider = () => {
 
@@ -11,8 +12,18 @@ const HomeSlider = () => {
 
     const { currentItem, handleItemChangeOnClick } = useHandleSlideChange()
 
+    const spreads = beers?.flatMap(beer => ([
+      {side: "left", image: beer.images[0] },
+      { side: "right", title: beer.name, text: beer.description, cover: beer.banner_img, color: beer.color_scheme }
+    ]))
+
   return (
     <div className='home-book'>
+      <div className='book-title'>
+        <p><GiSpellBook /></p>
+        <h2>The Grimoire of Beers</h2>
+        <p><GiSpellBook /></p>
+      </div>
       {
         beers ?
         
@@ -31,7 +42,29 @@ const HomeSlider = () => {
               </div>
             </div>
 
-            <div className='book-page'>
+            {
+              spreads.map((page, index) => (
+                <div key={index} className='book-page'>
+                  {
+                    page.side === "left" ? (
+                      <div className='book-img-container'>
+                        <img src={page.image} alt="book-image" />
+                      </div>
+                    ) : (
+                      <div className='book-page info'>
+                        <img src={page.cover} alt="bg" />
+                        <div className={`book-info ${page.color}`}>
+                          <h3>{page.title}</h3>
+                          <p>{page.text}</p>
+                        </div>
+                      </div>
+                    )
+                  }
+                </div>
+              ))
+            }
+
+            {/* <div className='book-page'>
               <div className='book-img-container'>
                 <img src={beers[0].images[0]} alt="book-image" />
               </div>
@@ -68,7 +101,7 @@ const HomeSlider = () => {
             </div>
 
             <div className='book-page'>
-              <img src="images/grimoire_bg.png" alt="bg" />
+              <img src="images/incantation_bg.png" alt="bg" />
               <div className='book-info arcane'>
                 <h3>{beers[2].name}</h3>
                 <p>{beers[2].description}</p>
@@ -82,29 +115,33 @@ const HomeSlider = () => {
             </div>
 
             <div className='book-page'>
-              <div className='book-info'>
+              <img src="images/incantation_bg.png" alt="bg" />
+              <div className='book-info arcane'>
                 <h3>{beers[3].name}</h3>
                 <p>{beers[3].description}</p>
               </div>
             </div>
 
-            <div className='book-page cover'>
+            <div className='book-page'>
               <div className='book-img-container'>
-                <img src="wizardhops_logo.png" alt="book logo" />
+                <img src={beers[4].images[0]} alt="book-image" />
               </div>
             </div>
-            {/* {
-              beers.map((beer) => (
-                
-                <div className='book-page'>
-                  <div className='book-img-container'>
-                    <img src={beer.images[0]} alt="book-image" />
-                  </div>
-                </div>
-              
-                
-              ))
-            } */}
+
+            <div className='book-page'>
+              <img src="images/grimoire_bg.png" alt="bg" />
+              <div className='book-info arcane'>
+                <h3>{beers[4].name}</h3>
+                <p>{beers[4].description}</p>
+              </div>
+            </div> */}
+
+            <div className='book-page cover'>
+              <div className='book-img-container'>
+                <img src="images/book_back_cover.png" alt="book cover" />
+              </div>
+            </div>
+          
           </HTMLFlipBook>
             {/* <div className={`slider-element ${beers[currentItem]?.color_scheme}`}>
               <div className={`slider-image ${beers[currentItem]?.color_scheme}`}>

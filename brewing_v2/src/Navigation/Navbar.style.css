@@ -54,7 +54,7 @@
 
 .active-link {
     color: var(--clr-logo-main);
-    background-color: var(--clr-hover);
+    /* background-color: var(--clr-hover); */
 }
 
 .nav-item {

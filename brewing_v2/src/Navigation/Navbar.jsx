@@ -19,7 +19,7 @@ const Navbar = () => {
         <Link className='link' to="/">
             <div onClick={() => toggleLink(0)} className='logo'>
                 <div className='logo-image'>
-                    <img src="/wizardhops_logo.png" alt="logo" />
+                    <img src="/wizardhops_logo_c.png" alt="logo" />
                 </div>
                 <p>
                     WIZARDHOPS

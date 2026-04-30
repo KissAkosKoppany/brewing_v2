@@ -64,17 +64,40 @@
 .home-book {
     width: var(--max-w);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;   
+}
+
+.book-title h2 {
+    text-align: center;
+    text-transform: uppercase;
     margin-bottom: 2rem;
-    
+    /* color: var(--clr-orange); */
+}
+
+.book-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-title p {
+    margin: .5rem;
+    margin-bottom: 1rem;
+    color: var(--clr-logo-main);
+    font-size:xx-large;
+}
+
+.book-title p:last-child {
+    transform: scaleX(-1);
 }
 
 .book-container {
     width: 1200px;
     height: 800px;
     margin-bottom: 2rem;
-    box-shadow: var(--clr-logo-hat) 0px 0px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +136,7 @@
 
 .book-page {
     cursor: pointer;
-    box-shadow: black 0px 0px 25px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 25px;
 }
 
 .book-page.cover {
@@ -124,29 +147,21 @@
     box-shadow: var(--clr-logo-hat) 0px 0px 15px;
 }
 
-.book-page.info {
+.book-page .book-page.info {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .book-info {
-    margin: 3rem 4rem;
+    margin: 0 4rem 7rem 4rem;
 }
 
 .book-info h3 {
     font-size: xx-large;
     text-align: center;
     margin-bottom: 5rem;
-    text-shadow: var(--text-shadow);
-}
-
-.book-info.enchanter h3 {
-    color: var(--clr-hop-enchanter);
-}
-
-.book-info.arcane h3 {
-    color: var(--clr-arcane-wheat);
+    /* text-shadow: var(--text-shadow); */
 }
 
 .book-info p {
@@ -154,215 +169,58 @@
     color: var(--clr-bg-accent);
 }
 
+.book-info.pandora h3 {
+    color: var(--clr-pandora);
+    text-shadow: var(--text-s-pandora);
+}
+
+.book-info.pandora p {
+    color: var(--clr-pandora);
+    text-shadow: var(--text-s-pandora);
+    
+}
+
+.book-info.enchanter h3 {
+    color: var(--clr-enchanter);
+    text-shadow: var(--text-s-enchanter);
+}
+
+.book-info.enchanter p {
+    color: var(--clr-enchanter);
+    text-shadow: var(--text-s-enchanter);
+}
+
+.book-info.incantation h3 {
+    color: var(--clr-grimoire);
+    text-shadow: var(--text-s-grimoire);
+}
+
+.book-info.incantation p {
+    color: var(--clr-grimoire);
+    text-shadow: var(--text-s-grimoire);
+}
+
+.book-info.grimoire h3 {
+    color: var(--clr-grimoire);
+    text-shadow: var(--text-s-grimoire);
+}
+
+.book-info.grimoire p {
+    color: var(--clr-grimoire);
+    text-shadow: var(--text-s-grimoire);
+}
+
+.book-info.arcane h3 {
+    color: var(--clr-arcane);
+    text-shadow: var(--text-s-arcane);
+}
+
 .book-info.arcane p {
-    color: var(--clr-arcane-wheat);
-    text-shadow: var(--text-shadow);
-}
-
-.reel-nav-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: .5rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: x-large;
-}
-
-.reel-nav-dot {
-    scale: 1;
-    transition: all 0.3s ease;
-}
-
-.reel-nav-dot:hover {
-    transform: scale(1.5);
-    cursor: pointer;
-}
-
-.slider-element {
-    min-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.slider-image {
-    width: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: var(--clr-orange); */
-    clip-path: ellipse(67% 100% at 31% 35%);
-}
-
-.slider-image-container {
-    width: auto;
-    height: 350px;
-}
-
-.slider-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slider-description {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 2rem;
-}
-
-.slider-description h3 {
-    font-size: xx-large;
-    margin: 0;
-    color: var(--clr-text);
-}
-
-.slider-description p {
-    padding: .2rem;
-    color: var(--clr-text);
-}
-
-.slider-description button {
-    background-color: var(--clr-bg);
-    border: 3px solid var(--clr-orange);
-    padding: .4rem 1.8rem;
-    border-radius: var(--br);
-    font-size:medium;
-    color: var(--clr-text);
-    cursor: pointer;
-    margin-top: .5rem;
-}
-
-.slider-description button:hover {
-    color: var(--clr-orange);
-}
-
-.slider-description button:active {
-    color: var(--clr-text);
-}
-
-.slider-description button:focus {
-    border: 3px solid var(--clr-orange);
+    color: var(--clr-arcane);
+    text-shadow: var(--text-s-arcane);
 }
 
 
-/* .............Custon colors............... */
-
-/* yakuza */
-/* .slider-element.yakuza {
-    border-right: 6px solid var(--clr-yakuza);
-} */
-
-.slider-image.yakuza {
-    /* background-color: var(--clr-yakuza); */
-    background-image: linear-gradient(to right, var(--clr-yakuza-d), var(--clr-yakuza));
-}
-
-.slider-description.yakuza button {
-    border: 3px solid var(--clr-yakuza);
-}
-
-.slider-description.yakuza button:hover {
-    color: var(--clr-yakuza);
-}
-
-.slider-description.yakuza button:focus {
-    border: 3px solid var(--clr-yakuza);
-}
-
-/* samurai */
-/* .slider-element.samurai {
-    border-right: 6px solid var(--clr-samurai);
-} */
-
-.slider-image.enchanter {
-    /* background-color: var(--clr-samurai); */
-    background-image: linear-gradient(to right, var(--clr-hop-enchanter), var(--clr-hop-enchanter));
-}
-
-.slider-description.enchanter button {
-    border: 3px solid var(--clr-hop-enchanter);
-}
-
-.slider-description.enchanter button:hover {
-    color: var(--clr-hop-enchanter);
-}
-
-.slider-description.enchanter button:focus {
-    border: 3px solid var(--clr-hop-enchanter);
-}
-
-/* shogun */
-/* .slider-element.shogun {
-    border-right: 6px solid var(--clr-shogun);
-} */
-
-.slider-image.shogun {
-    /* background-color: var(--clr-shogun); */
-    background-image: linear-gradient(to right, var(--clr-shogun-d), var(--clr-shogun));
-}
-
-.slider-description.shogun button {
-    border: 3px solid var(--clr-shogun);
-}
-
-.slider-description.shogun button:hover {
-    color: var(--clr-shogun);
-}
-
-.slider-description.shogun button:focus {
-    border: 3px solid var(--clr-shogun);
-}
-
-/* ronin */
-/* .slider-element.ronin {
-    border-right: 6px solid var(--clr-ronin);
-} */
-
-.slider-image.arcane {
-    /* background-color: var(--clr-ronin); */
-    background-image: linear-gradient(to right, var(--clr-arcane-wheat), var(--clr-arcane-wheat));
-}
-
-.slider-description.arcane button {
-    border: 3px solid var(--clr-arcane-wheat);
-}
-
-.slider-description.arcane button:hover {
-    color: var(--clr-arcane-wheat);
-}
-
-.slider-description.arcane button:focus {
-    border: 3px solid var(--clr-arcane-wheat);
-}
-
-/* sumo */
-/* .slider-element.sumo {
-    border-right: 6px solid var(--clr-sumo);
-} */
-
-.slider-image.sumo {
-    /* background-color: var(--clr-sumo); */
-    background-image: linear-gradient(to right, var(--clr-sumo-d), var(--clr-sumo));
-}
-
-.slider-description.sumo button {
-    border: 3px solid var(--clr-sumo);
-}
-
-.slider-description.sumo button:hover {
-    color: var(--clr-sumo);
-}
-
-.slider-description.sumo button:focus {
-    border: 3px solid var(--clr-sumo);
-}
 
 /* .........Home About........... */
 
@@ -413,6 +271,7 @@
 
 .about-title p {
     margin: .5rem;
+    margin-bottom: .8rem;
     color: var(--clr-highlight);
     font-size:x-large;
 }
