@@ -17,6 +17,9 @@ const HomeSlider = () => {
       { side: "right", title: beer.name, text: beer.description, cover: beer.banner_img, color: beer.color_scheme }
     ]))
 
+    const { width } = useWindowDimensions();
+
+
   return (
     <div className='home-book'>
       <div className='book-title'>
@@ -29,8 +32,8 @@ const HomeSlider = () => {
         
         <div className='book-container'>
           <HTMLFlipBook 
-            width={500} 
-            height={600}
+            width={width > 1350 ? 500 : width < 900 ? 272 : 340} 
+            height={width > 1350 ? 600 : width < 900 ? 320 : 400}
             maxShadowOpacity={0.8}
             drawShadow={true}
             showCover={true}
@@ -200,4 +203,27 @@ const useHandleSlideChange = () => {
     }
   }, [currentItem])
   return { currentItem, handleItemChangeOnClick }
+}
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
 }

@@ -29,8 +29,8 @@ const Home = () => {
         <img className="parallax__hut" src="images/parallax_hut.png" alt="" />
         <img className="parallax__shade" src="images/parallax_shade.png" alt="" />
       </div>
-      <main class="main-content">
-        <div class="wrapper">
+      <main className="main-content">
+        <div className="wrapper">
           <Suspense fallback={<Spinner />}>
             <HomeSlider />
           </Suspense>

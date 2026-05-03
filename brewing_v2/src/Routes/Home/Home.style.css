@@ -12,10 +12,12 @@
   /* overflow: hidden; */
   position: relative;
   z-index: 0;
-  min-height: 75vh;
+  min-height: 100vh;
+  /* aspect-ratio: 16 / 9; */
   display: grid;
   grid-template-areas: "stack";
   width: 99vw;
+  /* overflow: hidden; */
   /* min-width: ; */
 }
 
@@ -23,20 +25,24 @@
   grid-area: stack;
   animation: parallax linear;
   animation-timeline: scroll();
+  overflow: hidden;
 }
 
 .parallax > img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .primary-header,
 .hero {
-  --parallax-speed: 25;
+  --parallax-speed: -40;
   z-index: 10;
 }
 
+
 .parallax__bg {
-  --parallax-speed: 0;
+  --parallax-speed: 3;
 
   z-index: 1;
   min-height: 100%;
@@ -45,7 +51,7 @@
 }
 
 .parallax__last {
-  --parallax-speed: 0;
+  --parallax-speed: 3;
   z-index: 5;
 }
 
@@ -65,7 +71,7 @@
 }
 
 .parallax__hut {
-  --parallax-speed: 3;
+  --parallax-speed: 7;
   z-index: 4;
 }
 
@@ -89,7 +95,7 @@
 @keyframes parallax {
   to {
     transform: 
-      translateY(calc(var(--parallax-speed) * 200px));
+      translateY(calc(var(--parallax-speed) * 150px));
   }
 }
 
@@ -117,12 +123,15 @@ img {
 
 
 .hero {
-    margin-block-start: max(20vh, 8rem);
+    margin-block-start: max(30vh, 8rem);
 }
 
 .wrapper {
   width: var(--max-w);
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero__title {
@@ -132,12 +141,29 @@ img {
     max-width: 15ch;
     line-height: 1;
     position: relative;
+    align-self: flex-start;
+
 
   > span {
+    color: var(--clr-logo-main);
     font-style: normal;
     font-size: 0.5em;
     display: block;
   }
+}
+
+@media screen and (max-width: 1500px) {
+    .hero__title {
+        font-size: 3rem;
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .hero__title {
+        font-size: 2rem;
+        margin-left: 0;
+    }
 }
 
 /* ...........home banner............. */
@@ -194,7 +220,7 @@ img {
     clip-path: circle(58.7% at 50% 50%);
 }
 
-/* ............Home Slider.............. */
+/* ............Home Book.............. */
 
 .home-book {
     width: var(--max-w);
@@ -302,6 +328,66 @@ img {
 .book-info p {
     font-size: larger;
     color: var(--clr-bg-accent);
+}
+
+@media screen and (max-width: 1350px) {
+    .home-book, .wrapper {
+        width: var(--w-medium);
+    }
+
+    .book-container {
+        width: 850px;
+        height: 567px; 
+    }
+
+    .book-page {
+        width: 340px;
+        height: 400px;
+    }
+
+    .book-info {
+        margin: 2rem 1.5rem;
+    }
+
+    .book-info h3 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        margin-top: 0;
+    }
+
+    .book-info p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .home-book, .wrapper {
+        width: var(--w-small);
+    }
+
+    .book-container {
+        width: 540px;
+        height: 360px; 
+    }
+
+    .book-page {
+        width: 272px;
+        height: 320px;
+    }
+
+    .book-info {
+        margin: 2rem 1.5rem;
+    }
+
+    .book-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1.7rem;
+        margin-top: 1rem;
+    }
+
+    .book-info p {
+        font-size: .8rem;
+    }
 }
 
 .book-info.pandora h3 {
