@@ -14,7 +14,6 @@ const Home = () => {
   return (
     <div className="home">
       <div className="parallax">
-  
         <div className="hero">
           <div className="wrapper">
             <h1 className="hero__title">
@@ -29,6 +28,7 @@ const Home = () => {
         <img className="parallax__hut" src="images/parallax_hut.png" alt="" />
         <img className="parallax__shade" src="images/parallax_shade.png" alt="" />
       </div>
+      
       <main className="main-content">
         <div className="wrapper">
           <Suspense fallback={<Spinner />}>
@@ -38,6 +38,7 @@ const Home = () => {
           <HomeVideo />
         </div>
       </main>
+
     </div>
     
   )
