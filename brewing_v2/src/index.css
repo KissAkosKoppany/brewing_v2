@@ -71,6 +71,11 @@
                   -1px 1px 0 var(--clr-bg), 
                   1px 1px 0 var(--clr-bg);
 
+  --text-s-inverted: -3px -3px 0 var(--clr-text), 
+                  1px -1px 0 var(--clr-text), 
+                  -1px 1px 0 var(--clr-text), 
+                  1px 1px 0 var(--clr-text);
+
   --br: 2px;
   --bs: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --max-w: 1270px;

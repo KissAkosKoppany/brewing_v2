@@ -21,6 +21,13 @@
   /* min-width: ; */
 }
 
+.spacer {
+    width: 100%;
+    background: var(--clr-bg-accent);
+    height: 50px;
+    z-index: 999;
+}
+
 .parallax > * {
   grid-area: stack;
   animation: parallax linear;
@@ -108,12 +115,17 @@ img {
 .main-content {
     position: relative;
     width: 100%;
-    /* z-index: 1; */
-    background: var(--clr-bg-accent);
+    /* z-index: 9999; */
+    background: var(--clr-bg);
+    /* background-image: url("images/parallax_bg_2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top; */
     padding-block: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .flex-group {
@@ -135,17 +147,19 @@ img {
 }
 
 .hero__title {
-    color: var(--clr-text);
+    color: var(--clr-textt);
     text-shadow: var(--text-s);
     font-size: 4rem;
-    max-width: 15ch;
+    max-width: 20ch;
     line-height: 1;
     position: relative;
     align-self: flex-start;
+    text-transform: uppercase;
 
 
   > span {
-    color: var(--clr-logo-main);
+    text-shadow: var(--text-s);
+    color: var(--clr-logo-hat);
     font-style: normal;
     font-size: 0.5em;
     display: block;
@@ -228,14 +242,15 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;   
+    margin-bottom: 2rem;
 }
 
 .book-title h2 {
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 2rem;
-    /* color: var(--clr-orange); */
+    font-size: 3rem;
+    /* color: var(--clr-logo-hat); */
 }
 
 .book-title {
@@ -246,9 +261,9 @@ img {
 
 .book-title p {
     margin: .5rem;
-    margin-bottom: 1rem;
-    color: var(--clr-logo-main);
-    font-size:xx-large;
+    margin-bottom: -.2rem;
+    color: var(--clr-arcane);
+    font-size: 3rem;
 }
 
 .book-title p:last-child {
@@ -262,7 +277,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("images/book_bg.png");
+    background: url("images/parallax_bg_3.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -448,6 +463,10 @@ img {
 .home-about {
     max-width: var(--max-w);
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .about-title h2 {
@@ -455,20 +474,43 @@ img {
     text-transform: uppercase;
     margin-bottom: 2rem;
     /* color: var(--clr-orange); */
+    font-size: 3rem;
 }
 
 .about-text {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    position: relative;
+    /* background-color: var(--clr-bg-accent); */
+    /* background-image: url("images/parallax_stand.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; */
+}
+
+.about-text img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    /* filter: blur(1px); */
+    /* -webkit-filter: blur(1px); */
+    object-fit: contain;
+    opacity: .4;
+
 }
 
 .about-text p {
     text-indent: 2rem;
-    width: 30%;
+    width: 80%;
     padding: 1rem;
-    background-color: var(--clr-bg-accent);
-    border-radius: var(--br);
-    box-shadow: var(--bs);
+    font-size: 1.5rem;
+    text-shadow: var(--text-s);
+    z-index: 3;
 }
 
 .about-text p span {
@@ -492,9 +534,9 @@ img {
 
 .about-title p {
     margin: .5rem;
-    margin-bottom: .8rem;
-    color: var(--clr-highlight);
-    font-size:x-large;
+    margin-bottom: -.4rem;
+    color: var(--clr-logo-hat);
+    font-size: 3rem;
 }
 
 .about-title p:last-child {
@@ -506,6 +548,9 @@ img {
 .home-video {
     max-width: var(--max-w);
     margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .video-title {
@@ -517,12 +562,14 @@ img {
 .video-title h2 {
     text-transform: uppercase;
     margin-bottom: 2rem;
+    font-size: 3rem;
 }
 
 .video-title p {
-    font-size: xx-large;
+    font-size: 3rem;
     margin: .5rem;
-    color: var(--clr-yakuza);
+    margin-bottom: -.5rem;
+    color: var(--clr-pandora);
 }
 
 .video-title p:last-child {
@@ -536,7 +583,11 @@ img {
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
-    box-shadow: var(--bs);
+    box-shadow: var(--clr-pandora) 0px 0px 10px;
+}
+
+.video:hover {
+    box-shadow: var(--clr-pandora) 0px 0px 20px;
 }
 
 .video iframe {

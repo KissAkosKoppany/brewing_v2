@@ -17,7 +17,7 @@ const Home = () => {
         <div className="hero">
           <div className="wrapper">
             <h1 className="hero__title">
-              <span>CRAFTED BY MAGIC, BREWED TO PERFECTION!</span>UNLOCK THE SPELL OF GREAT BEER.
+              <span>At WizardHops,</span> brewing is more than craft—it's alchemy.
             </h1>
           </div>
         </div>
@@ -26,9 +26,9 @@ const Home = () => {
         <img className="parallax__bg" src="images/parallax_bg.png" alt="" />
         <img className="parallax__cloud" src="images/parallax_cloud2.png" alt="" />
         <img className="parallax__hut" src="images/parallax_hut.png" alt="" />
-        <img className="parallax__shade" src="images/parallax_shade.png" alt="" />
+        <img className="parallax__shade" src="images/parallax_shade_3.png" alt="" />
       </div>
-      
+      {/* <div className='spacer'></div> */}
       <main className="main-content">
         <div className="wrapper">
           <Suspense fallback={<Spinner />}>

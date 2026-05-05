@@ -27,6 +27,7 @@ const HomeSlider = () => {
         <h2>The Grimoire of Beers</h2>
         <p><GiSpellBook /></p>
       </div>
+      
       {
         beers ?
         

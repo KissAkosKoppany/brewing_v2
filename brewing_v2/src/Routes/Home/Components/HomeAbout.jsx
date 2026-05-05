@@ -1,23 +1,27 @@
 import React from 'react'
-import { GiHops, GiWheat, GiBeerStein } from "react-icons/gi";
+import { GiPotionBall } from "react-icons/gi";
 
 const HomeAbout = () => {
   return (
     <div className='home-about'>
         <div className='about-title'>
-            <p><GiHops /></p>
-            <h2>About Neko Kaiju</h2>
-            <p><GiHops /></p>
+            <p><GiPotionBall /></p>
+            <h2>About WizardHops</h2>
+            <p><GiPotionBall /></p>
         </div>
         <div className='about-text'>
+            <img src="images/parallax_viles.png" alt="" />
             <p>
-                <span><GiWheat /></span> At Neko Kaiju, we brew beers with the heart of a lucky cat and the roar of a monster. 
-                Each recipe is crafted in true kaiju spirit—bold, flavorful, and just a little mischievous. 
-                From hop-chopping samurais to sumo-sized stouts, our beers blend Japanese inspiration with craft beer creativity. <span><GiWheat /></span>
+                WizardHops was created to bring a bit more imagination into craft beer. 
+                We take familiar styles, add our own twist, 
+                and occasionally open Pandora's Box just to see what happens.
             </p>
             <p>
-                <span><GiBeerStein /></span> We don't just pour beer, we pour stories—fun, adventurous, and ready to bring a smile (and maybe a roar). 
-                So crack open a bottle, take a sip, and hop in for a good time. <span><GiBeerStein /></span>
+                Whether you're here for something light and refreshing or dark and mysterious, 
+                there's always a new flavor waiting to be discovered.
+            </p>
+            <p>
+                Go on—unlock the spell of great beer.
             </p>
         </div>
     </div>
