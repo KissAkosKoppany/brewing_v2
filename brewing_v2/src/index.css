@@ -1,21 +1,34 @@
 :root {
 
   
-  font-family: "New Rocker", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 200;
   box-sizing: border-box;
   
   color-scheme: light dark;
   color: var(--clr-text);
-  background-color: var(--clr-bg-accent);
-  font-size: large;
+  background-color: var(--clr-bg);
+  /* font-size: large; */
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  /* New Colors */
+
+  --clr-test1: rgba(129, 107, 114);
+  --clr-test2: rgba(123, 132, 137);
+  --clr-test3: rgba(127, 103, 50);
+  --clr-test4: rgba(131, 115, 117);
+  --clr-test5: rgba(115, 130, 134);
+  --clr-test6: rgba(142, 75, 69);
+  --clr-logo-hat: rgb(130, 79, 38);
+  --clr-logo-hop: rgb(68, 102, 70);
+
+
+  /* Old Colors */
   
   --clr-bg: rgb(15, 15, 15);
   --clr-bg-accent: rgb(22, 22, 22);
@@ -25,10 +38,6 @@
   --clr-active: rgba(255, 255, 255, 0.148);
   --clr-red: rgb(145, 36, 36);
   --clr-gold: gold;
-
-  --clr-logo-hat: rgba(237, 139, 59);
-  --clr-logo-main: rgba(159, 195, 128);
-  --clr-logo-black: rgba(22, 22, 21);
 
   --clr-arcane: #ffd391;
   --clr-arcane-hl: rgb(17, 17, 17);
@@ -77,6 +86,7 @@
                   1px 1px 0 var(--clr-text);
 
   --br: 2px;
+  --br-button: 30px;
   --bs: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   --max-w: 1270px;
   /* medium below 1350px */
@@ -107,4 +117,22 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+.app-container {
+  position: relative;
+}
+
+.app-container::before {
+  content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(
+            ellipse 65% 75% at 50% 0%,
+            rgba(255, 255, 255, 0.164) 2%,
+            rgba(255, 255, 255, 0.045) 30%,
+            rgba(255, 255, 255, 0) 70%
+        );
 }

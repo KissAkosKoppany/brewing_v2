@@ -6,7 +6,7 @@ const Footer = () => {
     <div className='footer'>
         <div className='footer-container'>
             <div className='footer-logo'>
-                <img src="/wizardhops_logo_c.png" alt="logo" />
+                <img src="/wizard_logo_final.png" alt="logo" />
             </div>
             <div className="footer-contact">
                 <h2>CONTACT US</h2>

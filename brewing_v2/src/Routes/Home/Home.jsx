@@ -13,32 +13,16 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="parallax">
-        <div className="hero">
-          <div className="wrapper">
-            <h1 className="hero__title">
-              <span>At WizardHops,</span> brewing is more than craft—it's alchemy.
-            </h1>
-          </div>
+      <main className="hero">
+        <div className="hero-text">
+          <h1>WizardHops</h1>
+          <h2>Brewing is more then craft</h2>
+          <h2>It's alchemy</h2>
         </div>
-        <img className="parallax__last" src="images/parallax_last.png" alt="" />
-        <img className="parallax__trees" src="images/parallax_trees.png" alt="" />
-        <img className="parallax__bg" src="images/parallax_bg.png" alt="" />
-        <img className="parallax__cloud" src="images/parallax_cloud2.png" alt="" />
-        <img className="parallax__hut" src="images/parallax_hut.png" alt="" />
-        <img className="parallax__shade" src="images/parallax_shade_3.png" alt="" />
-      </div>
-      {/* <div className='spacer'></div> */}
-      <main className="main-content">
-        <div className="wrapper">
-          <Suspense fallback={<Spinner />}>
-            <HomeSlider />
-          </Suspense>
-          <HomeAbout />
-          <HomeVideo />
+        <div>
+          {/* <img src="/wizard_logo_simple.png" alt="" /> */}
         </div>
       </main>
-
     </div>
     
   )
