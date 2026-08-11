@@ -14,14 +14,89 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.hero-title {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: left;
     flex-direction: column;
 }
 
-.hero-text h1 {
+.hero-title h1 {
     font-size: 70px;
-    background: -webkit-linear-gradient(var(--clr-text), var(--clr-logo-hat)); 
+    font-weight: 500;
+    background: -webkit-linear-gradient(bottom, var(--clr-logo-hat), var(--clr-text)); 
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: .5rem 0;
 }
 
+.hero-title h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+}
+
+
+.hero-product {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+    position: relative;
+}
+
+.hero-description {
+    width: 80%;
+}
+
+.hero-container {
+  position: relative;
+  width: 80%;
+  /* height: 650px; */
+}
+
+.hero-bottle {
+  position: absolute;
+
+  width: 170px;
+  height: auto;
+
+  bottom: 0;
+
+  will-change: transform;
+}
+
+/* Left → right */
+
+.bottle-1 {
+  left: 8%;
+  z-index: 2;
+}
+
+.bottle-2 {
+  left: 27%;
+  z-index: 3;
+}
+
+.bottle-3 {
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.bottle-4 {
+  right: 27%;
+  z-index: 3;
+}
+
+.bottle-5 {
+  right: 8%;
+  z-index: 2;
+}
