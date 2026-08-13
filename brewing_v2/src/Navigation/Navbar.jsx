@@ -22,7 +22,7 @@ const Navbar = () => {
                     <img src="/wizard_logo_simple.png" alt="logo" />
                 </div>
                 <p>
-                    WIZARDHOPS
+                    WIZARD<span>HOPS</span>
                 </p>
             </div>
         </Link>

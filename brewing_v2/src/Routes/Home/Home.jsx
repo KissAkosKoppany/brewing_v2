@@ -38,7 +38,7 @@ const Home = () => {
       <main className="hero">
         <div className="hero-title">
           <div className='title-box'>
-            <h1>WizardHops</h1>
+            <h1>Wizard<span>Hops</span></h1>
             <h2>Brewing is more then craft</h2>
             <h2>It's alchemy</h2>
           </div>

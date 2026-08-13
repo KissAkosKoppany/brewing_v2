@@ -20,6 +20,10 @@
     letter-spacing: 4px;
 }
 
+.logo span {
+    color: var(--clr-logo-hop);
+}
+
 .logo-image {
     height: 45px;
     width: 45px;

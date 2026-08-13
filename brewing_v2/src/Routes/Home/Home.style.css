@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 2rem;
 }
 
 .hero-title {
@@ -37,6 +38,13 @@
     margin: .5rem 0;
 }
 
+.title-box h1 span {
+    background: -webkit-linear-gradient(bottom, var(--clr-logo-hop), var(--clr-text)); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .hero-title h2 {
     font-size: 25px;
     font-weight: 300;
@@ -47,7 +55,7 @@
 .hero-title h2:nth-child(3) {
   font-weight: 700;
   font-size: 30px;
-  background: -webkit-linear-gradient(bottom, var(--clr-logo-hop), var(--clr-text)); 
+  background: -webkit-linear-gradient(bottom, var(--clr-logo-hat), var(--clr-text)); 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -157,7 +165,7 @@
 }
 
 @keyframes arrowAnimation {
-  from {color: var(--clr-logo-hop); transform: translateY(0)}
+  from {color: rgb(128, 128, 128); transform: translateY(0)}
   to {color: var(--clr-bg); transform: translateY(10px)}
 }
 
