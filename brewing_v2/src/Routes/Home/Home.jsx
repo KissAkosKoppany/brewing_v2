@@ -1,51 +1,35 @@
-import React, { lazy, Suspense, useRef, useEffect } from 'react'
+import React, { lazy, Suspense, useState, useEffect } from 'react'
 import './Home.style.css'
 import HomeBanner from './Components/HomeBanner'
 // import HomeSlider from './Components/HomeSlider'
 import HomeAbout from './Components/HomeAbout'
 import HomeVideo from './Components/HomeVideo'
 import Spinner from '../../GeneralComponents/Spinner'
+import { RiArrowDownWideLine } from "react-icons/ri";
 
 const HomeSlider = lazy(() => import('./Components/HomeSlider'))
 
 const Home = () => {
 
   const bottles = [
-    { src: "/images/beer_bottle.png", speed: 0.25 },
-    { src: "/images/beer_bottle.png", speed: 0.45 },
-    { src: "/images/beer_bottle.png", speed: 0.8 },
-    { src: "/images/beer_bottle.png", speed: 0.45 },
-    { src: "/images/beer_bottle.png", speed: 0.25 },
+    { src: "/images/beer_bottle.png", className: "bottle-1" },
+    { src: "/images/beer_bottle.png", className: "bottle-2" },
+    { src: "/images/beer_bottle.png", className: "bottle-3" },
+    { src: "/images/beer_bottle.png", className: "bottle-4" },
+    { src: "/images/beer_bottle.png", className: "bottle-5" },
   ];
 
-  const bottleRefs = useRef([])
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    let animationFrame;
-
     const handleScroll = () => {
-      if (animationFrame) return;
-
-      animationFrame = requestAnimationFrame(() => {
-        const scrollY = window.scrollY;
-
-        bottleRefs.current.forEach((bottle, index) => {
-          if (!bottle) return;
-
-          const speed = bottles[index].speed;
-
-          bottle.style.transform = `translate3d(0, ${-scrollY * speed}px, 0)`;
-        });
-
-        animationFrame = null;
-      });
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      cancelAnimationFrame(animationFrame);
     };
   }, []);
 
@@ -60,22 +44,20 @@ const Home = () => {
           </div>
         </div>
         <div className='hero-product'>
-          <div className='hero-container'>
-            {bottles.map((bottle, index) => (
+          <div className={`hero-container ${scrolled ? "is-scrolled" : ""}`}>
+            {bottles.map((bottle, i) => (
               <img
-                key={index}
-                ref={(el) => (bottleRefs.current[index] = el)}
-                className={`hero-bottle bottle-${index + 1}`}
+                key={i}
+                className={`hero-bottle ${bottle.className}`}
                 src={bottle.src}
                 alt=""
               />
             ))}
           </div>
-          <div className='hero-description'>
-            {/* <p>WizardHops was created to bring more imagination into craft beer. 
-              Whether you're here for something light and refreshing or dark and mysterious, 
-              there's always a new flavor waiting to be discovered.</p> */}
-          </div>
+        </div>
+        <div className={`hero-footer ${scrolled ? "is-scrolled" : ""}`}>
+          <p>Unlock the spell of beer</p>
+          <p><RiArrowDownWideLine /></p>
         </div>
       </main>
     </div>

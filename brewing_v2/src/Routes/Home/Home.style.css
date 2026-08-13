@@ -7,7 +7,8 @@
 
 
 .hero {
-    height: 100vh;
+    max-width: 1400px;
+    min-height: 100vh;
     position: relative;
     width: 100%;
     /* padding-block: 6rem; */
@@ -38,8 +39,18 @@
 
 .hero-title h2 {
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 300;
     margin: 0;
+    text-transform: uppercase;
+}
+
+.hero-title h2:nth-child(3) {
+  font-weight: 700;
+  font-size: 30px;
+  background: -webkit-linear-gradient(bottom, var(--clr-logo-hop), var(--clr-text)); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -58,45 +69,109 @@
 
 .hero-container {
   position: relative;
-  width: 80%;
-  /* height: 650px; */
+  width: 100%;
+  height: 400px;
 }
+
+/* ........Bottle size............... */
 
 .hero-bottle {
   position: absolute;
-
-  width: 170px;
+  width: 280px;
   height: auto;
-
-  bottom: 0;
-
+  bottom: 5%;
+  transition: transform 2500ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
 }
 
-/* Left → right */
+/*............Bottle spacing.............*/
 
 .bottle-1 {
-  left: 8%;
+  left: calc(50% - 290px);
   z-index: 2;
+  scale: .9;
 }
 
 .bottle-2 {
-  left: 27%;
+  left: calc(50% - 220px);
   z-index: 3;
+  scale: .95;
 }
 
 .bottle-3 {
-  left: 50%;
-  transform: translateX(-50%);
+  left: calc(50% - 140px);
+  /* transform: translateX(-50%); */
   z-index: 5;
 }
 
 .bottle-4 {
-  right: 27%;
+  right: calc(50% - 220px);
   z-index: 3;
+  scale: .95;
 }
 
 .bottle-5 {
-  right: 8%;
+  right: calc(50% - 290px);
   z-index: 2;
+  scale: .9;
+}
+
+/* .........Bottle transition.......... */
+
+.hero-container.is-scrolled .bottle-1 {
+  transform: translate(-25px, -20px);
+}
+
+.hero-container.is-scrolled .bottle-2 {
+  transform: translate(-10px, -30px);
+}
+
+.hero-container.is-scrolled .bottle-3 {
+  transform: translateY(-45px);
+}
+
+.hero-container.is-scrolled .bottle-4 {
+  transform: translate(+10px, -30px);
+}
+
+.hero-container.is-scrolled .bottle-5 {
+  transform: translate(+25px, -20px);
+}
+
+/* ..........Hero footer................. */
+
+.hero-footer {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: opacity 1000ms ease;
+}
+
+.hero-footer p {
+  font-size: 20px;
+}
+
+@keyframes arrowAnimation {
+  from {color: var(--clr-logo-hop); transform: translateY(0)}
+  to {color: var(--clr-bg); transform: translateY(10px)}
+}
+
+.hero-footer p:last-child {
+  font-size: 35px;
+  animation: arrowAnimation 1500ms ease-in-out infinite alternate;
+}
+
+.hero-footer.is-scrolled {
+  opacity: 0;
+}
+
+/*..........Hero responsive...............*/
+
+@media screen and (max-width: 1250px) {
+  
 }

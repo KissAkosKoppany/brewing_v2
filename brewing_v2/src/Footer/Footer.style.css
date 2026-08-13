@@ -1,5 +1,5 @@
 .footer {
-    background-color: var(--clr-bg-accent);
+    background-color: var(--clr-logo-black);
     padding-top: 1rem;
 }
 
@@ -28,7 +28,7 @@
 
 .footer a:link {
     text-decoration: none;
-    color: var(--clr-orange);
+    color: var(--clr-logo-hat);
 }
 
 .footer a:link:hover {
