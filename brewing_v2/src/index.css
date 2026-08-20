@@ -25,6 +25,8 @@
   --clr-logo-hat: rgb(130, 79, 38);
   --clr-logo-hop: rgb(68, 102, 70);
   --clr-logo-black: rgba(11, 11, 12);
+  --clr-logo-hat-gr: rgb(211, 178, 151);
+  --clr-logo-hop-gr: rgb(150, 204, 154);
 
   /* Font size */
 
@@ -36,7 +38,7 @@
   --font-600: 1.5rem;    /* 24 */
   --font-700: 1.875rem;  /* 30 */
   --font-800: 2.25rem;   /* 36 */
-  --font-900: 3rem;      /* 48 */
+  --font-900: 3.5rem;    
   --font-1000: 4.25rem;
 
   /* Spacers */
@@ -54,6 +56,8 @@
 
 
   /* Old Colors */
+
+  --text-s: 1px -1px 0 var(--clr-bg);
   
   --clr-bg: rgb(15, 15, 15);
   --clr-bg-accent: rgb(22, 22, 22);
@@ -75,45 +79,12 @@
   --clr-grimoire: rgb(255, 223, 181);
   --clr-grimoire-hl: rgb(31, 31, 31);
 
-  --text-s-pandora: -2px -2px 0 var(--clr-pandora-hl), 
-                  1px -1px 0 var(--clr-pandora-hl), 
-                  -1px 1px 0 var(--clr-pandora-hl), 
-                  1px 1px 0 var(--clr-pandora-hl);
   
-  --text-s-enchanter: -2px -2px 0 var(--clr-pandora-hl), 
-                  1px -1px 0 var(--clr-pandora-hl), 
-                  -1px 1px 0 var(--clr-pandora-hl), 
-                  1px 1px 0 var(--clr-pandora-hl);
-  
-  --text-s-incantation: -2px -2px 0 var(--clr-incantation-hl), 
-                  1px -1px 0 var(--clr-incantation-hl), 
-                  -1px 1px 0 var(--clr-incantation-hl), 
-                  1px 1px 0 var(--clr-incantation-hl);
 
-  --text-s-grimoire: -2px -2px 0 var(--clr-grimoire-hl), 
-                  1px -1px 0 var(--clr-grimoire-hl), 
-                  -1px 1px 0 var(--clr-grimoire-hl), 
-                  1px 1px 0 var(--clr-grimoire-hl);
-
-  --text-s-arcane: -2px -2px 0 var(--clr-arcane-hl), 
-                  1px -1px 0 var(--clr-arcane-hl), 
-                  -1px 1px 0 var(--clr-arcane-hl), 
-                  1px 1px 0 var(--clr-arcane-hl);
-
-  --text-s: -3px -3px 0 var(--clr-bg), 
-                  1px -1px 0 var(--clr-bg), 
-                  -1px 1px 0 var(--clr-bg), 
-                  1px 1px 0 var(--clr-bg);
-
-  --text-s-inverted: -3px -3px 0 var(--clr-text), 
-                  1px -1px 0 var(--clr-text), 
-                  -1px 1px 0 var(--clr-text), 
-                  1px 1px 0 var(--clr-text);
-
-  --br: 2px;
+  --br: 3px;
   --br-button: 30px;
   --bs: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  --max-w: 1270px;
+  --max-w: 1400px;
   /* medium below 1350px */
   --w-medium: 850px;
   /* medium below 950px */
@@ -155,9 +126,45 @@ body {
     pointer-events: none;
     background:
         radial-gradient(
-            ellipse 65% 75% at 50% 0%,
+            ellipse 65% 60rem at 50% 0%,
             rgba(255, 255, 255, 0.164) 2%,
             rgba(255, 255, 255, 0.045) 30%,
             rgba(255, 255, 255, 0) 70%
         );
+}
+
+@media screen and (max-width: 1250px) {
+  .app-container::before {
+    background:
+        radial-gradient(
+            ellipse 85% 50rem at 50% 0%,
+            rgba(255, 255, 255, 0.164) 2%,
+            rgba(255, 255, 255, 0.045) 30%,
+            rgba(255, 255, 255, 0) 70%
+        );
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .app-container::before {
+    background:
+        radial-gradient(
+            ellipse 100% 40rem at 50% 0%,
+            rgba(255, 255, 255, 0.164) 2%,
+            rgba(255, 255, 255, 0.045) 30%,
+            rgba(255, 255, 255, 0) 70%
+        );
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .app-container::before {
+    background:
+        radial-gradient(
+            ellipse 100% 35rem at 50% 0%,
+            rgba(255, 255, 255, 0.164) 2%,
+            rgba(255, 255, 255, 0.045) 30%,
+            rgba(255, 255, 255, 0) 70%
+        );
+  }
 }

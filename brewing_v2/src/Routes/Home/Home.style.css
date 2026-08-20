@@ -7,7 +7,7 @@
 
 
 .hero {
-    max-width: 1400px;
+    max-width: var(--max-w);
     min-height: 100vh;
     position: relative;
     width: 100%;
@@ -28,7 +28,7 @@
 
 .hero-title h1 {
     font-size: var(--font-1000);
-    font-weight: 500;
+    font-weight: 700;
     background: -webkit-linear-gradient(bottom, var(--clr-logo-hat), var(--clr-text)); 
     background-clip: text;
     -webkit-background-clip: text;
@@ -181,5 +181,233 @@
 /*..........Hero responsive...............*/
 
 @media screen and (max-width: 1250px) {
-  
+  .title-box h1 {
+    font-size: var(--font-900);
+  }
+
+  .title-box h2 {
+    font-size: var(--font-500);
+  }
+
+  .title-box h2:last-child {
+    font-size: var(--font-700);
+  }
+
+  .hero-container {
+    height: 300px;
+  }
+
+  .hero-bottle {
+    width: 200px;
+  }
+
+  .bottle-1 {
+  left: calc(50% - 220px);
+}
+
+  .bottle-2 {
+    left: calc(50% - 160px);
+  }
+
+  .bottle-3 {
+    left: calc(50% - 100px);
+  }
+
+  .bottle-4 {
+    right: calc(50% - 160px);
+  }
+
+  .bottle-5 {
+    right: calc(50% - 220px);
+  }
+
+  .hero-container.is-scrolled .bottle-1 {
+    transform: translate(-5px, -15px);
+  }
+
+  .hero-container.is-scrolled .bottle-2 {
+    transform: translate(-5px, -30px);
+  }
+
+  .hero-container.is-scrolled .bottle-3 {
+    transform: translateY(-40px);
+  }
+
+  .hero-container.is-scrolled .bottle-4 {
+    transform: translate(+5px, -30px);
+  }
+
+  .hero-container.is-scrolled .bottle-5 {
+    transform: translate(+5px, -15px);
+  }
+
+  .hero-footer p {
+    font-size: var(--font-400);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .title-box h1 {
+    font-size: var(--font-800);
+  }
+
+  .title-box h2 {
+    font-size: var(--font-400);
+  }
+
+  .title-box h2:last-child {
+    font-size: var(--font-600);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .title-box h1 {
+    font-size: var(--font-800);
+  }
+
+  .title-box h2 {
+    font-size: var(--font-400);
+  }
+
+  .title-box h2:last-child {
+    font-size: var(--font-700);
+  }
+
+  .hero-footer p {
+    font-size: var(--font-300);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .title-box h1 {
+    font-size: var(--font-700);
+  }
+
+  .title-box h2 {
+    font-size: var(--font-300);
+  }
+
+  .title-box h2:last-child {
+    font-size: var(--font-600);
+  }
+
+  .hero-container {
+    height: 300px;
+  }
+
+  .hero-bottle {
+    width: 120px;
+  }
+
+  .bottle-1 {
+  left: calc(50% - 125px);
+}
+
+  .bottle-2 {
+    left: calc(50% - 95px);
+  }
+
+  .bottle-3 {
+    left: calc(50% - 60px);
+  }
+
+  .bottle-4 {
+    right: calc(50% - 95px);
+  }
+
+  .bottle-5 {
+    right: calc(50% - 125px);
+  }
+
+  .hero-container.is-scrolled .bottle-1 {
+    transform: translate(-5px, -15px);
+  }
+
+  .hero-container.is-scrolled .bottle-2 {
+    transform: translate(-5px, -23px);
+  }
+
+  .hero-container.is-scrolled .bottle-3 {
+    transform: translateY(-30px);
+  }
+
+  .hero-container.is-scrolled .bottle-4 {
+    transform: translate(+5px, -23px);
+  }
+
+  .hero-container.is-scrolled .bottle-5 {
+    transform: translate(+5px, -15px);
+  }
+
+  .hero-footer p {
+    font-size: var(--font-300);
+  }
+}
+
+
+/* --------------- Home Description ---------------------- */
+
+.home-about {
+  max-width: var(--max-w);
+  width: 100%;
+  margin-top: var(--space-900);
+  margin-bottom: var(--space-900);
+  position: relative;
+  padding: 0 var(--space-600);
+}
+
+.about-description {
+  width: 40%;
+}
+
+.about-description h2 {
+  position: absolute;
+  text-transform: uppercase;
+  top: -2.3rem;
+  left: var(--space-600);
+  padding-left: var(--space-500);
+  font-size: var(--font-900);
+  font-weight: 800;
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
+  margin: 0;
+}
+
+.about-description h2 span {
+  margin-left: var(--space-600);
+}
+
+.about-description p {
+  position: absolute;
+  bottom: -5rem;
+  right: var(--space-600);
+  font-size: var(--font-600);
+  font-weight: 300;
+  width: 40%;
+  padding: var(--space-500);
+  background-color: rgba(15, 15, 15, 0.726);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-top-left-radius: var(--br);
+  text-indent: var(--space-600);
+}
+
+.about-image {
+  width: 100%;
+}
+
+.about-image img {
+  border-radius: var(--br);
+  aspect-ratio: 16/5;
+  width: 100%;
+  /* height: auto; */
+  object-fit: cover;
 }
