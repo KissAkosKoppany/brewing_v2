@@ -371,13 +371,22 @@
 .about-description h2 {
   position: absolute;
   text-transform: uppercase;
-  top: -2.3rem;
+  top: -2.7rem;
   left: var(--space-600);
   padding-left: var(--space-500);
   font-size: var(--font-900);
   font-weight: 800;
-  /* backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px); */
+  background: linear-gradient(
+    to bottom,
+    var(--clr-text) 0%,
+    var(--clr-text) 25%,
+    var(--clr-logo-hat-gr) 25%,
+    var(--clr-logo-hat) 100%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   margin: 0;
 }
 
@@ -410,4 +419,88 @@
   width: 100%;
   /* height: auto; */
   object-fit: cover;
+}
+
+@media screen and (max-width: 1300px) {
+  .about-description p {
+    font-size: var(--font-500);
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .about-description h2 {
+    font-size: var(--font-800);
+    top: -1.75rem;
+  }
+
+  .about-description p {
+    font-size: var(--font-300);
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-description h2 {
+    font-size: var(--font-700);
+    top: -1.45rem;
+  }
+
+  .about-description p {
+    font-size: var(--font-200);
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-description h2 {
+    font-size: var(--font-600);
+    top: -1.15rem;
+  }
+
+  .about-description p {
+    font-size: var(--font-100);
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-description h2 {
+    font-size: var(--font-500);
+    top: -.95rem;
+  }
+
+  .about-description p {
+    width: 80%;
+    padding: var(--space-300);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-description h2 {
+    font-size: var(--font-300);
+    top: -.75rem;
+  }
+
+  .about-description p {
+    width: 85%;
+  }
+
+  .home-about {
+    margin-top: var(--space-100);
+    margin-bottom: var(--space-1000);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-description h2 {
+    font-size: var(--font-200);
+    top: -.65rem;
+  }
+
+  .about-description p {
+    width: 85%;
+    bottom: -7rem;
+    padding: var(--space-200);
+  }
 }
