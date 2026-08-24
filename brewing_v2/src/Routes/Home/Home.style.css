@@ -504,3 +504,50 @@
     padding: var(--space-200);
   }
 }
+
+/* ------------------- Home Beers -------------------------- */
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.card {
+  flex: 0 0 30%;
+  min-height: 250px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #eee;
+  cursor: pointer;
+
+  /* Side cards */
+  opacity: 0.5;
+  transform: scale(0.85);
+
+  transition:
+    transform 1.4s ease,
+    opacity 1.4s ease,
+    background 1.4s ease;
+}
+
+.card--active {
+  /* Middle card */
+  opacity: 1;
+  transform: scale(1.05);
+  background: #fff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.card:hover {
+  opacity: 0.8;
+}
+
+.card--active:hover {
+  opacity: 1;
+}
