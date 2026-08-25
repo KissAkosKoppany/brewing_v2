@@ -54,10 +54,13 @@ const HomeBeers = () => {
                     return (
                         <div
                             key={card?.id}
-                            className={`card ${isMiddle ? "card--active" : ""}`}
+                            className={`card ${isMiddle ? "card--active" : ""} ${card.color_scheme}`}
                             onClick={() => handleCardClick(card?.id)}
                         >
-                            <h2>{card?.name}</h2>
+                            <div className='card-bg'></div>
+                            <div className="card-image">
+                                <img src={card?.images[0]} alt="beer label" />
+                            </div>
                             <p>{card?.description}</p>
                         </div>
                     );
