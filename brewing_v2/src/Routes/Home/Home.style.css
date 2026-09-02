@@ -675,3 +675,21 @@
         var(--clr-arcane)
     );
 }
+
+/* .............Home Beers Responsive................. */
+
+@media screen and (max-width: 1250px) {
+  .card p {
+    font-size: var(--space-400);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .home-spellbook h1 {
+    font-size: var(--space-600);
+  }
+
+  .card p {
+    font-size: var(--space-300);
+  }
+}
