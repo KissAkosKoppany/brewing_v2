@@ -626,6 +626,8 @@
 
 /* .......Card color schemes.............. */
 
+
+
 .card--active.grimoire::before,
 .card--active.grimoire::after {
   background-image: conic-gradient(
@@ -747,7 +749,7 @@
   text-transform: uppercase;
   font-size: var(--font-700);
   /* color: var(--clr-logo-hat); */
-  background: -webkit-linear-gradient(top, var(--clr-logo-hat), var(--clr-logo-hat-gr)); 
+  background: -webkit-linear-gradient(top, var(--clr-pandora), var(--clr-text)); 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -774,8 +776,9 @@
   background-color: var(--clr-bg);
   border-radius: var(--br);
   text-transform: uppercase;
-  border: 2px solid var(--clr-logo-hat);
-  background: -webkit-linear-gradient(bottom, var(--clr-logo-hat), var(--clr-logo-hat-gr)); 
+  border: 2px solid var(--clr-pandora);
+  /* color: var(--clr-pandora); */
+  background: -webkit-linear-gradient(top, var(--clr-pandora), var(--clr-text)); 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -783,12 +786,55 @@
 
 .experiment-description button:hover {
   cursor: pointer;
-  border-color: var(--clr-logo-hat-gr);
+  /* border-color: var(--clr-logo-hat); */
+  background: -webkit-linear-gradient(top, var(--clr-pandora), var(--clr-pandora)); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .experiment-description button:active {
-  border-color: var(--clr-logo-hat);
+  background: -webkit-linear-gradient(top, var(--clr-pandora), var(--clr-text)); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ..............The Experiment responsive..................*/
 
+@media screen and (max-width: 900px) {
+  .home-experiment h2 {
+    font-size: var(--font-800);
+  }
+  
+  .home-experiment h3 {
+    font-size: var(--font-600);
+  }
+
+  .experiment-description p, .experiment-table-pair p {
+    font-size: var(--font-500);
+  }
+
+  .experiment-description button {
+    font-size: var(--font-400);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-experiment h2 {
+    font-size: var(--font-700);
+  }
+  
+  .home-experiment h3 {
+    font-size: var(--font-500);
+  }
+
+  .experiment-description p, .experiment-table-pair p {
+    font-size: var(--font-400);
+  }
+
+  .experiment-description button {
+    font-size: var(--font-300);
+  }
+
+}
