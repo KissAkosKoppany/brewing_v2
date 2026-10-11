@@ -5,6 +5,7 @@ import HomeVideo from './Components/HomeVideo'
 import Spinner from '../../GeneralComponents/Spinner'
 import HomeHero from './Components/HomeHero'
 import HomeBeers from './Components/HomeBeers'
+import HomeExperiment from './Components/HomeExperiment'
 
 const Home = () => {
 
@@ -13,6 +14,7 @@ const Home = () => {
       <HomeHero />
       <HomeAbout />
       <HomeBeers />
+      <HomeExperiment />
     </div>
     
   )

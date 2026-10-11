@@ -720,3 +720,75 @@
     padding: var(--space-100);
   }
 }
+
+/* .................The Experiment................... */
+
+.home-experiment {
+  max-width: var(--max-w);
+  width: 100%;
+  margin-bottom: var(--space-1000);
+  padding: 0 var(--space-600);
+}
+
+.home-experiment h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--font-900);
+  /* color: var(--clr-logo-hat); */
+  background: -webkit-linear-gradient(bottom, var(--clr-logo-hat), var(--clr-logo-hat-gr)); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.home-experiment h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--font-700);
+  /* color: var(--clr-logo-hat); */
+  background: -webkit-linear-gradient(top, var(--clr-logo-hat), var(--clr-logo-hat-gr)); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+  margin-bottom: var(--space-800);
+}
+
+.experiment-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--space-700);
+}
+.experiment-description p {
+  margin-bottom: var(--space-500);
+  font-size: var(--font-600);
+  text-align: center;
+}
+
+.experiment-description button {
+  font-size: var(--font-500);
+  font-weight: 700;
+  padding: var(--space-300) var(--space-600);
+  background-color: var(--clr-bg);
+  border-radius: var(--br);
+  text-transform: uppercase;
+  border: 2px solid var(--clr-logo-hat);
+  background: -webkit-linear-gradient(bottom, var(--clr-logo-hat), var(--clr-logo-hat-gr)); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.experiment-description button:hover {
+  cursor: pointer;
+  border-color: var(--clr-logo-hat-gr);
+}
+
+.experiment-description button:active {
+  border-color: var(--clr-logo-hat);
+}
+
+/* ..............The Experiment responsive..................*/
+
