@@ -13,17 +13,42 @@ const HomeExperiment = () => {
         </div>
         <h3>CURRENT EDITION</h3>
         <div className='experiment-table'>
-            <div className='experiment-table-pair'>
-                <p>Type</p>
-                <p></p>
+            <h4>Name of the beer</h4>
+            <div className='experiment-table-image'>
+                <img src="images/experiment.jpeg" alt="experiment" />
             </div>
-            <div className='experiment-table-pair'>
-                <p>ABV</p>
-                <p>5%</p>
+            <h5>American whit</h5>
+            <p>Description of the beer, it will be short and punchy.</p>
+            <div className="experiment-table-info">
+                <div className='experiment-table-info-box'>
+                    <div className='info-box'>
+                        <p>ALCOHOL</p>
+                        <p>5%</p>
+                        <p>ABV</p>
+                    </div>
+                    <div className='info-box'>
+                        <p>COLOR</p>
+                        <p>Hazy Gold</p>
+                    </div>
+                </div>
+                <div className='experiment-table-info-box'>
+                    <div className='info-box'>
+                        <p>BITTERNESS</p>
+                        <p>21</p>
+                        <p>IBU</p>
+                    </div>
+                    <div className='info-box'>
+                        <p>BODY</p>
+                        <p>Medium</p>
+                    </div>
+                </div>
             </div>
-            <div className='experiment-table-pair'>
-                <p>IBU</p>
-                <p>21</p>
+            <h5>The falvor</h5>
+            <div className="experiment-table-flavor">
+                {/* array of string */}
+                <p>Citrus</p>
+                <p>Herbal</p>
+                <p>Juicy</p>
             </div>
         </div>
     </div>
