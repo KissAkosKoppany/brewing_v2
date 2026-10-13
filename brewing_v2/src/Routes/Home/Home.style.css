@@ -810,7 +810,7 @@
   padding: var(--space-200) var(--space-400);
   border-radius: var(--br);
   background-color: var(--clr-bg);
-  box-shadow: 0 0 20px 5px black;
+  box-shadow: 0 0 20px 2px black;
 }
 
 .experiment-table h4 {
@@ -881,6 +881,7 @@
 
 .experiment-table-flavor {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: var(--space-200);
 }
 
@@ -915,6 +916,42 @@
   .experiment-description button {
     font-size: var(--font-400);
   }
+
+  .experiment-table {
+    width: 95%;
+  }
+
+  .experiment-table h4 {
+    font-size: var(--font-500);
+  }
+
+  .experiment-table-image {
+    height: 300px;
+  }
+
+  .experiment-table h5 {
+    font-size: var(--font-400);
+  }
+
+  .experiment-table > p {
+    font-size: var(--font-300);
+  }
+
+  .info-box p:first-child {
+    font-size: var(--font-200);
+  }
+
+  .info-box p:nth-child(2) {
+    font-size: var(--font-400);
+  }
+
+  .info-box p:nth-child(3) {
+    font-size: var(--font-200);
+  }
+
+  .experiment-table-flavor p {
+    font-size: var(--font-200);
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -934,4 +971,110 @@
     font-size: var(--font-300);
   }
 
+  .experiment-table h4 {
+    font-size: var(--font-400);
+  }
+
+  .experiment-table-image {
+    height: 200px;
+  }
+
+  .experiment-table h5 {
+    font-size: var(--font-300);
+  }
+
+  .experiment-table > p {
+    font-size: var(--font-200);
+  }
+
+  .info-box p:first-child {
+    font-size: var(--font-100);
+  }
+
+  .info-box p:nth-child(2) {
+    font-size: var(--font-300);
+  }
+
+  .info-box p:nth-child(3) {
+    font-size: var(--font-100);
+  }
+
+  .experiment-table-flavor p {
+    font-size: var(--font-100);
+  }
 }
+
+/* .............Home Video................ */
+
+.home-video {
+  max-width: var(--max-w);
+  width: 100%;
+  margin-bottom: var(--space-1000);
+  padding: 0 var(--space-600);
+}
+
+.home-video h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--font-900);
+  background: -webkit-linear-gradient(bottom, var(--clr-logo-hat), var(--clr-logo-hat-gr)); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+.video {
+  margin-top: var(--space-700);
+  padding: var(--space-400);
+  /* background-color: var(--clr-logo-hat); */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  border-radius: var(--br);
+  box-shadow: 0 0 20px 2px black;
+}
+
+.video h3 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: var(--space-300);
+  font-size: var(--space-600);
+  background: -webkit-linear-gradient(bottom, var(--clr-logo-hop), var(--clr-logo-hop-gr)); 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video iframe {
+  height: auto;
+  aspect-ratio: 16/9;
+  border-radius: var(--br);
+  /* box-shadow: 0 0 20px 2px black; */
+}
+
+.video-title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-500);
+  color: var(--clr-logo-hop);
+  border-bottom: 1px solid var(--clr-logo-hop);
+}
+
+.video-title h4 {
+  margin-left: var(--space-300);
+  margin-top: var(--space-300);
+  margin-bottom: var(--space-300);
+}
+
+.video-title h4 span {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* .............Home Video Responsive................ */
+

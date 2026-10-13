@@ -15,6 +15,7 @@ const Home = () => {
       <HomeAbout />
       <HomeBeers />
       <HomeExperiment />
+      <HomeVideo />
     </div>
     
   )
