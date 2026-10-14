@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import HomeVoteModal from './HomeVoteModal'
 
 const HomeExperiment = () => {
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    const handleModal = (bool) => {
+        setIsOpen(bool)
+    }
+
   return (
     <div className='home-experiment'>
-        <HomeVoteModal />
+        {
+            isOpen ?
+            <HomeVoteModal handleModal={handleModal} />
+            :
+            null
+        }
         <h2>THE EXPERIMENT</h2>
         <h3>PANDORA'S BOX</h3>
         <div className='experiment-description'>
             <p>Curiosity has its own flavor.</p>
             <p>Pandora's Box is our special edition where every batch brings a new recipe and a new flavor. From bold ideas to unexpected combinations, you never know what comes next.</p>
             <p>And the best part? You get to be part of the experiment. Cast your vote and help decide what we brew next. You never know what we'll unleash when Pandora's Box opens again.</p>
-            <button>Vote for next batch</button>
+            <button onClick={() => handleModal(true)}>Vote for next batch</button>
         </div>
         <h3>CURRENT EDITION</h3>
         <div className='experiment-table'>

@@ -578,6 +578,7 @@
 }
 
 .card-bg {
+  border-radius: var(--br);
   position: absolute;
   width: 100%;
   height: 100%;
@@ -595,8 +596,10 @@
 }
 
 .card-image img {
+  border-radius: var(--br);
   width: 100%;
   object-fit: cover;
+  /* box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.068); */
 }
 
 .card--active {
@@ -1175,24 +1178,33 @@
   align-items: center;
 }
 
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
 .vote-form {
+  width: 800px;
   position: relative;
-  padding: var(--space-800);
+  padding: var(--space-700);
   /* background-color: var(--clr-bg); */
-  background-color: rgba(0, 0, 0, 0.37);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  background-color: rgba(0, 0, 0, 0.048);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: var(--br);
-  box-shadow: 0 0 15px 5px rgba(190, 190, 190, 0.226);
+  box-shadow: 0 0 15px 5px rgba(190, 190, 190, 0.178);
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 2;
 }
 
 .vote-close-button {
   position: absolute;
-  right: var(--space-300);
-  top: var(--space-300);
+  right: var(--space-200);
+  top: var(--space-200);
   font-size: var(--font-800);
   cursor: pointer;
   color: var(--clr-pandora);
@@ -1207,14 +1219,89 @@
   text-align: center;
   text-transform: uppercase;
   font-size: var(--font-600);
+  margin-bottom: var(--space-700);
 }
 
-.vote-form select {
-  padding: var(--space-200) var(--space-300);
+.vote-mail-input {
+  margin: var(--space-500) 0;
+  width: 50%;
+  padding: var(--space-400);
   font-size: var(--font-400);
-  border: 2px solid var(--clr-pandora);
   border-radius: var(--br);
-  background-color: var(--clr-bg);
+  border: 2px solid var(--clr-pandora);
+  background-color: rgba(100, 48, 61, 0.185);
   color: var(--clr-text);
-  line-height: 1.6;
+}
+
+.vote-mail-input:focus {
+  border-color: var(--clr-logo-hat-gr);
+}
+
+.vote-form > button {
+  font-size: var(--font-500);
+  padding: var(--space-200) var(--space-700);
+  border-radius: var(--br);
+  border: 2px solid var(--clr-pandora);
+  background-color: rgba(100, 48, 61, 0.185);
+  color: var(--clr-text);
+  cursor: pointer;
+  margin-top: var(--space-200);
+  margin-bottom: var(--space-700);
+  text-transform: uppercase;
+}
+
+.vote-form > button:hover {
+  border-color: var(--clr-logo-hat-gr);
+  color: var(--clr-logo-hat-gr);
+}
+
+.vote-form > button:active {
+  color: var(--clr-text);
+  border-color: var(--clr-pandora);
+}
+
+.vote-form > p {
+  width: 100%;
+  text-align: right;
+  font-size: var(--font-200);
+}
+
+/* ...........Modal Responsive.............. */
+
+@media screen and (max-width: 900px) {
+  .vote-form {
+    width: 500px;
+  }
+
+  .vote-form h1 {
+    font-size: var(--font-400);
+  }
+
+  .vote-form > button {
+    font-size: var(--font-200);
+  }
+
+  .vote-form > p {
+    font-size: var(--font-100);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .vote-form {
+    width: 300px;
+    padding: var(--space-500);
+  }
+
+  .vote-form h1 {
+    font-size: var(--font-200);
+  }
+
+  .vote-form > button {
+    font-size: var(--font-100);
+  }
+
+  .vote-close-button {
+    font-size: var(--font-500);
+  }
+
 }

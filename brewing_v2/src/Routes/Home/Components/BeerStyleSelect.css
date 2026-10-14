@@ -1,0 +1,248 @@
+.beer-select {
+  --select-bg: rgba(100, 48, 61, 0.185);
+  --select-border: var(--clr-pandora);
+  --select-gold: var(--clr-logo-hat-gr);
+  --select-text: var(--clr-text);
+  --select-muted: rgba(151, 149, 149, 0.671);
+
+  position: relative;
+  width: 50%;
+  font-family: inherit;
+  z-index: 1;
+}
+
+/* Trigger */
+
+.beer-select__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  width: 100%;
+  min-height: 56px;
+  padding: 0 var(--space-400);
+
+  color: var(--select-text);
+  background: var(--select-bg);
+  border: 2px solid var(--select-border);
+  border-radius: 8px;
+
+  font: inherit;
+  font-size: var(--font-400);
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    border-color 250ms ease,
+    background-color 250ms ease,
+    box-shadow 250ms ease;
+}
+
+.beer-select__trigger:hover,
+.beer-select__trigger.is-open {
+  border-color: var(--select-gold);
+}
+
+.beer-select__trigger.is-open {
+  box-shadow: 0 0 0 1px
+    rgb(201 168 106 / 12%);
+}
+
+.beer-select__value {
+  min-width: 0;
+  color: var(--select-muted);
+}
+
+.beer-select__value.has-value {
+  color: var(--select-text);
+}
+
+/* Arrow rotation */
+
+.beer-select__arrow {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--select-gold);
+
+  transition:
+    transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.beer-select__trigger.is-open .beer-select__arrow {
+  transform: rotate(180deg);
+}
+
+/* Dropdown panel */
+
+.beer-select__options {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+
+  z-index: 100;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+
+  background: rgba(14, 14, 14, 0.98);
+  border: 2px solid var(--select-border);
+  border-radius: 8px;
+  box-shadow: 0 14px 35px rgb(0 0 0 / 30%);
+
+  transform-origin: top center;
+  animation: dropdown-enter 220ms
+    cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.beer-select__options li {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes dropdown-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Individual options */
+
+.beer-select__option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  width: 100%;
+  padding: 13px 12px;
+
+  color: var(--select-text);
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+
+  font: inherit;
+  font-size: var(--font-300);
+  text-align: left;
+  cursor: pointer;
+
+  opacity: 0;
+  animation: option-enter 240ms ease forwards;
+  animation-delay: calc(var(--option-index) * 25ms);
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
+}
+
+@keyframes option-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.beer-select__option:hover,
+.beer-select__option:focus-visible {
+  color: var(--select-gold);
+  background: rgb(201 168 106 / 9%);
+  outline: none;
+}
+
+.beer-select__option.is-selected {
+  color: var(--select-gold);
+}
+
+.beer-select__check {
+  color: var(--select-gold);
+  font-size: 1rem;
+}
+
+/* Selected text: small upward movement and landing */
+
+.beer-select__value > span > span {
+  display: inline-block;
+  animation: selection-land 420ms
+    cubic-bezier(0.2, 0.8, 0.25, 1) both;
+}
+
+@keyframes selection-land {
+  0% {
+    transform: translateY(0);
+  }
+
+  35% {
+    transform: translateY(-9px);
+  }
+
+  65% {
+    transform: translateY(2px);
+  }
+
+  82% {
+    transform: translateY(-1px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Keyboard focus */
+
+.beer-select__trigger:focus-visible {
+  outline: 2px solid var(--select-gold);
+  outline-offset: 3px;
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .beer-select *,
+  .beer-select *::before,
+  .beer-select *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    .beer-select {
+        width: 90%;
+    }
+
+    .beer-select__trigger {
+        font-size: var(--font-200);
+    }
+
+    .beer-select__option {
+        font-size: var(--font-100);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .beer-select {
+        width: 100%;
+    }
+
+    .beer-select__trigger {
+        font-size: var(--font-100);
+    }
+
+    .beer-select__option {
+        font-size: var(--font-100);
+    }
+}
