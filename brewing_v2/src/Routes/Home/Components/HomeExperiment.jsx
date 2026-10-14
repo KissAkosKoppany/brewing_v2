@@ -1,8 +1,10 @@
 import React from 'react'
+import HomeVoteModal from './HomeVoteModal'
 
 const HomeExperiment = () => {
   return (
     <div className='home-experiment'>
+        <HomeVoteModal />
         <h2>THE EXPERIMENT</h2>
         <h3>PANDORA'S BOX</h3>
         <div className='experiment-description'>

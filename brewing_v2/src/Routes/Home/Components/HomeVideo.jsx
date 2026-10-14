@@ -1,5 +1,7 @@
 import React from 'react'
 import { FaPlayCircle } from "react-icons/fa";
+import { IoIosBeer } from "react-icons/io";
+import { GiWheat, GiCampCookingPot } from "react-icons/gi";
 
 const HomeVideo = () => {
   return (
@@ -11,6 +13,20 @@ const HomeVideo = () => {
           <div className='video-title'>
             <FaPlayCircle />
             <h4>Step inside the brewery <span>· Behind the brew</span></h4>
+          </div>
+          <div className="video-process">
+            <div className='video-process-element'>
+              <GiWheat />
+              <p>The ingredients</p>
+            </div>
+            <div className='video-process-element'>
+              <GiCampCookingPot />
+              <p>The process</p>
+            </div>
+            <div className='video-process-element'>
+              <IoIosBeer />
+              <p>The result</p>
+            </div>
           </div>
         </div>
     </div>
