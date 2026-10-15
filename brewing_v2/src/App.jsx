@@ -11,6 +11,7 @@ import { useLoadBrewings } from './hooks/useLoadBrewings'
 import Footer from './Footer/Footer'
 import Admin from './Routes/Admin/Admin'
 import { useLoadReviews } from './hooks/useLoadReviews'
+import ConfirmVote from './Routes/Home/Components/ConfirmVote'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
         <Route path='recipes/*' element={<Recipes />} />
         <Route path='cart' element={<Cart />} />
         <Route path='admin-dashboard/*' element={<Admin />} />
+        <Route path='confirm-vote' element={<ConfirmVote />} />
       </Routes>
       <Footer />
     </div>

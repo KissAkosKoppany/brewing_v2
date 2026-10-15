@@ -816,6 +816,36 @@
   box-shadow: 0 0 20px 2px black;
 }
 
+.experiment-table::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-pandora),
+    transparent
+  );
+}
+
+.experiment-table::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-pandora),
+    transparent
+  );
+}
+
 .experiment-table h4 {
   text-align: center;
   text-transform: uppercase;
@@ -1039,6 +1069,36 @@
   box-shadow: 0 0 20px 2px black;
 }
 
+.video::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-logo-hop-gr),
+    transparent
+  );
+}
+
+.video::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-logo-hop-gr),
+    transparent
+  );
+}
+
 .video h3 {
   text-transform: uppercase;
   text-align: center;
@@ -1055,7 +1115,7 @@
   height: auto;
   aspect-ratio: 16/9;
   border-radius: var(--br);
-  border: 3px solid var(--clr-logo-hop);
+  border: 2px solid var(--clr-logo-hop);
   /* box-shadow: 0 0 20px 2px black; */
 }
 
@@ -1194,11 +1254,42 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: var(--br);
-  box-shadow: 0 0 15px 5px rgba(190, 190, 190, 0.178);
+  box-shadow: 0 0 15px 2px rgba(190, 190, 190, 0.137);
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 2;
+  border: 1px solid var(--clr-pandora);
+}
+
+.vote-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-logo-hat-gr),
+    transparent
+  );
+}
+
+.vote-form::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-logo-hat-gr),
+    transparent
+  );
 }
 
 .vote-close-button {
@@ -1264,6 +1355,13 @@
   width: 100%;
   text-align: right;
   font-size: var(--font-200);
+}
+
+.vote-status-message {
+  color: var(--clr-logo-hat);
+  text-align: center !important;
+  margin-bottom: var(--space-400);
+  font-size: var(--font-400) !important;
 }
 
 /* ...........Modal Responsive.............. */
