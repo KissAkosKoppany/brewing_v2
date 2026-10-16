@@ -20,8 +20,8 @@
 .loading-spinner {
     width: 50px;
     height: 50px;
-    border: 6px solid var(--clr-orange);
-    border-top: 6px solid var(--clr-highlight);
+    border: 6px solid var(--clr-logo-hat);
+    border-top: 6px solid var(--clr-logo-hop);
     border-radius: 50%;
     animation: spinner 1s linear infinite;
     margin: 2rem;

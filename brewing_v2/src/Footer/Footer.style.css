@@ -52,3 +52,9 @@
         font-size: small;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}

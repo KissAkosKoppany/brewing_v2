@@ -5,6 +5,7 @@
     align-items: center;
     flex-direction: column;
     min-height: calc(100vh - 20.6rem);
+    margin-top: var(--space-700);
 }
 
 /* ------------ Shop Filters ------------ */
@@ -40,11 +41,12 @@
 /* ------------ Shop Items ------------ */
 
 .shop-items-container {
-    max-width: 1270px;
+    max-width: 1200px;
+    /* margin-top: var(--space-800); */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: var(--space-900);
 }
 
 @property --gradient-angle {
@@ -61,9 +63,9 @@
 .shop-item-card {
     width: 300px;
     background-color: var(--clr-bg-accent);
-    margin: 1rem;
+    margin: var(--space-400);
     border-radius: var(--br);
-    aspect-ratio: 10/16;
+    aspect-ratio: 10/15;
     position: relative;
     /* display: flex;
     flex-direction: column; */
@@ -73,14 +75,14 @@
 .shop-item-card::after {
     content: "";
     position: absolute;
-    inset: -3px;
+    inset: -1px;
     z-index: -1;
     border-radius: inherit;
     background-image: conic-gradient(
         from var(--gradient-angle),
-        var(--clr-highlight),
+        var(--clr-logo-hop),
         var(--clr-bg-accent),
-        var(--clr-highlight)
+        var(--clr-logo-hop)
     );
     animation: rotation 4s linear infinite;
 }
@@ -89,39 +91,39 @@
 .shop-item-card.enchanter::after {
     background-image: conic-gradient(
         from var(--gradient-angle),
-        var(--clr-hop-enchanter),
+        var(--clr-enchanter),
         var(--clr-bg-accent),
-        var(--clr-hop-enchanter)
+        var(--clr-enchanter)
     );
 }
 
-.shop-item-card.shogun::before,
-.shop-item-card.shogun::after {
+.shop-item-card.grimoire::before,
+.shop-item-card.grimoire::after {
     background-image: conic-gradient(
         from var(--gradient-angle),
-        var(--clr-shogun),
+        var(--clr-grimoire),
         var(--clr-bg-accent),
-        var(--clr-shogun)
+        var(--clr-grimoire)
     );
 }
 
-.shop-item-card.yakuza::before,
-.shop-item-card.yakuza::after {
+.shop-item-card.pandora::before,
+.shop-item-card.pandora::after {
     background-image: conic-gradient(
         from var(--gradient-angle),
-        var(--clr-yakuza),
+        var(--clr-pandora),
         var(--clr-bg-accent),
-        var(--clr-yakuza)
+        var(--clr-pandora)
     );
 }
 
-.shop-item-card.sumo::before,
-.shop-item-card.sumo::after {
+.shop-item-card.incantation::before,
+.shop-item-card.incantation::after {
     background-image: conic-gradient(
         from var(--gradient-angle),
-        var(--clr-sumo),
+        var(--clr-incantation),
         var(--clr-bg-accent),
-        var(--clr-sumo)
+        var(--clr-incantation)
     );
 }
 
@@ -129,9 +131,9 @@
 .shop-item-card.arcane::after {
     background-image: conic-gradient(
         from var(--gradient-angle),
-        var(--clr-arcane-wheat),
+        var(--clr-arcane),
         var(--clr-bg-accent),
-        var(--clr-arcane-wheat)
+        var(--clr-arcane)
     );
 } 
 
@@ -152,19 +154,17 @@
 .shop-item-card-description,
 .shop-item-card-price {
     margin: 0;
-    padding: 0 .4rem;
+    padding: 0 .6rem;
+
 }
 
 .shop-item-card-description h1, p {
     margin: 0;
     padding: 0;
-    font-size: large;
+    font-size: var(--font-300);
+    text-transform: uppercase;
+    font-weight: 700;
 }
-
-/* .shop-item-card-description p {
-    height: 5.4rem;
-    overflow-y: scroll;
-} */
 
 /* .shop-item-card-description p::-webkit-scrollbar {
     display: none;
@@ -172,7 +172,10 @@
 
 .shop-item-card-description p,
 .shop-item-card-price p {
-    font-size: medium;
+    font-size: var(--font-200);
+    font-weight: 300;
+    padding-bottom: var(--space-200);
+
 }
 
 .shop-item-card-price {
@@ -190,13 +193,31 @@
 /* ------------ Shop Item Page ------------ */
 
 .shop-item-page-container {
-    max-width: 1270px;
+    max-width: var(--max-w);
 }
 
 .shop-item-page-container h1 {
-    border-bottom: 2px solid var(--clr-highlight);
+    /* border-bottom: 2px solid var(--clr-logo-hop); */
     text-align: center;
-    font-size: xx-large;
+    font-size: var(--font-700);
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.shop-item-page-container > h1::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 4%;
+  width: 92%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-logo-hop),
+    transparent
+  );
 }
 
 .shop-item-container {
@@ -214,11 +235,27 @@
     width: 440px;
     height: 600px;
     padding-left: 1rem;
-    border-left: 2px solid var(--clr-highlight);
+    /* border-left: 2px solid var(--clr-logo-hop); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 1rem;
+    position: relative;
+}
+
+.item-page-info-container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2%;
+  height: 94%;
+  width: 2px;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--clr-logo-hop),
+    transparent
+  );
 }
 
 .item-page-description {
@@ -228,17 +265,25 @@
 
 .item-page-description h2 {
     margin: 0;
-    font-size: larger;
+    font-size: var(--font-400);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: var(--space-300);
 }
 
 .item-page-description p {
     margin: 0;
-    font-size: medium;
+    font-size: var(--font-300);
+    text-transform: none;
+    font-weight: 400;
 }
 
 .item-page-beer-info h2 {
     margin: 0;
-    font-size: larger;
+    font-size: var(--font-400);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: var(--space-300);
 }
 
 .item-page-beer-info ul {
@@ -249,20 +294,41 @@
 }
 
 .item-page-beer-info ul li {
+    position: relative;
     display: flex;
     width: 100%;
     justify-content: space-between;
-    border-bottom: 1px solid var(--clr-highlight);
+    /* border-bottom: 1px solid var(--clr-highlight); */
+}
+
+.item-page-beer-info ul li p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-logo-hop),
+    transparent
+  );
 }
 
 
 .item-page-beer-info ul li p {
-    font-size: medium;
+    font-size: var(--font-300);
+    font-weight: 300;
 }
 
-.item-page-beer-info ul li p::first-letter {
-    text-transform: capitalize;
+.item-page-beer-info ul li p:nth-child(2) {
+    font-weight: 500;
 }
+
+/* .item-page-beer-info ul li p::first-letter {
+    text-transform: capitalize;
+} */
 
 .item-page-price {
     display: flex;
@@ -276,18 +342,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: x-large;
+    font-size: var(--font-500);
+    font-weight: 500;
 }
 
 .item-page-price p:first-child span {
     font-size: xx-large;
     margin-top: .3rem;
-    color: var(--clr-orange);
+    color: var(--clr-logo-hat);
 }
 
 .item-page-price > p:first-child, .discounted-price > p:last-child {
     font-weight: bold;
-    color: var(--clr-orange);
+    color: var(--clr-logo-hat);
     font-size: xx-large;
 }
 
@@ -318,7 +385,7 @@
 }
 
 .item-page-price.on-stock p:last-child::before {
-    background-color: var(--clr-highlight);
+    background-color: var(--clr-logo-hop);
 }
 
 .item-page-price.out-of-stock p:last-child::before {
@@ -378,7 +445,26 @@
 
 .shop-item-page-review-container h2 {
     text-align: center;
-    border-bottom: 2px solid var(--clr-highlight);
+    position: relative;
+    font-size: var(--font-600);
+    font-weight: 500;
+    text-transform: uppercase;
+    /* border-bottom: 2px solid var(--clr-highlight); */
+}
+
+.shop-item-page-review-container h2::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 4%;
+  width: 92%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--clr-logo-hop),
+    transparent
+  );
 }
 
 .item-page-review {
@@ -399,15 +485,16 @@
 }
 
 .item-page-review-stars button {
-    background-color: var(--clr-highlight);
+    background-color: var(--clr-logo-hop);
     border: none;
     margin-top: 1rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
     transition: all .2s linear;
     scale: 1;
-    font-size: medium;
-    color: var(--clr-bg-accent);
+    font-size: var(--font-400);
+    text-transform: uppercase;
+    color: var(--clr-bg);
     font-weight: bold;
     border-radius: var(--br);
 }
@@ -445,15 +532,20 @@
     transform: translate(-50%, -50%);
     z-index: 40;
     width: 400px;
-    background-color: var(--clr-bg-accent);
+    background-color: rgba(0, 0, 0, 0.11);
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.219);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
+    border-radius: var(--br);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .item-review-from h1 {
     margin-top: 0;
+    font-size: var(--font-600);
 }
 
 .star-rating {
@@ -507,10 +599,12 @@
 
 .item-review-input {
   font-size:18px;
-  padding:10px 10px 10px 5px;
+  padding: 15px 15px 15px 5px;
   display:block;
   width:300px;
   border:none;
+  border-radius: var(--br);
+  background-color: var(--clr-bg);
 }
 
 .item-review-input:focus { 
@@ -524,8 +618,8 @@
   font-weight:normal;
   position:absolute;
   pointer-events:none;
-  left:5px;
-  top:7px;
+  left:10px;
+  top:12px;
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
@@ -535,11 +629,11 @@
 .item-review-input:focus ~ .item-review-label, .item-review-input:valid ~ .item-review-label {
   top:-20px;
   font-size: 14px;
-  color: var(--clr-highlight);
+  color: var(--clr-logo-hop);
 }
 
 .item-review-input:placeholder-shown ~ .item-review-label {
-    top: 7px;
+    top: 12px;
     font-size: medium;
     color: var(--clr-text);
 }
@@ -555,11 +649,12 @@
   width:0;
   bottom:1px; 
   position:absolute;
-  background: var(--clr-highlight); 
+  background: var(--clr-logo-hop);
   transition:0.2s ease all; 
   -moz-transition:0.2s ease all; 
   -webkit-transition:0.2s ease all;
 }
+
 .bar:before {
   left:50%;
 }
@@ -605,15 +700,15 @@
 }
 
 .item-review-submit-buttons button {
-    font-size: medium;
+    font-size: var(--font-500);
     margin: 0 0.5rem;
     padding: .5rem 1rem;
-    background-color: var(--clr-highlight);
+    background-color: var(--clr-logo-hop);
     border: none;
     scale: 1;
     transition: all .2s linear;
-    color: var(--clr-bg-accent);
-    font-weight: bold;
+    color: var(--clr-bg);
+    font-weight: 400;
     border-radius: var(--br);
     cursor: pointer;
 }
@@ -664,7 +759,7 @@ progress[value]::-webkit-progress-bar {
 }
 
 progress[value]::-webkit-progress-value {
-    background-color: var(--clr-highlight);
+    background-color: var(--clr-logo-hop);
     border-radius: var(--br);
 }
 
@@ -683,7 +778,7 @@ progress[value]::-webkit-progress-value {
 
 .review-comments-container h3 span {
     font-weight: 100;
-    font-size: large;
+    font-size: var(--font-400);
 }
 
 .review-comment {
@@ -810,5 +905,9 @@ progress[value]::-webkit-progress-value {
         font-size:15px;
         width:280px;
         margin: auto;
-}
+    }
+
+    .item-page-info-container::before {
+        width: 0;
+    }
 }

@@ -17,14 +17,14 @@ const ShopMain = () => {
       }
     }, [beers])
 
-    const applyFilter = (category) => {
-        const filteredBeers = beers.filter(beer => beer.type === category || category === "all")
-        setAllBeers(filteredBeers)
-    }
+    // const applyFilter = (category) => {
+    //     const filteredBeers = beers.filter(beer => beer.type === category || category === "all")
+    //     setAllBeers(filteredBeers)
+    // }
 
   return (
     <>
-        <ShopFilters applyFilter={applyFilter} />
+        {/* <ShopFilters applyFilter={applyFilter} /> */}
         <Suspense fallback={<Spinner />}>
           <ShopItems beers={allBeers} />
         </Suspense>

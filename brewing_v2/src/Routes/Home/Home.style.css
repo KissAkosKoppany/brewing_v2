@@ -567,7 +567,7 @@
 .card--active::after {
     content: "";
     position: absolute;
-    inset: -2px;
+    inset: -3px;
     z-index: -1;
     border-radius: inherit;
     animation: rotation 4s linear infinite;
@@ -625,6 +625,8 @@
   font-size: var(--font-500);
   padding: var(--space-100);
   text-indent: var(--space-500);
+  font-weight: 300;
+  text-transform: none;
 }
 
 /* .......Card color schemes.............. */
@@ -724,6 +726,21 @@
   .card {
     padding: var(--space-100);
   }
+
+  .card--active::before,
+  .card--active::after {
+    inset: -1px;
+  }
+
+  .card p {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .card p {
+    font-size: 7px;
+  }
 }
 
 /* .................The Experiment................... */
@@ -769,6 +786,7 @@
 .experiment-description p {
   margin-bottom: var(--space-500);
   font-size: var(--font-600);
+  font-weight: 400;
   text-align: center;
 }
 

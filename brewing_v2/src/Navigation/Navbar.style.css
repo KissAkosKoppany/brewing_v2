@@ -62,7 +62,7 @@
 }
 
 .active-link {
-    color: var(--clr-logo-main);
+    color: var(--clr-logo-hat);
     /* background-color: var(--clr-hover); */
 }
 
