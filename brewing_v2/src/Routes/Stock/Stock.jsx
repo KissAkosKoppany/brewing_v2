@@ -1,6 +1,6 @@
 import React from "react"
 import './Stock.style.css'
-import { GiBeerBottle } from "react-icons/gi";
+import { GoDotFill } from "react-icons/go";
 import { IoIosStar } from "react-icons/io";
 import { useSelector } from "react-redux";
 import Spinner from "../../GeneralComponents/Spinner";
@@ -48,7 +48,7 @@ const Stock = () => {
                 </div>
                 <div className="stock-value">
                   <h2>Stock</h2>
-                  <p><span><GiBeerBottle /></span> {beer.stock}</p>
+                  <p><span className={beer.stock > 0 ? "available" : "out-of-stock"}><GoDotFill /></span> {beer.stock > 0  ? "Available" : "Out of stock"}</p>
                 </div>
             </div>
             )

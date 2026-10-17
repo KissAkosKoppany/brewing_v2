@@ -3,7 +3,9 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-800);
+    margin-top: var(--space-800);
+    min-height: var(--min-h);
 }
 
 .stock-item {
@@ -12,18 +14,21 @@
     justify-content: space-between;
     background-color: var(--clr-bg-accent);
     width: 800px;
-    margin-bottom: 1rem;
-    box-shadow: var(--bs);
+    margin-bottom: var(--space-500);
+    box-shadow: 2px 2px 10px 1px black;
+    border-radius: var(--br);
 }
 
 .stock-image {
     width: 140px;
     height: auto;
-    padding: .5rem;
+    padding: var(--space-200);
+    padding-bottom: var(--space-100);
 }
 
 .stock-image img {
     width: 100%;
+    border-radius: var(--br);
 }
 
 .stock-info {
@@ -33,6 +38,11 @@
 
 .stock-title {
     margin-left: .5rem;
+}
+
+.stock-title h2 {
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 .stock-title p {
@@ -49,18 +59,20 @@
 
 .stock-value {
     margin-right: 1rem;
-}
-
-.stock-value p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 160px;
 }
 
 .stock-value p span {
     margin-top: 4px;
     margin-right: 4px;
-    color: var(--clr-orange);
+}
+
+.stock-value p .available {
+    color: var(--clr-logo-hop);
+}
+
+.stock-value p .out-of-stock {
+    color: var(--clr-red);
 }
 
 /* ..........Responsive.......... */

@@ -1,0 +1,33 @@
+.behind-the-brew-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: var(--space-800);
+    min-height: var(--min-h);
+}
+
+.behind-the-brew-container h1 {
+    text-transform: uppercase;
+    font-size: var(--font-1000);
+    background: -webkit-linear-gradient(bottom, var(--clr-logo-hat), var(--clr-text)); 
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.behind-the-brew-container h1:last-child {
+    color: var(--clr-logo-hop);
+    font-size: 8rem;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .behind-the-brew-container h1 {
+        font-size: var(--font-700);
+    }
+
+    .behind-the-brew-container h1:last-child {
+        font-size: var(--font-1000);
+    }
+}

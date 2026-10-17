@@ -1153,6 +1153,11 @@
   margin-bottom: var(--space-300);
 }
 
+
+.video-title h4:hover {
+  color: var(--clr-pandora);
+}
+
 .video-title h4 span {
   font-weight: 300;
   text-transform: uppercase;

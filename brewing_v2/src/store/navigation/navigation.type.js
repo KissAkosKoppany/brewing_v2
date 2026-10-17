@@ -1,0 +1,3 @@
+export const NAVIGATION_ACTION_TYPES = {
+    SET_AVTIVE_LINK: "SET_ACTIVE_LINK",
+}

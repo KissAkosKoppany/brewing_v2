@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: calc(100vh - 20.6rem);
+    min-height: var(--min-h);
     margin-top: var(--space-700);
 }
 
